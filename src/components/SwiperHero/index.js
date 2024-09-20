@@ -75,9 +75,7 @@ const Slide = ({ slide }) => {
         <div className={styles.title} data-swiper-parallax="-300">
           {slide.title}
         </div>
-        <div className={styles.subtitle} data-swiper-parallax="-200">
-          Subtitle
-        </div>
+ 
         <div className={styles.text} data-swiper-parallax="-100">
           <p>{slide.text}</p>
         </div>
