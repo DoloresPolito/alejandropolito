@@ -19,6 +19,7 @@
       margin: 0px;
       transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
+
     .name {
       display: flex;
       position: relative;
@@ -44,26 +45,24 @@
         }
       }
     }
+
     &:hover {
-
-      .copyright {
-        transform: rotate(360deg);
-      }
-
- 
-
+      opacity: 0.8;
       .name {
         .word1 {
           transform: translateY(-100%);
         }
         .word2 {
           transform: translateY(-100px);
+          transition-delay: 0.1s; 
         }
         .word1after {
           transform: translateY(-80px);
+          transition-delay: 0s; 
         }
         .word2after {
           transform: translateY(-80px);
+          transition-delay: 0.1s;
         }
       }
     }

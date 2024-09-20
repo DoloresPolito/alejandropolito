@@ -8,6 +8,7 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import Button from "../../components/Button";
 import AnimatedDiv from "../../components/AnimatedDiv";
+import Link from "next/link";
 
 export default function SwiperHero() {
   const slides = [
@@ -18,12 +19,14 @@ export default function SwiperHero() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "2.png",
       background: "#c29579",
+      link:"/cirugia-reparadora"
     },
     {
       title: "Cirugía Plástica",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "1.png",
       background: "#36514b",
+      link:"/cirugia-plastica"
     },
 
     {
@@ -31,6 +34,7 @@ export default function SwiperHero() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "3.png",
       background: "#8993a7",
+      link:"/no-quirurgicos"
     },
   ];
 
@@ -88,7 +92,10 @@ const Slide = ({ slide }) => {
             </div>
             </AnimatedDiv>
             <AnimatedDiv delay={0.4}>
+              <Link href={slide.link}>
+        
             <Button color={slide.background} />
+            </Link>
             </AnimatedDiv>
           </div>
  

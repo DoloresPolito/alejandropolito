@@ -53,7 +53,7 @@ export default function Header() {
         animate={isActive ? "open" : "closed"}
         className={styles.background}
       ></motion.div>
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+      <AnimatePresence mode="wait">{isActive && <Nav setIsActive={setIsActive}/>}</AnimatePresence>
     </div>
   );
 }

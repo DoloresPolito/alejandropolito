@@ -24,14 +24,3 @@
   height: auto;
 }
 
-.mySwiper .swiper-pagination .swiper-pagination-bullet {
-  background-color: white !important; /* Cambiar color de los puntos */
-  opacity: 0.6 !important; /* Opcional: Cambiar opacidad */
-}
-
-.mySwiper
-  .swiper-pagination
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: white !important; /* Puntos activos en blanco */
-  opacity: 1 !important;
-}

@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import SwiperHero from "@/home/SwiperHero";
 import About from "@/home/About";
 import Work from "@/home/Work";
-
+import Clinic from "@/home/Clinic";
 
 export default function Home() {
 
@@ -27,6 +27,7 @@ export default function Home() {
       <SwiperHero />
       <About />
       <Work/>
+      <Clinic/>
     </div>
   );
 }
