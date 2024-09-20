@@ -1,0 +1,66 @@
+.section {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  z-index: -1;
+  .container {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .item {
+    flex: 1; /* Cada item ocupa 33.33% */
+    height: 70vh;
+    position: relative;
+    overflow: hidden; /* Esconde el desbordamiento del zoom de la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    z-index: 1;
+    max-height: 80vh;
+    &:nth-of-type(1) {
+      background-image: url("/images/2.png");
+    }
+    &:nth-of-type(2) {
+      background-image: url("/images/1.png");
+    }
+    &:nth-of-type(3) {
+      background-image: url("/images/3.png");
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 60vh;
+     justify-content: space-between;
+
+      h2 {
+        margin-bottom: 1rem;
+
+            font-family: "BwGradual";
+            font-size: 5vh;
+            margin-bottom: 20vh;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0px 7vw;
+        
+          
+      }
+
+    }
+
+    // &:hover {
+    //     background-size: 140%; /* Zoom en la imagen de fondo */
+    //     opacity: 0.8; /* Cambia la opacidad del elemento */
+      
+    //   }
+  }
+}

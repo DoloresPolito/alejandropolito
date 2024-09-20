@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "framer-motion": "^11.5.4",
+    "lenis": "^1.1.13",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.13.1",
     "sass": "^1.78.0",
     "swiper": "^11.1.14"
   },

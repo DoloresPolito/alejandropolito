@@ -1,5 +1,9 @@
+import styles from "./styles.module.scss"
+
 export default function Footer() {
-    return <footer>
-        <h2>alejandro polito cirugia plastica</h2>
-    </footer>
-  }
+  return (
+    <div className={styles.footer}>
+      <h6>Alejandro Polito</h6>
+    </div>
+  );
+}
