@@ -5,22 +5,21 @@ import { useForm } from "react-hook-form";
 // import { sendEmail } from "@/utils/send-email";
 
 import Button from "@/components/Button";
+import Image from "next/image";
+
+import contactimage from "../../../public/images/contact.png";
 
 export default function Form() {
   return (
     <div className={styles.container}>
-
-
-      {/* <div className={styles.formcontainer}> */}
-        <div className={styles.left}>
-
-        </div>
-        <div className={styles.right}>
+      <div className={styles.left}>
+        <Image src={contactimage} alt="contact" />
+      </div>
+      <div className={styles.right}>
         <h2>CONSULTAS</h2>
         <ContactForm />
-        </div>
-   
-      {/* </div> */}
+      </div>
+
     </div>
   );
 }
@@ -46,7 +45,6 @@ const ContactForm = () => {
         </>
       ) : (
         <>
-
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.inputcontainer}>
               <input
@@ -80,9 +78,8 @@ const ContactForm = () => {
               ></textarea>
             </div>
 
-      
             <div className={styles.buttoncontainer}>
-            <Button text="ENVIAR"/>
+              <Button text="ENVIAR" />
               {/* <button className={styles.button}>
                 {" "}
                 <p>ENVIAR</p>

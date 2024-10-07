@@ -1,7 +1,8 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-
 import image from "../../../public/images/about-corto.jpg"
+
+
 export default function AboutCorto() {
   return (
     <div className={styles.section}>

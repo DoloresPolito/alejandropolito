@@ -41,7 +41,7 @@ export default function SwiperHero() {
     {
       title: "DR. ALEJANDRO POLITO",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "3.png",
+      src: "4.png",
       background: "#234a74",
       link:"/about1"
     },
