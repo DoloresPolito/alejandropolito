@@ -26,22 +26,20 @@ export default function Address() {
       <h2>CONTACTO</h2>
 
       <div className={styles.addresscontainer}>
-        {items.map((item) => {
-          return (
-            <div className={styles.item} key={item.place}>
-              <div className={styles.top}>
-                <h4>{item.place}</h4>
-                <Link href={item.link} target="_blank">
-                  <h4 style={{textDecoration:"underline"}}>CÓMO LLEGAR</h4>
-                </Link>
-              </div>
-              <div className={styles.bottom}>
-                <p>{item.address}</p>
-                <p>{item.phone}</p>
-              </div>
+        {items.map((item) => (
+          <div className={styles.item} key={item.place}>
+            <div className={styles.top}>
+              <h4>{item.place}</h4>
+              <Link href={item.link} target="_blank">
+                <h4 style={{ textDecoration: "underline" }}>CÓMO LLEGAR</h4>
+              </Link>
             </div>
-          );
-        })}
+            <div className={styles.bottom}>
+              <p>{item.address}</p>
+              <p>{item.phone}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
