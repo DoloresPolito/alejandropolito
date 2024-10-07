@@ -1,17 +1,13 @@
-"use client"
+"use client";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import styles from "./page.module.css";
 import SwiperHero from "@/home/SwiperHero";
-// import About from "@/home/AboutHome";
 import Work from "@/home/Work";
 import Clinic from "@/home/Clinic";
-import AboutCorto from "@/about/AboutCorto";
-import AboutHome1 from "@/about/AboutHome1";
-import AboutHome2 from "@/about/AboutHome2";
+import AboutHome from "@/home/AboutHome";
+import styles from "./styles.module.scss";
 
 export default function Home() {
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -24,15 +20,12 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-
   return (
     <div className={styles.page}>
       <SwiperHero />
-      <AboutHome1/>
-      <AboutHome2/>
-      <AboutCorto />
-      <Work/>
-      <Clinic/>
+      <AboutHome />
+      <Work />
+      <Clinic />
     </div>
   );
 }
