@@ -1,13 +1,84 @@
-.footer{
+.footer {
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  z-index: 100;
+  background-color: #9d8b74;
+  justify-content: center;
+  align-items: center;
+
+
+  .leftcontainer {
     display: flex;
-    width: 100vw;
-    height: 30vh;
-   z-index: 100;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    border-right: 1px solid black;
+    padding:4vh 2vh;
+  }
 
-    h2{
-        font-family: "BwGradual";
-        font-size: 8vh;
-        margin-bottom: 20vh;
+  .rightcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    padding:4vh 2vh;
+  }
+
+  .topleft {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    padding:4vh 5vh;
+
+    .navcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .col{
+            display: flex;
+            flex-direction: column;
+            padding-right: 2vh;
+            p{
+                font-size: 1.7vh;
+                padding-bottom: 1.2vh;
+            }
+        }
     }
+  }
 
+  .topright {
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    padding:4vh 5vh;
+
+    .item{
+        display: flex;
+        flex-direction: column;
+     padding: 0vh 2vh;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    padding:4vh 5vh;
+  }
+
+  h4 {
+    font-family: "BwGradual";
+    font-size: 3vh;
+    margin-bottom: 4vh;
+    color: white;
+  }
+
+  p{
+    color: white;
+    font-size: 2vh;
+  }
 }

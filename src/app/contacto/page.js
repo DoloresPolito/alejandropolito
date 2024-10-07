@@ -1,10 +1,22 @@
+
+import styles from "./styles.module.scss";
+import Address from "@/contact/Address";
+import Form from "@/contact/Form";
+
+
+
 export default function Contact() {
   return (
-    <section>
-      <div>
-        <h2>Contact Us</h2>
-        
+    <div className={styles.section}>
+      <div className={styles.addresscontainer}>
+        <Address />
       </div>
-    </section>
+
+      <div className={styles.formcontainer}>
+        <Form />
+      </div>
+    </div>
   );
 }
+
+

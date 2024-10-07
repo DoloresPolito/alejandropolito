@@ -1,4 +1,4 @@
-export default function About() {
+export default function About1() {
     return (
       <section >
         <div >

@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import styles from "./page.module.css";
 import SwiperHero from "@/home/SwiperHero";
-import About from "@/home/About";
+import About from "@/home/AboutHome";
 import Work from "@/home/Work";
 import Clinic from "@/home/Clinic";
+import AboutCorto from "@/components/AboutCorto";
 
 export default function Home() {
 
@@ -25,7 +26,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <SwiperHero />
-      <About />
+      <AboutCorto />
       <Work/>
       <Clinic/>
     </div>

@@ -17,24 +17,33 @@ export default function SwiperHero() {
     {
       title: "Cirugía Reparadora",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "2.png",
-      background: "#c29579",
+      src: "1.png",
+   
+      background: "#36514b",
       link:"/cirugia-reparadora"
     },
     {
       title: "Cirugía Plástica",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "1.png",
-      background: "#36514b",
+      src: "2.png",
+      background: "#85a5c4",
       link:"/cirugia-plastica"
     },
 
     {
-      title: "No Quirúrgicos",
+      title: " Tratamientos No Quirúrgicos",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "3.png",
-      background: "#8993a7",
+      background: "#9d8b74",
       link:"/no-quirurgicos"
+    },
+
+    {
+      title: "DR. ALEJANDRO POLITO",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      src: "3.png",
+      background: "#234a74",
+      link:"/about1"
     },
   ];
 

@@ -1,0 +1,64 @@
+.section {
+  display: flex;
+  background-color: #fffcf6;
+  height: 200vh;
+  width: 100vw;
+  padding-top: 20vh;
+  justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90vw;
+    align-items: center;
+    padding: 0vh 20vh;
+    text-align: center;
+
+    .imagecontainer {
+      display: flex;
+      height: 90vh;
+      width: 100%;
+      margin-top: 15vh;
+
+      img {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .item {
+        border-bottom: 1px solid black;
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          font-family: "Mori";
+          font-size: 2.3vh;
+        }
+      }
+    }
+
+    h2 {
+      font-family: "BwGradual";
+      font-size: 7vh;
+      margin-bottom: 4vh;
+      color: black;
+    }
+
+    p {
+      font-family: "Mori";
+      font-size: 3vh;
+      margin-bottom: 4vh;
+      color: black;
+      max-width: 90%;
+    }
+  }
+}

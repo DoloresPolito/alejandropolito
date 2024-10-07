@@ -28,8 +28,8 @@ const links = [
     src: "1.png"
   },
   {
-    title: "About Us",
-    href: "/about",
+    title: "Dr. Alejandro Polito",
+    href: "/about1",
     src: "2.png"
   },
 
