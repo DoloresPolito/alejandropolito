@@ -26,9 +26,9 @@ export default function Address() {
       <h2>CONTACTO</h2>
 
       <div className={styles.addresscontainer}>
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
-            <div className={styles.item}>
+            <div className={styles.item} key={index}>
               <div className={styles.top}>
                 <h4>{item.place}</h4>
                 <Link href={item.link} target="_blank">
