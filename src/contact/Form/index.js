@@ -4,11 +4,24 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 // import { sendEmail } from "@/utils/send-email";
 
+import Button from "@/components/Button";
+
 export default function Form() {
   return (
-    <>
-      <ContactForm />
-    </>
+    <div className={styles.container}>
+
+
+      {/* <div className={styles.formcontainer}> */}
+        <div className={styles.left}>
+
+        </div>
+        <div className={styles.right}>
+        <h2>CONSULTAS</h2>
+        <ContactForm />
+        </div>
+   
+      {/* </div> */}
+    </div>
   );
 }
 
@@ -27,13 +40,13 @@ const ContactForm = () => {
         <>
           <div className={styles.messagesent}>
             <h3>
-             GRACIAS POR EL MENSAJE, NOS COMUNICAREMOS CON VOS A LA BREVEDAD.
+              GRACIAS POR EL MENSAJE, NOS COMUNICAREMOS CON VOS A LA BREVEDAD.
             </h3>
           </div>
         </>
       ) : (
         <>
-          <h4>CONSULTAS</h4>
+
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.inputcontainer}>
               <input
@@ -66,11 +79,14 @@ const ContactForm = () => {
                 {...register("message", { required: true })}
               ></textarea>
             </div>
+
+      
             <div className={styles.buttoncontainer}>
-              <button className={styles.button}>
+            <Button text="ENVIAR"/>
+              {/* <button className={styles.button}>
                 {" "}
                 <p>ENVIAR</p>
-              </button>
+              </button> */}
             </div>
           </form>
         </>
