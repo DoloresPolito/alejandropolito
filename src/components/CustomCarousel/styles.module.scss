@@ -1,0 +1,88 @@
+.container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10vh;
+  z-index: 10;
+}
+
+.carouselcontainer {
+  height: 90vh;
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carouselcontent {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+}
+
+.swiper {
+  width: 100vw;
+  height: 90vh;
+}
+
+.mySwiper {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slide {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10vh;
+
+  .imagecontainer2 {
+    width: 25vw;
+    height: 70vh;
+
+    img {
+      width: 25vw;
+      height: 70vh;
+    }
+  }
+
+  .imagecontainer1 {
+    width: 25vw;
+    height: 70vh;
+
+    img {
+      width: 25vw;
+      height: 50vh;
+    }
+  }
+
+  .imagecontainer3 {
+    width: 20vw;
+    height: 70vh;
+
+    img {
+      width: 20vw;
+      height: 40vh;
+    }
+  }
+
+
+  // .imagecontainer1 img, .imagecontainer2 img, .imagecontainer3 img {
+  //   object-fit: cover; // Asegura que la imagen se ajuste sin deformarse
+  //   width: 100%; // Asegura que ocupe el ancho del contenedor
+  //   height: 100%; // Asegura que ocupe la altura del contenedor
+  // }
+}

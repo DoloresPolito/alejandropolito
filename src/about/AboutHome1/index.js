@@ -27,7 +27,7 @@ export default function AboutHome1() {
               estética y reconstrucción que se usan en el mundo.
             </h3>
           </AnimatedDiv>
-          <AnimatedDiv>
+          <AnimatedDiv delay={0.3}>
           <div className={styles.imagecontainer}>
             <Image src={image} alt="about" />
           </div>

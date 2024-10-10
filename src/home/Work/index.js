@@ -30,8 +30,7 @@ export default function About() {
               style={{ backgroundImage: `url(${item.imageUrl})` }}
               initial={{ backgroundSize: "100%", opacity: 1 }}
               whileHover={{
-                backgroundSize: "110%",
-                opacity: 0.8,
+                backgroundSize: "105%",
                 transition: { duration: 0.5, ease: "easeInOut" },
               }}
               animate={{ backgroundSize: "100%", opacity: 1 }}

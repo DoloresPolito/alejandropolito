@@ -1,6 +1,22 @@
+"use client";
 import styles from "./styles.module.scss";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Footer() {
+  const underlineVariants = {
+    initial: {
+      width: 0,
+    },
+    hover: {
+      width: "100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className={styles.footer}>
       <div className={styles.leftcontainer}>
@@ -12,14 +28,74 @@ export default function Footer() {
 
           <div className={styles.navcontainer}>
             <div className={styles.col}>
-              <p>CIRUGÍA PLÁSTICA</p>
-              <p>CIRUGÍA REPARADORA</p>
-              <p>TRATAMIENTOS NO QUIRÚRGICOS</p>
+              <Link href="/cirugia-plastica">
+                <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">CIRUGÍA PLÁSTICA</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </Link>
+              <Link href="/cirugia-reparadora">
+               
+
+                <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">CIRUGÍA REPARADORA</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </Link>
+              <Link href="/no-quirurgicos">
+      
+
+
+                <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">TRATAMIENTOS NO QUIRÚRGICOS</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </Link>
             </div>
             <div className={styles.col}>
-              <p>DR. ALEJANDRO POLITO</p>
-              <p>CENTRO MÉDICO</p>
-              <p>CONTACTO</p>
+              <Link href="/about1">
+
+
+              <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">DR. ALEJANDRO POLITO</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+            
+              </Link>
+              <Link href="/">
+                
+
+                <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">CENTRO MÉDICO</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </Link>
+              <Link href="/contacto">
+
+              <motion.div className={styles.navitem} whileHover="hover">
+                  <p class="styled-paragraph">CONTACTO</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+             
+              </Link>
             </div>
           </div>
         </div>
@@ -32,7 +108,7 @@ export default function Footer() {
         <div className={styles.topright}>
           <div className={styles.item}>
             <h4>
-             Centro Médico
+              Centro Médico
               <br />
               Gualeguaychú
             </h4>

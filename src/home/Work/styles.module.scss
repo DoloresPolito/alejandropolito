@@ -24,6 +24,10 @@
     max-height: 80vh;
     &:nth-of-type(1) {
       background-image: url("/images/2.png");
+
+        object-fit: cover; // Ajusta la imagen para que cubra todo el contenedor sin deformarse
+        object-position: center; // Centra la imagen dentro del contenedor
+
     }
     &:nth-of-type(2) {
       background-image: url("/images/1.png");
@@ -40,27 +44,24 @@
       display: flex;
       flex-direction: column;
       height: 60vh;
-     justify-content: space-between;
+      justify-content: space-between;
 
       h2 {
         margin-bottom: 1rem;
 
-            font-family: "BwGradual";
-            font-size: 5vh;
-            margin-bottom: 20vh;
-            text-align: center;
-            text-transform: uppercase;
-            padding: 0px 7vw;
-        
-          
+        font-family: "BwGradual";
+        font-size: 5vh;
+        margin-bottom: 20vh;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0px 7vw;
       }
-
     }
 
     // &:hover {
     //     background-size: 140%; /* Zoom en la imagen de fondo */
     //     opacity: 0.8; /* Cambia la opacidad del elemento */
-      
+
     //   }
   }
 }

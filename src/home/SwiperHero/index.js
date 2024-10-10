@@ -12,22 +12,21 @@ import Link from "next/link";
 
 export default function SwiperHero() {
   const slides = [
-
-
-    {
-      title: "Cirugía Reparadora",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "1.png",
-   
-      background: "#36514b",
-      link:"/cirugia-reparadora"
-    },
     {
       title: "Cirugía Plástica",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "2.png",
       background: "#85a5c4",
-      link:"/cirugia-plastica"
+      link: "/cirugia-plastica",
+    },
+
+    {
+      title: "Cirugía Reparadora",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      src: "1.png",
+
+      background: "#36514b",
+      link: "/cirugia-reparadora",
     },
 
     {
@@ -35,7 +34,7 @@ export default function SwiperHero() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "3.png",
       background: "#9d8b74",
-      link:"/no-quirurgicos"
+      link: "/no-quirurgicos",
     },
 
     {
@@ -43,7 +42,7 @@ export default function SwiperHero() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
       src: "4.png",
       background: "#234a74",
-      link:"/about1"
+      link: "/about1",
     },
   ];
 
@@ -53,6 +52,7 @@ export default function SwiperHero() {
         <div className={styles.carouselcontainer}>
           <div className={styles.carouselcontent}>
             <Swiper
+                 loop={true}
               speed={1000}
               parallax={true}
               autoplay={{
@@ -89,25 +89,24 @@ const Slide = ({ slide }) => {
         className={styles.slide}
         style={{ backgroundColor: slide.background }}
       >
-    
-          <div className={styles.textcontainer}>
+        <div className={styles.textcontainer}>
           <AnimatedDiv delay={0}>
             <div className={styles.title} data-swiper-parallax="-300">
               {slide.title}
-            </div>       </AnimatedDiv>
-            <AnimatedDiv delay={0.3}>
+            </div>{" "}
+          </AnimatedDiv>
+          <AnimatedDiv delay={0.3}>
             <div className={styles.text} data-swiper-parallax="-100">
               <p>{slide.text}</p>
             </div>
-            </AnimatedDiv>
-            <AnimatedDiv delay={0.4}>
-              <Link href={slide.link}>
-        
-            <Button color={slide.background} />
+          </AnimatedDiv>
+          <AnimatedDiv delay={0.4}>
+            <Link href={slide.link}>
+              <Button color={slide.background} />
             </Link>
-            </AnimatedDiv>
-          </div>
- 
+          </AnimatedDiv>
+        </div>
+
         <div className={styles.imagecontainer}>
           <Image
             src={`/images/${slide.src}`}
@@ -115,6 +114,14 @@ const Slide = ({ slide }) => {
             width={600}
             height={700}
           />
+
+          {/* <Image
+            src={`/images/${slide.src}`}
+            alt="image"
+            layout="fill" // Se ajusta para ocupar todo el contenedor
+            objectFit="cover" // Cubre el contenedor sin deformarse
+            objectPosition="center" // Centra la imagen dentro del contenedor
+          /> */}
         </div>
       </div>
     </>

@@ -1,22 +1,21 @@
-.body{
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  a {
+    color: #0d0d0d;
+    text-decoration: none;
+    font-family: "BwGradual";
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0px;
     display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-
-    a{
-        color: #0D0D0D;
-        text-decoration: none;
-        font-family: 'BwGradual';
-     
-    }
-
-    p{
-        margin: 0px;
-        display: flex;
-        overflow: hidden;
-        font-size: 8vh;
-        padding-right: 30px;
-        padding-top: 10px;
-  
-    }
+    overflow: hidden;
+    font-size: 6vh;
+    padding-right: 30px;
+    padding-top: 10px;
+  }
 }

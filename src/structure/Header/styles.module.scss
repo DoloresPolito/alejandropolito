@@ -1,22 +1,23 @@
 .header {
-  background-color: #f4f0ea;
+  background-color: #fffcf8;
   position: fixed;
   width: 100%;
   height: 10vh;
   box-sizing: border-box;
   padding: 10px;
   z-index: 100;
-  opacity: 0.8;
+
+  border-bottom: 0.2vh solid black;
 
   .background {
-    background-color: #e0ddd8;
+    background-color: #fffcf6;
+    border-top: 0.2vh solid black;
     opacity: 1;
     height: 100%;
     width: 100%;
     position: absolute;
     left: 0;
     top: 100%;
-
   }
 
   .bar {
@@ -26,19 +27,14 @@
     font-weight: 400;
     position: relative;
 
-
     .name {
       font-family: "BwGradual";
       font-size: 4vh;
-      // font-family: var(--gradual-font);
     }
 
     p {
       margin: 0px;
     }
-
-
-
 
     .el {
       display: flex;
@@ -100,18 +96,17 @@
   }
 }
 
-
 @media only screen and (min-width: 600px) {
-    .header{
-        padding: 20px;
+  .header {
+    padding: 20px;
 
-        .bar{
-            font-size: 15px;
-        }
-
-        .shop{
-            display: block;
-            cursor: pointer;
-        }
+    .bar {
+      font-size: 15px;
     }
+
+    .shop {
+      display: block;
+      cursor: pointer;
+    }
+  }
 }

@@ -85,13 +85,25 @@
             margin-bottom: 10vh;
     }
   }
-  .imagecontainer {
-    width: 50vw;
-    height: 90vh;
+  // .imagecontainer {
+  //   width: 50vw;
+  //   height: 90vh;
 
+  //   img {
+  //     width: 50vw;
+  //     height: 90vh;
+  //   }
+  // }
+
+  .imagecontainer {
+    width: 50vw;  // Contenedor de imagen fijo con un tamaño específico
+    height: 90vh; // Altura fija del contenedor
+  
     img {
-      width: 50vw;
-      height: 90vh;
+      width: 100%;  // La imagen toma el 100% del ancho del contenedor
+      height: 100%; // La imagen toma el 100% de la altura del contenedor
+      object-fit: cover; // Ajusta la imagen para que cubra todo el contenedor sin deformarse
+      object-position: center; // Centra la imagen dentro del contenedor
     }
   }
 }

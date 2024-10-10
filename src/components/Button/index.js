@@ -13,9 +13,9 @@ export default function Button({ color = "#0D0D0D", text }) {
             ) : (
               <>
                 <p className={styles.word1}>VER </p>
-                <p className={styles.word2}>TRATAMIENTOS</p>
+                <p className={styles.word2}>MÁS</p>
                 <p className={styles.word1after}>VER</p>
-                <p className={styles.word2after}> TRATAMIENTOS</p>
+                <p className={styles.word2after}> MÁS</p>
               </>
             )}
           </div>

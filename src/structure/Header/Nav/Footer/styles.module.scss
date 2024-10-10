@@ -1,0 +1,25 @@
+.footer {
+    position: absolute; 
+    bottom: 0;
+    width: 100%; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    font-size: 2.5vh;
+    padding-bottom: 3vh; 
+    
+    ul {
+        font-family: "BwGradual";
+        width: auto;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; 
+    }
+
+    li {
+        span {
+            color: #9f9689;
+        }
+    }
+}
+
