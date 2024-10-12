@@ -16,17 +16,17 @@ const links = [
   {
     title: "Cirugía Plástica",
     href: "/cirugia-plastica",
-    src: "2.png"
+    src: "ilus/cuerpo.jpg"
   },
   {
     title: "Cirugía Reparadora",
     href: "/cirugia-reparadora",
-    src: "3.png"
+    src: "ilus/nariz.jpg"
   },
   {
     title: "No quirúrgicos",
     href: "/no-quirurgicos",
-    src: "1.png"
+    src: "ilus/mama.jpg"
   },
   {
     title: "Dr. Alejandro Polito",

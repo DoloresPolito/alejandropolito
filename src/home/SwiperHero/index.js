@@ -15,7 +15,7 @@ export default function SwiperHero() {
     {
       title: "Cirugía Plástica",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "2.png",
+      src: "3.jpg",
       background: "#85a5c4",
       link: "/cirugia-plastica",
     },
@@ -32,7 +32,7 @@ export default function SwiperHero() {
     {
       title: " Tratamientos No Quirúrgicos",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
-      src: "3.png",
+      src: "4.jpg",
       background: "#9d8b74",
       link: "/no-quirurgicos",
     },

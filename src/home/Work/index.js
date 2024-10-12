@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function About() {
   const items = [
-    { id: 1, title: "Cirugía Plástica", imageUrl: "/images/2.png", delay: 0.3, link:"/cirugia-plastica" },
+    { id: 1, title: "Cirugía Plástica", imageUrl: "/images/3.jpg", delay: 0.3, link:"/cirugia-plastica" },
     {
       id: 2,
       title: "Cirugía Reparadora",
@@ -16,7 +16,7 @@ export default function About() {
       delay: 0.5,
       link:"/cirugia-reparadora"
     },
-    { id: 3, title: "No Quirúrgicos", imageUrl: "/images/3.png", delay: 0.7,link:"/no-quirurgicos" },
+    { id: 3, title: "No Quirúrgicos", imageUrl: "/images/4.jpg", delay: 0.7,link:"/no-quirurgicos" },
   ];
 
   return (

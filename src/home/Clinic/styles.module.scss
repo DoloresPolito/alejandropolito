@@ -4,4 +4,25 @@
     background-color: #f4f0ea;
     display: flex;
     flex-direction: column;
+    position:relative;
+
+
+    .textcontainer{
+        position: absolute;
+        width: 40vh;
+        height: 15vh;
+        bottom: 3vh;
+        right: 5vw;
+
+        h2{
+            font-family: "BwGradual";
+            font-size: 2.5vh;
+            margin-bottom: 4vh;
+            color: black;
+        }
+
+        p{
+            font-size: 1.5vh;
+        }
+    }
 }

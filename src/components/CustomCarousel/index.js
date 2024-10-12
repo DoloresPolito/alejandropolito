@@ -10,46 +10,67 @@ import Image from "next/image";
 export default function SwiperHero() {
   const slides = [
     {
-      src1: "2.png",
-      src2: "1.png",
-      src3: "3.png",
-    },
-    {
-      src1: "1.png",
-      src2: "4.png",
-      src3: "3.png",
-    },
-    {
-      src1: "2.png",
-      src2: "3.png",
-      src3: "1.png",
-    },
-    {
-      src1: "4.png",
-      src2: "1.png",
-      src3: "2.png",
+      src1: "clinica/v2.png",
+      orientation: "vertical",
     },
 
     {
-      src1: "2.png",
-      src2: "3.png",
-      src3: "1.png",
+      src1: "clinica/cuadradas/2.png",
+      orientation: "horizontal",
     },
+    // {
+    //   src1: "clinica/cuadradas/1.png",
+    //   orientation: "horizontal",
+    // },
+
+
+
     {
-      src1: "4.png",
-      src2: "1.png",
-      src3: "2.png",
+      src1: "clinica/v4.png",
+      orientation: "vertical",
+    },
+
+
+
+    {
+      src1: "clinica/cuadradas/4.png",
+      orientation: "horizontal",
     },
 
     {
-      src1: "2.png",
-      src2: "3.png",
-      src3: "1.png",
+      src1: "clinica/v3.png",
+      orientation: "vertical",
+    },
+
+
+    // {
+    //   src1: "clinica/cuadradas/6.png",
+    //   orientation: "horizontal",
+    // },
+    // {
+    //   src1: "clinica/v5.png",
+    //   orientation: "vertical",
+    // },
+
+    {
+      src1: "clinica/v1.png",
+      orientation: "vertical",
     },
     {
-      src1: "4.png",
-      src2: "1.png",
-      src3: "2.png",
+      src1: "clinica/cuadradas/7.png",
+      orientation: "horizontal",
+    },
+    {
+      src1: "clinica/cuadradas/8.png",
+      orientation: "horizontal",
+    },
+    {
+      src1: "clinica/cuadradas/3.png",
+      orientation: "horizontal",
+    },
+    {
+      src1: "clinica/cuadradas/5.png",
+      orientation: "horizontal",
     },
   ];
 
@@ -59,10 +80,10 @@ export default function SwiperHero() {
         <div className={styles.carouselcontainer}>
           <div className={styles.carouselcontent}>
             <Swiper
-            loop={true}
+              loop={true}
               speed={1000}
               parallax={true}
-              slidesPerView={3} // Mostrar 3 imágenes por vista
+              slidesPerView={2.5} // Mostrar 3 imágenes por vista
               slidesPerGroup={1} // Mover de una imagen a la vez
               autoplay={{
                 delay: 3000, // Cambiar cada 3 segundos
@@ -78,7 +99,7 @@ export default function SwiperHero() {
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <Slide slide={slide} />
+                  <SlideVertical slide={slide} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -89,17 +110,41 @@ export default function SwiperHero() {
   );
 }
 
-const Slide = ({ slide }) => {
-  return (
+const SlideVertical = ({ slide }) => {
+  return slide.orientation === "horizontal" ? (
     <div className={styles.slide}>
-      <div className={styles.imagecontainer1}>
-        <Image src={`/images/${slide.src1}`} alt="image" width={600} height={700} />
+      <div className={styles.imagecontainerhorizontal}>
+        <Image
+          src={`/images/${slide.src1}`}
+          alt="image"
+          width={600}
+          height={700}
+          priority
+        />
       </div>
-      <div className={styles.imagecontainer2}>
-        <Image src={`/images/${slide.src2}`} alt="image" width={600} height={700} />
+    </div>
+  ) : slide.orientation === "vertical" ? (
+    <div className={styles.slide}>
+      <div className={styles.imagecontainervertical}>
+        <Image
+          src={`/images/${slide.src1}`}
+          alt="image"
+          width={600}
+          height={700}
+          priority
+        />
       </div>
-      <div className={styles.imagecontainer3}>
-        <Image src={`/images/${slide.src3}`} alt="image" width={600} height={700} />
+    </div>
+  ) : (
+    <div className={styles.slide}>
+      <div className={styles.imagecontainercuadrada}>
+        <Image
+          src={`/images/${slide.src1}`}
+          alt="image"
+          width={600}
+          height={700}
+          priority
+        />
       </div>
     </div>
   );
