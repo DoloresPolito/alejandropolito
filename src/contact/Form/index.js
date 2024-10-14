@@ -16,7 +16,7 @@ export default function Form() {
         <Image src={contactimage} alt="contact" />
       </div>
       <div className={styles.right}>
-        <h2>CONSULTAS</h2>
+        <h3>CONSULTAS</h3>
         <ContactForm />
       </div>
 
@@ -72,18 +72,18 @@ const ContactForm = () => {
             </div>
             <div className={styles.inputcontainertextarea}>
               <textarea
-                placeholder="Mensaje"
+                // placeholder="Mensaje"
                 className={`${styles.input} ${styles.textarea}`}
                 {...register("message", { required: true })}
               ></textarea>
             </div>
 
             <div className={styles.buttoncontainer}>
-              <Button text="ENVIAR" />
-              {/* <button className={styles.button}>
+              {/* <Button text="ENVIAR" /> */}
+              <button className={styles.button}>
                 {" "}
                 <p>ENVIAR</p>
-              </button> */}
+              </button>
             </div>
           </form>
         </>

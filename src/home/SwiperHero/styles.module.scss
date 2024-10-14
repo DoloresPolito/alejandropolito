@@ -33,16 +33,15 @@
   display: flex;
   flex-direction: row;
 
-    .swiper-pagination-bullet {
-      background-color: white !important; // Cambia el color de los puntos a blanco
-      opacity: 0.6 !important; // Ajusta la opacidad si lo deseas
-    }
-  
-    .swiper-pagination-bullet-active {
-      background-color: white !important; // Asegúrate de que el punto activo también sea blanco
-      opacity: 1 !important;
-    }
-  
+  .swiper-pagination-bullet {
+    background-color: white !important; // Cambia el color de los puntos a blanco
+    opacity: 0.6 !important; // Ajusta la opacidad si lo deseas
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: white !important; // Asegúrate de que el punto activo también sea blanco
+    opacity: 1 !important;
+  }
 }
 
 .swiper-slide {
@@ -59,52 +58,44 @@
 
   .textcontainer {
     width: 50vw;
-    height: 70vh;
+    height: 90vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0px 6vw;
-    color:white;
-
+    color: white;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
     .title {
-      font-family: "BwGradual";
+      font-family: "BwGradualLight";
       font-size: 8vh;
       margin-bottom: 5vh;
-
       text-align: center;
       text-transform: uppercase;
       padding: 0px 2vw;
-  
     }
 
     .text {
       font-family: "Sequel";
       font-size: 2vh;
       text-align: center;
-            margin-bottom: 3vh;
+      margin-bottom: 3vh;
     }
   }
-  // .imagecontainer {
-  //   width: 50vw;
-  //   height: 90vh;
 
-  //   img {
-  //     width: 50vw;
-  //     height: 90vh;
-  //   }
-  // }
 
   .imagecontainer {
-    width: 50vw;  // Contenedor de imagen fijo con un tamaño específico
-    height: 90vh; // Altura fija del contenedor
-  
+    width: 50vw; 
+    height: 90vh; 
+    border-bottom: 1px solid black;
+
     img {
-      width: 100%;  // La imagen toma el 100% del ancho del contenedor
-      height: 100%; // La imagen toma el 100% de la altura del contenedor
-      object-fit: cover; // Ajusta la imagen para que cubra todo el contenedor sin deformarse
-      object-position: center; // Centra la imagen dentro del contenedor
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      object-position: center; 
     }
   }
 }

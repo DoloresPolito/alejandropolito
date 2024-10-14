@@ -1,6 +1,13 @@
 @font-face {
     font-family: 'BwGradual';
-    src: url('/fonts/BwGradualDEMO-Regular.otf') format('opentype');
+    src: url('/fonts/BwGradual/BwGradualDEMO-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BwGradualLight';
+    src: url('/fonts/BwGradual/BwGradual-Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }

@@ -7,7 +7,6 @@ import AnimatedDiv from "@/components/AnimatedDiv";
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 export default function Address() {
-
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -27,7 +26,6 @@ export default function Address() {
 
     requestAnimationFrame(raf);
   }, []);
-
 
   const items = [
     {
@@ -54,27 +52,32 @@ export default function Address() {
   ];
   return (
     <div className={styles.container}>
-           <motion.div style={{ y,}} className={styles.motionDiv} >
-      <h2>CONTACTO</h2>
+      <motion.div style={{ y }} className={styles.motionDiv}>
+        <h3>CONTACTO</h3>
 
-      <div className={styles.addresscontainer}>
-        {items.map((item) => (
-          <AnimatedDiv delay={item.delay} key={item.delay}>
-            <div className={styles.item}>
-              <div className={styles.top}>
-                <h4>{item.place}</h4>
-                <Link href={item.link} target="_blank">
-                  <h4 style={{ textDecoration: "underline" }}>CÓMO LLEGAR</h4>
-                </Link>
+        <div className={styles.addresscontainer}>
+          {items.map((item) => (
+            <AnimatedDiv delay={item.delay} key={item.delay}>
+              <div className={styles.item}>
+                <div className={styles.top}>
+                  <h4>{item.place}</h4>
+                  <Link href={item.link} target="_blank">
+                    <h4 style={{ textDecoration: "underline" }}>CÓMO LLEGAR</h4>
+                  </Link>
+                </div>
+                <div className={styles.bottom}>
+                  <Link href={item.link} target="_blank">
+                    <p>{item.address}</p>
+                  </Link>
+
+             
+                    <p>{item.phone}</p>
+           
+                </div>
               </div>
-              <div className={styles.bottom}>
-                <p>{item.address}</p>
-                <p>{item.phone}</p>
-              </div>
-            </div>
-          </AnimatedDiv>
-        ))}
-      </div>
+            </AnimatedDiv>
+          ))}
+        </div>
       </motion.div>
     </div>
   );

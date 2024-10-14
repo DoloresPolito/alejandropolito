@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: row;
 
-  h2 {
-    font-family: "BwGradual";
+
+
+  h3 {
+    font-family: "BwGradualLight";
     font-size: 5vh;
     margin-bottom: 5vh;
   }
@@ -49,30 +51,43 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin: 10px 0;
 }
 
 .input {
-  height: 45px;
+  height:7vh;
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
-  padding-left: 20px;
+  padding-left: 5px;
   font-family: "Mori";
-  font-size: 14px;
+  font-size: 1.7vh;
   font-weight: 300;
   background-color: #85a5c4;
+  &::placeholder {
+    font-family: "Mori";
+    text-transform: uppercase;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
 }
 
 .textarea {
-  height: 120px;
+  height: 25vh;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 5px;
   padding-top: 10px;
   font-family: "Mori";
-  font-size: 14px;
+  font-size: 1.7vh;
   font-weight: 300;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   background-color: #aac0d6;
   &::placeholder {
     font-family: "Mori";
@@ -85,18 +100,24 @@
   justify-content: flex-end;
 }
 
-// .button {
-//   height: 45px;
-//   width: 120px;
-//   background-color: #ffffff;
-//   outline: none;
-//   border: none;
-//   border-radius: 30px;
-//   color: #636060;
-//   cursor: pointer;
-//   font-size: 16px;
-//   font-weight: 300;
-// }
+.button {
+  height: 5vh;
+  width: 120px;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 2vh;
+  margin-top: 2vh;
+  font-weight: 300;
+
+  &:hover{
+    background-color: white;
+    color:black
+  }
+}
 
 .messagesent {
   height: 500px;
@@ -104,6 +125,8 @@
   padding: 100px 0px;
 
   h3 {
-    font-size: 32px;
+    font-family: "Mori";
+    font-size: 2vh;
+    line-height: 100%;
   }
 }
