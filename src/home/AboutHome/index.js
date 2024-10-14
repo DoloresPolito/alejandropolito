@@ -8,7 +8,7 @@ export default function AboutHome() {
   return (
     <>
       <div className={styles.section}>
-        <AboutHome1 />
+        <AboutHome1 view="home"/>
         <AboutHome2 />
       </div>
     </>

@@ -7,7 +7,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import AnimatedDiv from "@/components/AnimatedDiv";
 
-export default function AboutHome1() {
+export default function AboutHome1({view}) {
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,7 +18,7 @@ export default function AboutHome1() {
 
   return (
     <div className={styles.section}>
-      <motion.div style={{ y }} className={styles.motionDiv}>
+      <motion.div style={{ y,     marginTop: view === "home" ? "-10vh" : "0vh",}} className={styles.motionDiv} >
         <div className={styles.container}>
           <AnimatedDiv>
             <h3>

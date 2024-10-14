@@ -4,8 +4,17 @@ import Lenis from "lenis";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
-
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 export default function Address() {
+
+  const container = useRef();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -45,6 +54,7 @@ export default function Address() {
   ];
   return (
     <div className={styles.container}>
+           <motion.div style={{ y,}} className={styles.motionDiv} >
       <h2>CONTACTO</h2>
 
       <div className={styles.addresscontainer}>
@@ -65,6 +75,7 @@ export default function Address() {
           </AnimatedDiv>
         ))}
       </div>
+      </motion.div>
     </div>
   );
 }
