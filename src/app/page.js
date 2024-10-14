@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 import SwiperHero from "@/home/SwiperHero";
-import Work from "@/home/Work";
+import Work2 from "@/home/Work2";
 import Clinic from "@/home/Clinic";
 import AboutHome from "@/home/AboutHome";
 import styles from "./styles.module.scss";
@@ -24,7 +24,7 @@ export default function Home() {
     <div className={styles.page}>
       <SwiperHero />
       <AboutHome />
-      <Work />
+      <Work2 />
       <Clinic />
     </div>
   );

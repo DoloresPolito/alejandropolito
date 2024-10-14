@@ -31,13 +31,13 @@ const links = [
   {
     title: "Dr. Alejandro Polito",
     href: "/about1",
-    src: "2.png"
+    src: "clinica/v1el.png"
   },
 
   {
     title: "Contacto",
     href: "/contacto",
-    src: "3.png"
+    src: "clinica/v2.png"
   }
 ]
 

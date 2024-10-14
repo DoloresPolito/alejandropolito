@@ -12,12 +12,14 @@ export default function SwiperHero() {
     {
       src1: "clinica/v2.png",
       orientation: "vertical",
-    },
+    },  
 
     {
       src1: "clinica/cuadradas/2.png",
       orientation: "horizontal",
     },
+
+
     // {
     //   src1: "clinica/cuadradas/1.png",
     //   orientation: "horizontal",
@@ -30,12 +32,12 @@ export default function SwiperHero() {
       orientation: "vertical",
     },
 
-
-
     {
-      src1: "clinica/cuadradas/4.png",
+      src1: "clinica/cuadradas/7.png",
       orientation: "horizontal",
     },
+
+ 
 
     {
       src1: "clinica/v3.png",
@@ -56,22 +58,26 @@ export default function SwiperHero() {
       src1: "clinica/v1.png",
       orientation: "vertical",
     },
+
+
     {
-      src1: "clinica/cuadradas/7.png",
+      src1: "clinica/cuadradas/8.png",
+      orientation: "horizontal",
+    },
+
+    {
+      src1: "clinica/cuadradas/5.png",
       orientation: "horizontal",
     },
     {
-      src1: "clinica/cuadradas/8.png",
+      src1: "clinica/cuadradas/4.png",
       orientation: "horizontal",
     },
     {
       src1: "clinica/cuadradas/3.png",
       orientation: "horizontal",
     },
-    {
-      src1: "clinica/cuadradas/5.png",
-      orientation: "horizontal",
-    },
+
   ];
 
   return (
