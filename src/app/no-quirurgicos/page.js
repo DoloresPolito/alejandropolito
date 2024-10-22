@@ -1,10 +1,7 @@
+import GeneralTreatment from "@/components/GeneralTreatment";
+import content from "../../jsons/noquirurgicos.json"
 export default function NoQuirurgicos() {
     return (
-      <section>
-        <div>
-          <h2>No Quirurgicos</h2>
-          
-        </div>
-      </section>
+      <GeneralTreatment content={content[0]}/>
     );
   }

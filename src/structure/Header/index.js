@@ -12,6 +12,11 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.bar}>
+      <div className={styles.el}>
+          <Link href="/" className={styles.name}>
+            Alejandro Polito
+          </Link>
+        </div>
         <div
           onClick={() => {
             setIsActive(!isActive);
@@ -23,7 +28,7 @@ export default function Header() {
               isActive ? styles.burgerActive : ""
             }`}
           ></div>
-          <div className={styles.label}>
+          {/* <div className={styles.label}>
             <motion.p
               variants={opacity}
               animate={!isActive ? "open" : "closed"}
@@ -33,19 +38,15 @@ export default function Header() {
             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
               Close
             </motion.p>
-          </div>
-        </div>
-        <div className={styles.el}>
-          <Link href="/" className={styles.name}>
-            Alejandro Polito
-          </Link>
+          </div> */}
         </div>
 
-        <div className={styles.el}>
+
+        {/* <div className={styles.el}>
           <Link href="/contacto">
             <p>Contacto</p>{" "}
           </Link>
-        </div>
+        </div> */}
       </div>
       <motion.div
         variants={background}

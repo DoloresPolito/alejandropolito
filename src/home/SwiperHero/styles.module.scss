@@ -1,17 +1,17 @@
 .container {
-  height: 90vh;
+  height: 92vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 8vh;
   z-index: 10;
 }
 
 .carouselcontainer {
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -19,14 +19,14 @@
 
 .carouselcontent {
   position: relative;
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   display: flex;
 }
 
 .swiper {
   width: 100vw;
-  height: 90vh;
+  height: 92vh;
 }
 
 .mySwiper {
@@ -58,7 +58,7 @@
 
   .textcontainer {
     width: 50vw;
-    height: 90vh;
+    height: 92vh;
 
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@
 
   .imagecontainer {
     width: 50vw; 
-    height: 90vh; 
+    height: 92vh; 
     border-bottom: 1px solid black;
 
     img {

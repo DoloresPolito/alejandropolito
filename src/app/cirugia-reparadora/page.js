@@ -1,9 +1,7 @@
+import GeneralTreatment from "@/components/GeneralTreatment";
+import content from "../../jsons/reparadora.json"
 export default function Reparadora() {
   return (
-    <section>
-      <div>
-        <h2>Reparadora</h2>
-      </div>
-    </section>
+    <GeneralTreatment content={content[0]}/>
   );
 }

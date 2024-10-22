@@ -1,0 +1,45 @@
+[
+  
+
+    {
+        "titulo": "Tratamientos No Quirúrgicos",
+        "texto": "Mejoramos la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas.",
+        "tratamientos":[{
+            "nombre":"Plasma",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Rellenos",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Luz Pulsada",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        },{
+            "nombre":"Radiofrecuencia",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Dermatología Clínica",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        },{
+            "nombre":"Botox",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Cosmiatría",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        } ]
+    }
+   
+]

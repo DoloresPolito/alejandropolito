@@ -55,7 +55,7 @@ export default function Index({setIsActive}) {
         </div>
         <Image src={links[selectedLink.index].src} isActive={selectedLink.isActive} alt={selectedLink.title}/>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </motion.div>
   )
 }

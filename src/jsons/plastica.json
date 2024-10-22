@@ -1,0 +1,45 @@
+[
+  
+
+    {
+        "titulo": "Cirugía Plástica",
+        "texto": "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
+        "tratamientos":[{
+            "nombre":"Orejas",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Abdomen",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Facial",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        },{
+            "nombre":"Nariz",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Mamaria",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Lipoescultura",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        },{
+            "nombre":"Párpados",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        } ]
+    }
+   
+]

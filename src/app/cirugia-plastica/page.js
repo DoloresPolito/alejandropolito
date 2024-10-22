@@ -1,10 +1,11 @@
+import styles from "./styles.module.scss";
+
+
+import GeneralTreatment from "@/components/GeneralTreatment";
+import content from "../../jsons/plastica.json"
 export default function Plastica() {
-    return (
-      <section>
-        <div>
-          <h2>Plastica</h2>
-         
-        </div>
-      </section>
-    );
-  }
+  return (
+    <GeneralTreatment content={content[0]}/>
+
+  );
+}

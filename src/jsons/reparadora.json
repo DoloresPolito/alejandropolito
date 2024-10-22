@@ -1,0 +1,40 @@
+[
+  
+
+    {
+        "titulo": "Cirugía Reconstructiva",
+        "texto": "Restaurar la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
+        "tratamientos":[{
+            "nombre":"Cirugía Plastica Infantil",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Cicatrices y tatuajes",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Lesiones de piel",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        },{
+            "nombre":"Reconstrucción mamaria",
+            "link":"",
+            "src":"/images/tratamientos/Retoque1.png"
+
+        },{
+            "nombre":"Fracturas maxilofaciales",
+            "link":"",
+            "src":"/images/tratamientos/Retoque2.png"
+
+        },{
+            "nombre":"Quemados",
+            "link":"",
+            "src":"/images/tratamientos/Retoque3.png"
+
+        }]
+    }
+   
+]
