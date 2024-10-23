@@ -16,7 +16,8 @@
             "nombre":"Abdomen",
             "link":"",
             "src":"/images/tratamientos/Retoque2.png",
-            "descripcion":"La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción."
+            "descripcion":"La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción.",
+            "ilus":"/images/ilus/1.cuerpo.png"
 
         },{
             "id":"facial",
@@ -30,22 +31,22 @@
             "nombre":"Nariz",
             "link":"/nariz",
             "src":"/images/tratamientos/nariz.jpg",
-            "descripcion":"La cirugía de nariz o rinoplastia está orientada a modificar la forma de la nariz para lograr la armonía con los demás parámetros de la cara, teniendo en cuenta la personalidad, edad y sexo. La idea rectora es mantener la armonía y naturalidad. Además de la corrección estética se trabaja para mejorar la función respiratoria que puede estar alterada por un tabique nasal desviado."
-
+            "descripcion":"La cirugía de nariz o rinoplastia está orientada a modificar la forma de la nariz para lograr la armonía con los demás parámetros de la cara, teniendo en cuenta la personalidad, edad y sexo. La idea rectora es mantener la armonía y naturalidad. Además de la corrección estética se trabaja para mejorar la función respiratoria que puede estar alterada por un tabique nasal desviado.",
+            "ilus":"/images/ilus/2.nariz.png"
         },{
             "id":"reconstruccion-mamaria",
             "nombre":"Mamaria",
             "link":"",
             "src":"/images/tratamientos/mamaria.jpg",
-            "descripcion":"Procedimientos: Reconstrucción mamaria, implantes mamarios, reducción mamamria. En general lo procedimiento quirúrgicos mamarios se realizan con anestesia combinada, no requieren internación, la paciente puede retirarse a su casa en 3 o 4 horas una vez que se recupera de la anestesia. Lo habitual es que puedan retornar a su trabajo en 3 o 4 días luego de la cirugía y restablecer su actividad normal a los 15 días."
-
+            "descripcion":"Procedimientos: Reconstrucción mamaria, implantes mamarios, reducción mamamria. En general lo procedimiento quirúrgicos mamarios se realizan con anestesia combinada, no requieren internación, la paciente puede retirarse a su casa en 3 o 4 horas una vez que se recupera de la anestesia. Lo habitual es que puedan retornar a su trabajo en 3 o 4 días luego de la cirugía y restablecer su actividad normal a los 15 días.",
+            "ilus":"/images/ilus/3.teta.png"
         },{
             "id":"lipoescultura",
             "nombre":"Lipoescultura",
             "link":"",
             "src":"/images/tratamientos/lipoescultura.jpg",
-            "descripcion":"Elimina el tejido adiposo que se acumula en varias regiones del cuerpo. Con una fina cánula se absorbe la grasa localizada. La elección de la anestesia dependerá de la zona a operar y de la cantidad de grasa que deba aspirarse."
-
+            "descripcion":"Elimina el tejido adiposo que se acumula en varias regiones del cuerpo. Con una fina cánula se absorbe la grasa localizada. La elección de la anestesia dependerá de la zona a operar y de la cantidad de grasa que deba aspirarse.",
+            "ilus":"/images/ilus/1.cuerpo.png"
         },{
             "id":"parpados",
             "nombre":"Párpados",

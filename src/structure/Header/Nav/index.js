@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { height } from '../anim';
 import Body from './Body';
 import Image from './Image';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 const links = [
   {
@@ -16,17 +16,17 @@ const links = [
   {
     title: "Cirugía Plástica",
     href: "/cirugia-plastica",
-    src: "ilus/cuerpo.jpg"
+    src: "ilus/1.cuerpo.png"
   },
   {
     title: "Cirugía Reparadora",
     href: "/cirugia-reparadora",
-    src: "ilus/nariz.jpg"
+    src: "ilus/2.nariz.png"
   },
   {
     title: "No quirúrgicos",
     href: "/no-quirurgicos",
-    src: "ilus/mama.jpg"
+    src: "ilus/3.teta.png"
   },
   {
     title: "Dr. Alejandro Polito",

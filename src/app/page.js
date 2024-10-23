@@ -5,6 +5,7 @@ import SwiperHero from "@/home/SwiperHero";
 import Work2 from "@/home/Work2";
 import Clinic from "@/home/Clinic";
 import AboutHome from "@/home/AboutHome";
+import Logos from "@/home/Logos";
 import styles from "./styles.module.scss";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <AboutHome />
       <Work2 />
       <Clinic />
+      <Logos/>
     </div>
   );
 }

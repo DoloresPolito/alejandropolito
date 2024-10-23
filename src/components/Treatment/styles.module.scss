@@ -2,29 +2,33 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
 
   .container {
-    width: 90%;
-    height: 85vh;
-    margin-top: 10vh;
+    width: 85%;
+    height: 90vh;
+    margin-top: 13vh;
     display: flex;
-
     .left {
       display: flex;
       flex-direction: column;
       width: 50%;
       align-items: center;
-      margin: 0vh 10vh;
+      height: 95%;
 
 
       .topcontent {
         display: flex;
         flex-direction: column;
-        height: 50%;
-        width: 100%;
+        height: 40%;
+        width: 80%;
         align-items: center;
+
+        .category {
+          font-family: "BwGradual";
+          font-size: 2.7vh;
+        }
 
         .titulo {
           font-family: "BwGradual";
@@ -37,30 +41,37 @@
         }
 
         .descripcion {
-          margin-bottom: 5vh;
-          font-size: 2vh;
+          font-size: 1.7vh;
           line-height: 110%;
           font-family: "Mori";
           text-align: center;
-          max-width: 70vh;
+          max-width: 50vh;
         }
       }
 
       .iconcontainer {
         height: 40%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .footer {
         display: flex;
         justify-content: space-between;
         height: 10%;
-        width: 100%;
+        width: 80%;
+        align-items: flex-end;
 
+        p {
+          font-size: 1.8vh;
+        }
         .left {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          justify-content: flex-end;
           width: 80%;
         }
       }
@@ -70,15 +81,18 @@
       display: flex;
       flex-direction: column;
       width: 50%;
+      height: 95%;
 
       .imagecontainer {
         display: flex;
         justify-content: flex-end;
-        margin-right: 10vh;
+        width: 100%;
       }
 
       img {
+        width: 90%;
         object-fit: cover;
+        margin-top: 0.5vh;
       }
     }
   }

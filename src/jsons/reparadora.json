@@ -30,8 +30,8 @@
             "nombre":"Reconstrucción mamaria",
             "link":"",
             "src":"/images/tratamientos/reconstruccion-mamaria.jpg",
-            "descripcion":"La reconstrucción de mamas puede realizarse en forma inmediata, a los pocos meses o años después de la. La técnica a utilizarse depende de varios factores: El estado local de los tejidos, la forma y el tamaño de la mama contra-lateral, etc. Se puede utilizar un implante mamario, tejidos propios de la paciente o la combinación de ambos."
-
+            "descripcion":"La reconstrucción de mamas puede realizarse en forma inmediata, a los pocos meses o años después de la. La técnica a utilizarse depende de varios factores: El estado local de los tejidos, la forma y el tamaño de la mama contra-lateral, etc. Se puede utilizar un implante mamario, tejidos propios de la paciente o la combinación de ambos.",
+            "ilus":"/images/ilus/3.teta.png"
         },{
             "id":"fracturas-maxilofaciales",
             "nombre":"Fracturas maxilofaciales",
