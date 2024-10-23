@@ -47,7 +47,6 @@ export default function Work2() {
               }}
               animate={{ backgroundSize: "100%", opacity: 1 }}
             >
-
               <AnimatedDiv delay={item.delay}>
                 <Image
                   src={item.imageUrl}
@@ -57,17 +56,14 @@ export default function Work2() {
                 />
               </AnimatedDiv>
 
-    
-      
               <div className={styles.textcontainer}>
-              <AnimatedDiv delay={item.delay}>
-                <h2>{item.title}</h2>
-                <Link href={item.link}>
-                  <Button />
-                </Link>
+                <AnimatedDiv delay={item.delay}>
+                  <h2>{item.title}</h2>
+                  <Link href={item.link}>
+                    <button>VER TRATAMIENTOS</button>
+                  </Link>
                 </AnimatedDiv>
               </div>
-          
             </motion.div>
           ))}
         </div>

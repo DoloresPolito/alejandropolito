@@ -14,7 +14,7 @@ export default function SwiperHero() {
   const slides = [
     {
       title: "Cirugía Plástica",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      text: "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
       src: "3.jpg",
       background: "#85a5c4",
       link: "/cirugia-plastica",
@@ -22,7 +22,7 @@ export default function SwiperHero() {
 
     {
       title: "Cirugía Reparadora",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      text: "Restaurar la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
       src: "1.png",
 
       background: "#36514b",
@@ -31,7 +31,7 @@ export default function SwiperHero() {
 
     {
       title: " Tratamientos No Quirúrgicos",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      text: "Mejoramos la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas.",
       src: "4.jpg",
       background: "#9d8b74",
       link: "/no-quirurgicos",
@@ -39,7 +39,7 @@ export default function SwiperHero() {
 
     {
       title: "DR. ALEJANDRO POLITO",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamdictum mattis velit, sit amet faucibus felis iaculis nec. Nullalaoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.",
+      text: "Es cirujano plástico con una extensa experiencia en las últimas técnicas de cirugías aplicadas a la estética y reconstrucción que se usan en el mundo.",
       src: "4.png",
       background: "#234a74",
       link: "/about1",

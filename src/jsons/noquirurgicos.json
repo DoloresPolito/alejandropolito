@@ -8,7 +8,7 @@
             "id":"plasma",
             "nombre":"Plasma Rico en Plaquetas",
             "link":"",
-            "src":"/images/tratamientos/Retoque2.png",
+            "src":"/images/tratamientos/plasma.png",
             "descripcion":" El plasma rico en plaquetas es un procedimiento médico que se realiza en el consultorio con el fin de generar rejuvenecimiento en la piel. Tiene mucha utilidad en diferentes campos de la medicina. El plasma sanguíneo contiene plaquetas y éstas a su vez poseen unas proteínas llamadas factores de crecimiento. Estos factores tienen la habilidad de generar tejidos donde se ubican. En medicina estética regeneran células nuevas, nuevos vasos sanguíneos, nuevos colágenos y nueva elastina, acelerando así el proceso de eliminación de las células más dañadas, sobre todo el proceso de rejuvenecimiento facial."
 
         },{
@@ -22,14 +22,14 @@
             "id":"luz-pulsada",
             "nombre":"Luz Pulsada",
             "link":"",
-            "src":"/images/tratamientos/Retoque3.png",
+            "src":"/images/tratamientos/luz-pulsada.png",
             "descripcion":"La luz pulsada intensa es una tecnología altamente efectiva para el tratamiento de manchas oscuras (solares), manchas rojas o enrojecimiento difuso, rosácea y vasitos dilatados (telangiectasias). Además, produce un estímulo del colágeno por lo cual mejora la textura de la piel, arrugas finas y superficiales, cicatrices leves de acné y poros dilatados."
 
         },{
             "id":"radiofrecuencia",
             "nombre":"Radiofrecuencia",
             "link":"",
-            "src":"/images/tratamientos/Retoque1.png",
+            "src":"/images/tratamientos/radiofrecuencia.png",
             "descripcion":"Este sistema proporciona un estiramiento y tensado de la piel, mediante un dispositivo especial que permite reducir la flaccidez y recuperar el contorno facial."
 
         },{

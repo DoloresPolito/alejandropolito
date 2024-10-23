@@ -38,7 +38,7 @@ export default function GeneralTreatment({ content, category }) {
                 >
                   <p>{tratamiento.nombre}</p>
 
-                  <button className={styles.verMasButton}>Ver más</button>
+                  <button className={styles.verMasButton}>VER +</button>
                 </div>
               </Link>
             ))}

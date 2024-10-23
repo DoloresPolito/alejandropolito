@@ -15,7 +15,7 @@
             "id":"abdomen",
             "nombre":"Abdomen",
             "link":"",
-            "src":"/images/tratamientos/Retoque2.png",
+            "src":"/images/tratamientos/abdomen.jpg",
             "descripcion":"La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción.",
             "ilus":"/images/ilus/1.cuerpo.png"
 
@@ -23,7 +23,7 @@
             "id":"facial",
             "nombre":"Facial",
             "link":"",
-            "src":"/images/tratamientos/Retoque3.png",
+            "src":"/images/tratamientos/facial.png",
             "descripcion":"Puede combinar procedimientos como: Lifting, cirugía de párpados, liposucción de papada y mejilla, corrección de mentón y punta nasal, corrección de cola, cejas, etc., apoyados complementariamente con tratamientos no quirúrgicos. El objetivo es implementar cambios con naturalidad, eligiendo siempre el tratamiento acorde a sus necesidades. Cada caso es muy particular y esto es una síntesis de lo que tenemos disponible, por lo que siempre es necesario la evaluación y consulta personalizada para diseñar la estrategia."
 
         },{
@@ -51,7 +51,7 @@
             "id":"parpados",
             "nombre":"Párpados",
             "link":"",
-            "src":"/images/tratamientos/Retoque1.png",
+            "src":"/images/tratamientos/parpados.png",
             "descripcion":"Es un procedimiento para extraer la grasa y el exceso de piel de los parpados superiores e inferiores. Corrige la caída de los parpados superiores y las bolsas que nos hacen parecer mayores de lo que somos. Se realiza con anestesia local o combinada y normalmente no es necesario permanecer en el centro más de un par de horas después de la operación."
         } ]
     }
