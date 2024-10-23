@@ -1,0 +1,85 @@
+.section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 90%;
+    height: 85vh;
+    margin-top: 10vh;
+    display: flex;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-items: center;
+      margin: 0vh 10vh;
+
+
+      .topcontent {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        align-items: center;
+
+        .titulo {
+          font-family: "BwGradual";
+          font-size: 6vh;
+          margin-bottom: 2vh;
+          margin-top: 2vh;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 2vh 2vw;
+        }
+
+        .descripcion {
+          margin-bottom: 5vh;
+          font-size: 2vh;
+          line-height: 110%;
+          font-family: "Mori";
+          text-align: center;
+          max-width: 70vh;
+        }
+      }
+
+      .iconcontainer {
+        height: 40%;
+        width: 100%;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        height: 10%;
+        width: 100%;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 80%;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .imagecontainer {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10vh;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

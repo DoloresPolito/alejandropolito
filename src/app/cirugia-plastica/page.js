@@ -5,7 +5,7 @@ import GeneralTreatment from "@/components/GeneralTreatment";
 import content from "../../jsons/plastica.json"
 export default function Plastica() {
   return (
-    <GeneralTreatment content={content[0]}/>
+    <GeneralTreatment content={content[0]} category="cirugia-plastica"/>
 
   );
 }

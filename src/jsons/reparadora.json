@@ -5,34 +5,46 @@
         "titulo": "Cirugía Reconstructiva",
         "texto": "Restaurar la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
         "tratamientos":[{
+            "id":"cirugia-plastica-infantil",
             "nombre":"Cirugía Plastica Infantil",
             "link":"",
-            "src":"/images/tratamientos/Retoque1.png"
+            "src":"/images/tratamientos/cirugia-infantil.jpg",
+            "descripcion":"Los Principios que rigen la cirugía plástica en los niños, en términos generales, son similares a los que se utilizan en los adultos. Sin embargo las técnicas deben ser adaptadas a ciertos factores anatómicos fisiológicos y psicológicos relacionados con la infancia."
 
         },{
+            "id":"cicatrices-tatuajes",
             "nombre":"Cicatrices y tatuajes",
             "link":"",
-            "src":"/images/tratamientos/Retoque2.png"
+            "src":"/images/tratamientos/cicatrices-tatuajes.jpg",
+            "descripcion":"Durante el proceso de recuperación de una herida resultante de un accidente, una cirugía, una quemadura, o de acné, la cicatrización ocurre siempre que varias capas de la piel hayan sido afectadas. Una vez que la cicatriz se forma, nunca desaparece, aunque puede hacerse menos visible por diversos métodos."
 
         },{
+            "id":"lesiones-de-piel",
             "nombre":"Lesiones de piel",
             "link":"",
-            "src":"/images/tratamientos/Retoque3.png"
+            "src":"/images/tratamientos/lesiones-de-piel.jpg",
+            "descripcion":"Una lesión en la piel potencialmente maligna debe extirparse completamente y ser estudiada por el Patólogo quien establece un diagnóstico. El cirujano plástico además, debe reconstruir el defecto dejado por la resección, minimizando las secuelas estéticas y funcionales."
 
         },{
+            "id":"reconstruccion-mamaria",
             "nombre":"Reconstrucción mamaria",
             "link":"",
-            "src":"/images/tratamientos/Retoque1.png"
+            "src":"/images/tratamientos/reconstruccion-mamaria.jpg",
+            "descripcion":"La reconstrucción de mamas puede realizarse en forma inmediata, a los pocos meses o años después de la. La técnica a utilizarse depende de varios factores: El estado local de los tejidos, la forma y el tamaño de la mama contra-lateral, etc. Se puede utilizar un implante mamario, tejidos propios de la paciente o la combinación de ambos."
 
         },{
+            "id":"fracturas-maxilofaciales",
             "nombre":"Fracturas maxilofaciales",
             "link":"",
-            "src":"/images/tratamientos/Retoque2.png"
+            "src":"/images/tratamientos/fracturas-maxilofaciales.jpg",
+            "descripcion":"La cirugía reconstructiva máxilofacial mejora la función y la estética de deformidades congénitas o causadas por accidentes, quemaduras y patologías en el territorio máxilofacial. La utilización de nuevas técnicas y tecnologías ha permitido aumentar las posibilidades terapéuticas y mejorar ostensiblemente los resultados obtenidos."
 
         },{
+            "id":"quemados",
             "nombre":"Quemados",
             "link":"",
-            "src":"/images/tratamientos/Retoque3.png"
+            "src":"/images/tratamientos/quemados.jpg",
+            "descripcion":"Hay que tener en cuenta que el momento de comenzar a pensar en la reparación, se encuentra inmediatamente después de que la quemadura ha tenido lugar. Si el cirujano que trata la lesión aguda no es el responsable de la reconstrucción posterior, es preferible la consulta temprana al cirujano plástico para marcar la estrategia que se deberá seguir en la reparación."
 
         }]
     }

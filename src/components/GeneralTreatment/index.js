@@ -1,15 +1,16 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
-export default function GeneralTreatment({ content }) {
-  const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
+export default function GeneralTreatment({ content, category }) {
+  const [backgroundImage, setBackgroundImage] = useState(
+    content.tratamientos[0].src
+  );
 
   const handleMouseEnter = (imageSrc) => {
     setBackgroundImage(imageSrc);
   };
-
-
 
   return (
     <>
@@ -26,15 +27,20 @@ export default function GeneralTreatment({ content }) {
         >
           <div className={styles.grilla}>
             {content.tratamientos.map((tratamiento, index) => (
-              <div
-                key={index}
-                className={styles.item}
-                onMouseEnter={() => handleMouseEnter(tratamiento.src)}
-             
-              >
-                <p>{tratamiento.nombre}</p>
-                <button className={styles.verMasButton}>Ver más</button>
-              </div>
+              <Link
+              key={index}
+              href={`/${category}/${tratamiento.id}`}
+            >
+                <div
+                  key={index}
+                  className={styles.item}
+                  onMouseEnter={() => handleMouseEnter(tratamiento.src)}
+                >
+                  <p>{tratamiento.nombre}</p>
+
+                  <button className={styles.verMasButton}>Ver más</button>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
