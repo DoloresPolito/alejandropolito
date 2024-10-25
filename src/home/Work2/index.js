@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import styles from "./styles.module.scss";
-import Button from "../../components/Button";
 import AnimatedDiv from "../../components/AnimatedDiv";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -53,6 +52,7 @@ export default function Work2() {
                   alt="work"
                   height={600}
                   width={500}
+                  priority
                 />
               </AnimatedDiv>
 

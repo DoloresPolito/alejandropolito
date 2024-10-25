@@ -11,9 +11,10 @@ export default function Address() {
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
+    layoutEffect: false, 
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "100vh"]);
 
   useEffect(() => {
     const lenis = new Lenis();

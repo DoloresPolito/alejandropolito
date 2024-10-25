@@ -1,7 +1,9 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import image from "../../../public/images/about2.png";
+import image from "../../../public/images/about1.png";
 import AnimatedDiv from "@/components/AnimatedDiv";
+import image2 from "../../../public/images/about.png";
+import Link from "next/link";
 
 export default function AboutHome2() {
   return (
@@ -17,8 +19,12 @@ export default function AboutHome2() {
         <AnimatedDiv delay={0.3}>
           <div className={styles.imagecontainer}>
             <Image src={image} alt="about" />
+            <Image src={image2} alt="about" />
           </div>
         </AnimatedDiv>
+        <Link href="/about2">
+          <p>MÁS INFORMACIÓN</p>
+        </Link>
       </div>
     </div>
   );

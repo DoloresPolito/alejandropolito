@@ -16,7 +16,8 @@
             "nombre":"Rellenos",
             "link":"",
             "src":"/images/tratamientos/rellenos.jpg",
-            "descripcion":"Para arrugas más profundas o surcos faciales (Ej.: Peribucales, surcos nasogenianos) se utilizan diferentes sustancias de relleno que son inyectadas o implantadas en la piel. El material se elegirá de acuerdo al tipo de arruga a tratar, la zona y expectativas de durabilidad. Esos materiales también se usan para realzar los bordes de los labios o aumentar su volumen."
+            "descripcion":"Para arrugas más profundas o surcos faciales (Ej.: Peribucales, surcos nasogenianos) se utilizan diferentes sustancias de relleno que son inyectadas o implantadas en la piel. El material se elegirá de acuerdo al tipo de arruga a tratar, la zona y expectativas de durabilidad. Esos materiales también se usan para realzar los bordes de los labios o aumentar su volumen.",
+            "ilus":"/images/ilus/5.labios.png"
 
         },{
             "id":"luz-pulsada",
@@ -30,7 +31,8 @@
             "nombre":"Radiofrecuencia",
             "link":"",
             "src":"/images/tratamientos/radiofrecuencia.png",
-            "descripcion":"Este sistema proporciona un estiramiento y tensado de la piel, mediante un dispositivo especial que permite reducir la flaccidez y recuperar el contorno facial."
+            "descripcion":"Este sistema proporciona un estiramiento y tensado de la piel, mediante un dispositivo especial que permite reducir la flaccidez y recuperar el contorno facial.",
+            "ilus":"/images/ilus/6.cuerpo.png"
 
         },{
             "id":"dermatologia-clinica",
@@ -51,8 +53,8 @@
             "nombre":"Cosmiatría",
             "link":"",
             "src":"/images/tratamientos/cosmiatria.jpg",
-            "descripcion":"La Cosmiatría es un área de la Dermatología que se encarga de agrupar todas las técnicas cosméticas. Es una actividad que busca darle armonía al cuerpo y al rostro. (Tratamientos corporales anti-celulíticos, Tratamientos corporales reductores, Tratamientos corporales por flacidez, Drenaje linfático manual, Tratamientos faciales, Punta de diamante, Radiofrecuencia facial y corporal, Aparatología)."
-
+            "descripcion":"La Cosmiatría es un área de la Dermatología que se encarga de agrupar todas las técnicas cosméticas. Es una actividad que busca darle armonía al cuerpo y al rostro. (Tratamientos corporales anti-celulíticos, Tratamientos corporales reductores, Tratamientos corporales por flacidez, Drenaje linfático manual, Tratamientos faciales, Punta de diamante, Radiofrecuencia facial y corporal, Aparatología).",
+            "ilus":"/images/ilus/4.orejas.png"
         } ]
     }
    

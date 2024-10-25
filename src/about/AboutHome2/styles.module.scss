@@ -19,19 +19,29 @@
 
     h5 {
       margin-bottom: 10vh;
-      font-family: "Mori";
-      font-size: 2.3vh;
+      font-family: "MoriLight";
+      font-size: 2.4vh;
       line-height: 120%;
+      max-width: 80vh;
     }
 
     .imagecontainer {
       height: 50vh;
       width: auto;
+    display: flex;
+
 
       img {
         height: 50vh;
         width: auto;
+        margin: 2vh;
       }
+    }
+
+
+    p{
+      text-decoration: underline;
+      margin-top: 10vh;
     }
   }
 }
