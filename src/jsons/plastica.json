@@ -5,20 +5,20 @@
         "titulo": "Cirugía Plástica",
         "texto": "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
         "tratamientos":[{
-            "id":"orejas",
-            "nombre":"Orejas",
-            "link":"",
-            "src":"/images/tratamientos/plastica/orejas.png",
-            "descripcion":"La cirugía del oído externo o otoplastia se realiza para modificar forma, tamaño y posición de las orejas. Se puede realizar en pacientes adolescentes y/o adultos pero no cabe duda que adquiere mucha importancia en niños de 4 a 7 años de edad, victimas de la burla a la que muchas veces están expuestos. La oreja se aborda por el surco posterior y se trabaja sobre el cartílago auricular. Es un procedimiento con baja incidencia de complicaciones y rápida recuperación.",
-            "ilus":"/images/ilus/4.oreja.png"
-
-        },{
             "id":"abdomen",
             "nombre":"Abdomen",
             "link":"",
             "src":"/images/tratamientos/plastica/abdomen.png",
             "descripcion":"La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción.",
             "ilus":"/images/ilus/1.cuerpo.png"
+
+        },{
+            "id":"orejas",
+            "nombre":"Orejas",
+            "link":"",
+            "src":"/images/tratamientos/plastica/orejas.png",
+            "descripcion":"La cirugía del oído externo o otoplastia se realiza para modificar forma, tamaño y posición de las orejas. Se puede realizar en pacientes adolescentes y/o adultos pero no cabe duda que adquiere mucha importancia en niños de 4 a 7 años de edad, victimas de la burla a la que muchas veces están expuestos. La oreja se aborda por el surco posterior y se trabaja sobre el cartílago auricular. Es un procedimiento con baja incidencia de complicaciones y rápida recuperación.",
+            "ilus":"/images/ilus/4.oreja.png"
 
         },{
             "id":"facial",

@@ -11,21 +11,21 @@ export default function Work2() {
     {
       id: 1,
       title: "Cirugía Plástica",
-      imageUrl: "/images/3.jpg",
+      imageUrl: "/images/work/2.png",
       delay: 0.3,
       link: "/cirugia-plastica",
     },
     {
       id: 2,
       title: "Cirugía Reparadora",
-      imageUrl: "/images/1.png",
+      imageUrl: "/images/work/1.png",
       delay: 0.5,
       link: "/cirugia-reparadora",
     },
     {
       id: 3,
       title: "No Quirúrgicos",
-      imageUrl: "/images/4.jpg",
+      imageUrl: "/images/work/3.png",
       delay: 0.7,
       link: "/no-quirurgicos",
     },
@@ -46,24 +46,29 @@ export default function Work2() {
               }}
               animate={{ backgroundSize: "100%", opacity: 1 }}
             >
-              <AnimatedDiv delay={item.delay}>
-                <Image
-                  src={item.imageUrl}
-                  alt="work"
-                  height={600}
-                  width={500}
-                  priority
-                />
-              </AnimatedDiv>
-
-              <div className={styles.textcontainer}>
+         
                 <AnimatedDiv delay={item.delay}>
-                  <h2>{item.title}</h2>
-                  <Link href={item.link}>
-                    <button>VER TRATAMIENTOS</button>
-                  </Link>
+                  <Image
+                    src={item.imageUrl}
+                    alt="work"
+                    height={600}
+                    width={500}
+                    priority
+                  />
                 </AnimatedDiv>
-              </div>
+
+                <div className={styles.textcontainer}>
+                  <AnimatedDiv delay={item.delay}>
+                    <h2>{item.title}</h2>
+                  </AnimatedDiv>
+
+                  <AnimatedDiv delay={item.delay}>
+                         <Link href={item.link}>
+                    <button>VER TRATAMIENTOS</button>
+                           </Link>
+                  </AnimatedDiv>
+                </div>
+       
             </motion.div>
           ))}
         </div>

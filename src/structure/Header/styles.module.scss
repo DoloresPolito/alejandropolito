@@ -8,6 +8,7 @@
   border-bottom: 0.2vh solid black;
 
 
+
   .background {
     background-color: #fffcf6;
     border-top: 0.2vh solid black;
@@ -23,17 +24,17 @@
 
   .bar {
     display: flex;
- 
     justify-content: space-between;
     font-weight: 400;
     position: relative;
-    margin-top: 2vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    margin-top: 1.8vh;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
+
 
     .name {
       font-family: "BwGradual";
-      font-size: 4vh;
+      font-size: 3.5vh;
     }
 
     p {
@@ -65,7 +66,7 @@
       }
 
       .burger {
-        width: 4vh;
+        width: 4.4vh;
         position: relative;
         pointer-events: none;
 

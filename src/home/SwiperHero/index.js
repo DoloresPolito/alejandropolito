@@ -14,7 +14,7 @@ export default function SwiperHero() {
   const slides = [
     {
       title: "Cirugía Plástica",
-      text: "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
+      text: "Técnicas avanzadas que combinan arte y ciencia para realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
       src: "3.jpg",
       background: "#85a5c4",
       link: "/cirugia-plastica",
@@ -22,7 +22,7 @@ export default function SwiperHero() {
 
     {
       title: "Cirugía Reparadora",
-      text: "Restaurar la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
+      text: "Procedimientos especializados que restauran la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
       src: "1.png",
 
       background: "#36514b",
@@ -31,7 +31,7 @@ export default function SwiperHero() {
 
     {
       title: " Tratamientos No Quirúrgicos",
-      text: "Mejoramos la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas.",
+      text: "Soluciones estéticas avanzadas que mejoran la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas para rejuvenecer la piel, remodelar el cuerpo y realzar la belleza natural de forma sutil y efectiva.",
       src: "4.jpg",
       background: "#9d8b74",
       link: "/no-quirurgicos",
@@ -90,6 +90,9 @@ const Slide = ({ slide }) => {
         style={{ backgroundColor: slide.background }}
       >
         <div className={styles.textcontainer}>
+          <div className={styles.inside}>
+
+     
           <AnimatedDiv delay={0}>
             <div className={styles.title} data-swiper-parallax="-300">
               {slide.title}
@@ -105,6 +108,7 @@ const Slide = ({ slide }) => {
               <Button color={slide.background} />
             </Link>
           </AnimatedDiv>
+          </div>
         </div>
 
         <div className={styles.imagecontainer}>
@@ -114,14 +118,6 @@ const Slide = ({ slide }) => {
             width={600}
             height={700}
           />
-
-          {/* <Image
-            src={`/images/${slide.src}`}
-            alt="image"
-            layout="fill" // Se ajusta para ocupar todo el contenedor
-            objectFit="cover" // Cubre el contenedor sin deformarse
-            objectPosition="center" // Centra la imagen dentro del contenedor
-          /> */}
         </div>
       </div>
     </>
