@@ -15,7 +15,7 @@ export default function SwiperHero() {
     {
       title: "Cirugía Plástica",
       text: "Técnicas avanzadas que combinan arte y ciencia para realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
-      src: "3.jpg",
+      src: "2.png",
       background: "#85a5c4",
       link: "/cirugia-plastica",
     },

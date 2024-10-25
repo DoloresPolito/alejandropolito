@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.bar}>
-      <div className={styles.el}>
+        <div className={styles.el}>
           <Link href="/" className={styles.name}>
             Alejandro Polito
           </Link>
@@ -41,12 +41,7 @@ export default function Header() {
           </div> */}
         </div>
 
-
-        {/* <div className={styles.el}>
-          <Link href="/contacto">
-            <p>Contacto</p>{" "}
-          </Link>
-        </div> */}
+  
       </div>
       <motion.div
         variants={background}
@@ -54,7 +49,9 @@ export default function Header() {
         animate={isActive ? "open" : "closed"}
         className={styles.background}
       ></motion.div>
-      <AnimatePresence mode="wait">{isActive && <Nav setIsActive={setIsActive}/>}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActive && <Nav setIsActive={setIsActive} />}
+      </AnimatePresence>
     </div>
   );
 }
