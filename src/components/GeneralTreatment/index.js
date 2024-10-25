@@ -22,17 +22,17 @@ export default function GeneralTreatment({ content, category }) {
         <AnimatedDiv delay={0.3}>
           <h5>{content.texto}</h5>
         </AnimatedDiv>
-     
+
         <motion.div
- initial={{ scale: 0.9, opacity: 0 }}
- animate={{ scale: 1, opacity: 1 }}
- transition={{ delay: 0.2, duration: 1.5 }}
-className={styles.imagecontainer}
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 1.2 }}
+          className={styles.imagecontainer}
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            transition: 'background-image 0.5s ease-in-out', // Transición de imagen de fondo
+            transition: "background-image 0.5s ease-in-out", // Transición de imagen de fondo
           }}
         >
           <div className={styles.grilla}>
@@ -49,7 +49,6 @@ className={styles.imagecontainer}
             ))}
           </div>
         </motion.div>
-    
       </div>
     </>
   );

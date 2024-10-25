@@ -5,7 +5,7 @@ import AnimatedDiv from "@/components/AnimatedDiv";
 import image2 from "../../../public/images/about.png";
 import Link from "next/link";
 
-export default function AboutHome2() {
+export default function AboutHome2({view}) {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -23,10 +23,10 @@ export default function AboutHome2() {
           </div>
         </AnimatedDiv>
  
-     
-        <Link href="/about2">
+     {view ? (  <Link href="/about2">
           <p>MÁS INFORMACIÓN</p>
-        </Link>
+        </Link>) : (<></>)}
+      
       </div>
     </div>
   );

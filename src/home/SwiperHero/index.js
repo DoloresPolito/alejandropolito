@@ -20,7 +20,6 @@ export default function SwiperHero() {
       background: "#85a5c4",
       link: "/cirugia-plastica",
     },
-
     {
       title: "Cirugía Reparadora",
       text: "Procedimientos especializados que restauran la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
@@ -29,7 +28,6 @@ export default function SwiperHero() {
       background: "#36514b",
       link: "/cirugia-reparadora",
     },
-
     {
       title: " Tratamientos No Quirúrgicos",
       text: "Soluciones estéticas avanzadas que mejoran la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas para rejuvenecer la piel, remodelar el cuerpo y realzar la belleza natural de forma sutil y efectiva.",
@@ -37,15 +35,13 @@ export default function SwiperHero() {
       background: "#9d8b74",
       link: "/no-quirurgicos",
     },
-
     {
       title: "DR. ALEJANDRO POLITO",
       text: "Es cirujano plástico con una extensa experiencia en las últimas técnicas de cirugías aplicadas a la estética y reconstrucción que se usan en el mundo.",
       src: "4.png",
       background: "#234a74",
       link: "/about1",
-      difbutton:true
-
+      difbutton: true,
     },
   ];
 
@@ -55,18 +51,13 @@ export default function SwiperHero() {
         <div className={styles.carouselcontainer}>
           <div className={styles.carouselcontent}>
             <Swiper
-                 loop={true}
+              loop={true}
               speed={1000}
               parallax={true}
               autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,
               }}
-              // pagination={{
-              //   clickable: true,
-              //   bulletClass: 'swiper-pagination-bullet',
-              //   bulletActiveClass: 'swiper-pagination-bullet-active'
-              // }}
               modules={[Parallax, Pagination, Autoplay]}
               className={styles.mySwiper}
             >
@@ -94,33 +85,31 @@ const Slide = ({ slide }) => {
       >
         <div className={styles.textcontainer}>
           <div className={styles.inside}>
-
-     
-          <AnimatedDiv delay={0}>
-            <div className={styles.title} data-swiper-parallax="-300">
-              {slide.title}
-            </div>{" "}
-          </AnimatedDiv>
-          <AnimatedDiv delay={0.3}>
-            <div className={styles.text} data-swiper-parallax="-100">
-              <p>{slide.text}</p>
-            </div>
-          </AnimatedDiv>
-          <AnimatedDiv delay={0.4}>
-            <Link href={slide.link}>
-              <Button color={slide.background} difbutton={slide.difbutton}/>
-            </Link>
-          </AnimatedDiv>
+            <AnimatedDiv delay={0}>
+              <div className={styles.title} data-swiper-parallax="-300">
+                {slide.title}
+              </div>{" "}
+            </AnimatedDiv>
+            <AnimatedDiv delay={0.3}>
+              <div className={styles.text} data-swiper-parallax="-100">
+                <p>{slide.text}</p>
+              </div>
+            </AnimatedDiv>
+            <AnimatedDiv delay={0.4}>
+              <Link href={slide.link}>
+                <Button color={slide.background} difbutton={slide.difbutton} />
+              </Link>
+            </AnimatedDiv>
           </div>
         </div>
 
         {/* <div className={styles.imagecontainer}> */}
         <motion.div
-        className={styles.imagecontainer}
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.4, duration: 1 }}
-      >
+          className={styles.imagecontainer}
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
+        >
           <Image
             src={`/images/${slide.src}`}
             alt="image"

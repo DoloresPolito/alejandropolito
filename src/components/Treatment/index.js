@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import AnimatedDiv from "../AnimatedDiv";
 
 const Treatment = ({ data }) => {
   return (
@@ -9,9 +10,15 @@ const Treatment = ({ data }) => {
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.topcontent}>
+          <AnimatedDiv delay={0.1}>
             <p className={styles.category}>Cirugía Plástica</p>
+            </AnimatedDiv>
+            <AnimatedDiv delay={0.1}>
             <p className={styles.titulo}>{data.nombre}</p>
+            </AnimatedDiv>
+            <AnimatedDiv delay={0.3}>
             <p className={styles.descripcion}>{data.descripcion}</p>
+            </AnimatedDiv>
           </div>
           <div className={styles.iconcontainer}>
             {data.ilus ? (<>  <Image
