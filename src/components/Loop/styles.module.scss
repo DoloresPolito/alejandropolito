@@ -1,0 +1,49 @@
+.loopSection {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f3e8dd; // Ajusta el color según tu diseño
+
+  .marquee {
+    display: flex;
+    align-items: center;
+    animation: scroll 60s linear infinite;
+    white-space: nowrap;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &.reverse .marquee {
+    animation-direction: reverse;
+  }
+
+  .logoWrapper {
+    margin-left: 5vh;
+    position: relative;
+    background-color: #f3e8dd; 
+    width: 16vh;
+    height: 16vh;
+    max-width: 16vh;
+    max-height: 16vh;
+    position: relative;
+    margin-right: 7vh;
+  }
+
+  .logo {
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}

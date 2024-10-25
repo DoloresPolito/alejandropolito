@@ -7,6 +7,7 @@ import Clinic from "@/home/Clinic";
 import AboutHome from "@/home/AboutHome";
 import Logos from "@/home/Logos";
 import styles from "./styles.module.scss";
+import LogosMoving from "@/home/LogosMoving";
 
 export default function Home() {
   useEffect(() => {
@@ -27,7 +28,8 @@ export default function Home() {
       <AboutHome />
       <Work2 />
       <Clinic />
-      <Logos/>
+      {/* <Logos/> */}
+      <LogosMoving/>
     </div>
   );
 }

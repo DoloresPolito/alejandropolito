@@ -1,0 +1,25 @@
+.section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3e8dd;
+  padding-top: 10vh;
+  h4 {
+    font-family: "MoriLight";
+    font-size: 3.5vh;
+    letter-spacing: 0.1vh;
+    color: #0d0d0d;
+    padding-bottom: 10vh;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding-bottom: 10vh;
+  }
+}
