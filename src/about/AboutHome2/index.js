@@ -22,6 +22,8 @@ export default function AboutHome2() {
             <Image src={image2} alt="about" />
           </div>
         </AnimatedDiv>
+ 
+     
         <Link href="/about2">
           <p>MÁS INFORMACIÓN</p>
         </Link>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 // import { sendEmail } from "@/utils/send-email";
 
-import Button from "@/components/Button";
+
 import Image from "next/image";
 
 import contactimage from "../../../public/images/contact.png";
@@ -79,7 +79,7 @@ const ContactForm = () => {
             </div>
 
             <div className={styles.buttoncontainer}>
-              {/* <Button text="ENVIAR" /> */}
+        
               <button className={styles.button}>
                 {" "}
                 <p>ENVIAR</p>

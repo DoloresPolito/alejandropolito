@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-export default function Button({ color = "#0D0D0D", text }) {
+export default function Button({ color = "#0D0D0D", text, difbutton }) {
   return (
     <>
       <div className={styles.header} style={{ color: color }}>
@@ -12,10 +12,10 @@ export default function Button({ color = "#0D0D0D", text }) {
               </>
             ) : (
               <>
-                <p className={styles.word1}>VER </p>
-                <p className={styles.word2}>TRATAMIENTOS</p>
-                <p className={styles.word1after}>VER</p>
-                <p className={styles.word2after}> TRATAMIENTOS</p>
+                <p className={styles.word1}>{difbutton ? ("MÁS") : ("VER")} </p>
+                <p className={styles.word2}>{difbutton ? ("INFORMACIÓN") : ("TRATAMIENTOS")} </p>
+                <p className={styles.word1after}>{difbutton ? ("MÁS") : ("VER")} </p>
+                <p className={styles.word2after}> {difbutton ? ("INFORMACIÓN") : ("TRATAMIENTOS")} </p>
               </>
             )}
           </div>

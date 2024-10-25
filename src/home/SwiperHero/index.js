@@ -43,6 +43,8 @@ export default function SwiperHero() {
       src: "4.png",
       background: "#234a74",
       link: "/about1",
+      difbutton:true
+
     },
   ];
 
@@ -105,7 +107,7 @@ const Slide = ({ slide }) => {
           </AnimatedDiv>
           <AnimatedDiv delay={0.4}>
             <Link href={slide.link}>
-              <Button color={slide.background} />
+              <Button color={slide.background} difbutton={slide.difbutton}/>
             </Link>
           </AnimatedDiv>
           </div>
