@@ -28,7 +28,7 @@ export default function Header() {
               isActive ? styles.burgerActive : ""
             }`}
           ></div>
-          {/* <div className={styles.label}>
+          <div className={styles.label}>
             <motion.p
               variants={opacity}
               animate={!isActive ? "open" : "closed"}
@@ -36,9 +36,9 @@ export default function Header() {
               Menu
             </motion.p>
             <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-              Close
+              Cerrar
             </motion.p>
-          </div> */}
+          </div>
         </div>
 
   

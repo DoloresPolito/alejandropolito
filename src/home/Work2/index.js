@@ -5,7 +5,7 @@ import AnimatedDiv from "../../components/AnimatedDiv";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
+import Button from "@/components/Button";
 export default function Work2() {
   const items = [
     {
@@ -46,29 +46,28 @@ export default function Work2() {
               }}
               animate={{ backgroundSize: "100%", opacity: 1 }}
             >
-         
+              <AnimatedDiv delay={item.delay}>
+                <Image
+                  src={item.imageUrl}
+                  alt="work"
+                  height={600}
+                  width={500}
+                  priority
+                />
+              </AnimatedDiv>
+
+              <div className={styles.textcontainer}>
                 <AnimatedDiv delay={item.delay}>
-                  <Image
-                    src={item.imageUrl}
-                    alt="work"
-                    height={600}
-                    width={500}
-                    priority
-                  />
+                  <h2>{item.title}</h2>
                 </AnimatedDiv>
 
-                <div className={styles.textcontainer}>
-                  <AnimatedDiv delay={item.delay}>
-                    <h2>{item.title}</h2>
-                  </AnimatedDiv>
-
-                  <AnimatedDiv delay={item.delay}>
-                         <Link href={item.link}>
-                    <button>VER TRATAMIENTOS</button>
-                           </Link>
-                  </AnimatedDiv>
-                </div>
-       
+                <AnimatedDiv delay={item.delay}>
+                  <Link href={item.link}>
+                    {/* <button>VER TRATAMIENTOS</button> */}
+                    <Button/>
+                  </Link>
+                </AnimatedDiv>
+              </div>
             </motion.div>
           ))}
         </div>

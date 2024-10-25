@@ -9,6 +9,7 @@ import Image from "next/image";
 import Button from "../../components/Button";
 import AnimatedDiv from "../../components/AnimatedDiv";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function SwiperHero() {
   const slides = [
@@ -113,14 +114,20 @@ const Slide = ({ slide }) => {
           </div>
         </div>
 
-        <div className={styles.imagecontainer}>
+        {/* <div className={styles.imagecontainer}> */}
+        <motion.div
+        className={styles.imagecontainer}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+      >
           <Image
             src={`/images/${slide.src}`}
             alt="image"
             width={600}
             height={700}
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -15,9 +15,10 @@
     border-radius: 30px;
     padding: 10px 20px;
     margin-top: 3vh;
+
     p {
       margin: 0px;
-      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1); // Efecto más lento
     }
 
     .name {
@@ -26,22 +27,20 @@
       overflow: hidden;
       white-space: nowrap;
       margin-left: 1px;
-      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
 
       p {
         position: relative;
-        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+
         &:nth-of-type(2) {
           padding-left: 0.3em;
         }
-        &:nth-of-type(3) {
-          position: absolute;
-          top: 80px;
-        }
+
+        &:nth-of-type(3),
         &:nth-of-type(4) {
           position: absolute;
           top: 80px;
-          left: 38px;
         }
       }
     }
@@ -49,22 +48,23 @@
     &:hover {
       opacity: 0.8;
       background-color: black;
-      color:white;
+      color: white;
+
       .name {
-        .word1 {
+        .word1,
+        .word2 {
           transform: translateY(-100%);
         }
-        .word2 {
-          transform: translateY(-100px);
-          transition-delay: 0.1s; 
-        }
-        .word1after {
-          transform: translateY(-80px);
-          transition-delay: 0s; 
-        }
+
+        .word1after,
         .word2after {
-          transform: translateY(-80px);
-          transition-delay: 0.1s;
+          transform: translateY(-80px); /* Mismo movimiento para ambas */
+        }
+
+        .word2after {
+          left: 38px; /* Ajusta esta línea para mover horizontalmente */
+
+          transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
         }
       }
     }
