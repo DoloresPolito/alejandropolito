@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  @media only screen and (max-width: 750px) {
+    margin-top: 2vh;
+    max-width: 90vw;
+  }
 
   a {
     color: #0d0d0d;
@@ -17,5 +21,11 @@
     font-size: 6vh;
     padding-right: 30px;
     padding-top: 10px;
+    @media only screen and (max-width: 750px) {
+      font-size: 4.5vh;
+      white-space: normal; 
+      overflow-wrap: break-word; 
+      word-break: break-word;
+    }
   }
 }

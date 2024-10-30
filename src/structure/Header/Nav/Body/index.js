@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./styles.module.scss";
@@ -9,10 +10,22 @@ export default function Body({
   setSelectedLink,
   setIsActive,
 }) {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 750);
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial value
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const getChars = (word) => {
-    let chars = [];
-    word.split("").forEach((char, i) => {
-      chars.push(
+    if (isSmallScreen) {
+      // En pantallas pequeñas, devuelve el texto sin dividir en caracteres
+      return word;
+    } else {
+      // En pantallas grandes, divide en caracteres individuales
+      return word.split("").map((char, i) => (
         <motion.span
           custom={[i * 0.02, (word.length - i) * 0.01]}
           variants={translate}
@@ -23,9 +36,8 @@ export default function Body({
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
-      );
-    });
-    return chars;
+      ));
+    }
   };
 
   const handleMenuClose = () => {

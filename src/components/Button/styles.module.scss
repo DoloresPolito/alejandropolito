@@ -19,6 +19,9 @@
     p {
       margin: 0px;
       transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1); // Efecto más lento
+      @media only screen and (max-width: 750px) {
+        font-size: 2vh;
+      }
     }
 
     .name {

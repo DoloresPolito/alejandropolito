@@ -3,20 +3,33 @@
   position: relative;
   padding: 2vh;
 
-
   .wrapper {
     display: flex;
     gap: 50px;
     height: 90vh;
     justify-content: space-between;
-  
+ 
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
+    }
 
+    .imagecontainermobile {
+      height: 40vh;
+      width: 40vh;
+      display: flex;
+      align-self: flex-end;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 50vh;
   }
 }
-

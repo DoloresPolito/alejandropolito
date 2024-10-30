@@ -10,7 +10,7 @@
   z-index: 10;
 
   @media only screen and (max-width: 750px) {
-    height: auto;
+    height:auto;
   }
 }
 
@@ -21,7 +21,7 @@
   display: flex;
 
   @media only screen and (max-width: 750px) {
-    height: auto;
+    height:auto;
   }
 }
 
@@ -32,13 +32,16 @@
   display: flex;
 
   @media only screen and (max-width: 750px) {
-    height: auto;
+    height:auto;
   }
 }
 
 .swiper {
   width: 100vw;
   height: 92vh;
+
+
+  
   
 }
 
@@ -72,6 +75,9 @@
   @media only screen and (max-width: 750px) {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    height:auto;
+
   }
 
   .textcontainer {
@@ -90,8 +96,9 @@
     @media only screen and (max-width: 750px) {
       border: none;
       width: 100vw;
-      height: 50vh;
-      padding-top: 5vh;
+      height: 40vh;
+      padding: 0vh 0vw 0px 0vw;
+      margin-top: 3vh;
     }
 
     .inside {
@@ -107,6 +114,9 @@
         text-align: center;
         text-transform: uppercase;
         padding: 0px 2vw;
+        @media only screen and (max-width: 750px) {
+          font-size: 6vh;
+        }
       }
 
       .text {
@@ -116,6 +126,10 @@
         margin-bottom: 2vh;
         max-width: 56vh;
         line-height: 120%;
+        @media only screen and (max-width: 750px) {
+          font-size: 1.8vh;
+          max-width: 70vw;
+        }
       }
     }
   }
@@ -127,9 +141,9 @@
 
     @media only screen and (max-width: 750px) {
       width: 80vw;
-      height: 45vh;
+      height: 60vh;
       margin-top: 3vh;
-      padding-bottom: 3vh;
+      margin-bottom: 10vh;
     }
 
     img {
@@ -138,8 +152,11 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+
       @media only screen and (max-width: 750px) {
-        padding-bottom: 3vh;
+        height: 60vh;
+        margin-bottom: 3vh;
+
       }
     }
   }
