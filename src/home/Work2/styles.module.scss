@@ -6,10 +6,7 @@
   background-color: #f4f0ea;
 
   @media only screen and (max-width: 750px) {
-
     height: auto;
-
-    // height: 150vh;
   }
 
   .container {
@@ -38,7 +35,7 @@
 
     @media only screen and (max-width: 750px) {
       width: 100vw !important;
-      height: 45vh !important; // Ajusta la altura de cada item a 50vh
+      height: 55vh !important; // Ajusta la altura de cada item a 50vh
       flex-direction: column;
 
     }
@@ -50,9 +47,9 @@
 
       @media only screen and (max-width: 750px) {
         min-width: 100%; // Ajusta la imagen para ocupar el ancho completo en pantallas pequeñas
-        max-height: 25vh; // Altura de imagen acorde al tamaño del item
+        max-height: 55vh; // Altura de imagen acorde al tamaño del item
         object-fit: cover; 
-        min-height: 70vh;
+       height: auto;
 
       }
     }
@@ -67,7 +64,7 @@
       align-items: center !important;
 
       @media only screen and (max-width: 750px) {
-        max-height: 60vh;}
+        max-height: 55vh;}
 
 
       h2 {
@@ -78,6 +75,10 @@
         text-transform: uppercase;
         padding: 0px 7vw;
         color: white;
+
+        @media only screen and (max-width: 750px) {
+          font-size: 5vh;
+       }
       }
 
       button {

@@ -1,7 +1,7 @@
 "use client";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const underlineVariants = {
@@ -131,6 +131,10 @@ export default function Footer() {
         </div>
         <div className={styles.bottom}>{/* <p>Back to top</p> */}</div>
       </div>
+      <div className={styles.responsiveBottom}>
+        <p>Alejandro Polito ® 2024. Todos los derechos reservados.</p>
+      </div>
+      
     </div>
   );
 }

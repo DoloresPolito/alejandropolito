@@ -126,4 +126,19 @@
     color: white;
     font-size: 2vh;
   }
+  .responsiveBottom {
+    display: none;
+    padding: 4vh 5vh;
+    color: white;
+    font-size: 2vh;
+
+    @media only screen and (max-width: 750px) {
+      display: flex; // Mostrar solo en pantallas pequeñas
+    }
+  }
+
+
 }
+
+
+
