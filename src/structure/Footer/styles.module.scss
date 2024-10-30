@@ -7,6 +7,11 @@
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
 
   .leftcontainer {
     display: flex;
@@ -14,7 +19,13 @@
     width: 35%;
     height: 100%;
     border-right: 1px solid black;
-    padding:4vh 2vh;
+    padding: 4vh 2vh;
+    @media only screen and (max-width: 750px) {
+      border-right: none;
+      border-bottom: 1px solid black;
+      width: 100%;
+      padding: 2vh 0vh;
+    }
   }
 
   .rightcontainer {
@@ -22,7 +33,12 @@
     flex-direction: column;
     width: 65%;
     height: 100%;
-    padding:4vh 2vh;
+    padding: 4vh 2vh;
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+      padding: 0vh 0vh;
+    }
   }
 
   .topleft {
@@ -30,43 +46,41 @@
     flex-direction: column;
     height: 90%;
     width: 100%;
-    padding:4vh 5vh;
+    padding: 4vh 5vh;
 
-    .navcontainer{
+    .navcontainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media only screen and (max-width: 750px) {
+        flex-direction: column;
+      }
+
+      .col {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        padding-right: 2vh;
 
+        .navitem {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 0.5vh;
 
-        .col{
-            display: flex;
-            flex-direction: column;
-            padding-right: 2vh;
-
-       
-
-            .navitem{
-              position: relative;
-              display: inline-block;
-              margin-bottom: 0.5vh;
-
-              .underline {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 1px;
-                background-color: white; // Color del subrayado
-                width: 0; 
-              }
-            }
-
-            
-
-            p{
-                font-size: 1.7vh;
-                padding-bottom: 0.5vh;
-            }
+          .underline {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: white; // Color del subrayado
+            width: 0;
+          }
         }
+
+        p {
+          font-size: 1.7vh;
+          padding-bottom: 0.5vh;
+        }
+      }
     }
   }
 
@@ -75,12 +89,19 @@
     justify-content: space-between;
     height: 90%;
     width: 100%;
-    padding:4vh 5vh;
+    padding: 4vh 5vh;
 
-    .item{
-        display: flex;
-        flex-direction: column;
-     padding: 0vh 2vh;
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: 0vh 2vh;
+      @media only screen and (max-width: 750px) {
+        padding: 0vh 0vh;
+      }
     }
   }
 
@@ -88,7 +109,10 @@
     display: flex;
     height: 10%;
     width: 100%;
-    padding:4vh 5vh;
+    padding: 4vh 5vh;
+    @media only screen and (max-width: 750px) {
+     display: none;
+    }
   }
 
   h4 {
@@ -98,7 +122,7 @@
     color: white;
   }
 
-  p{
+  p {
     color: white;
     font-size: 2vh;
   }
