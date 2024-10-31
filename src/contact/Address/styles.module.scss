@@ -5,6 +5,7 @@
   flex-direction: column;
   overflow: hidden;
 
+
   .motionDiv {
     position: relative;
     height: 100%;
@@ -30,16 +31,24 @@
       flex-direction: column;
       border-bottom: 1px solid black;
 
+
       h4 {
         font-family: "BwGradual";
         font-size: 1.8vh;
         margin-bottom: 1vh;
-        color:rgb(88, 87, 87)
+        color: rgb(88, 87, 87);
+
+        @media only screen and (max-width: 750px) {
+          font-size: 1.5vh;
+        }
       }
 
-      p{
+      p {
         font-family: "Mori";
         font-size: 3vh;
+        @media only screen and (max-width: 750px) {
+          font-size: 2.2vh;
+        }
       }
 
       .top {

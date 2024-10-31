@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: row;
 
-
+  @media only screen and (max-width: 750px) {
+    flex-direction: column-reverse;
+    height: auto;
+    align-items: center;
+  }
 
   h3 {
     font-family: "BwGradualLight";
@@ -17,16 +21,26 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+    }
     img {
       object-fit: cover;
       height: 60vh;
       width: auto;
+
+      @media only screen and (max-width: 750px) {
+        height: 40vh;
+      }
     }
   }
   .right {
     display: flex;
     flex-direction: column;
     width: 50%;
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+    }
   }
 }
 
@@ -36,8 +50,13 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 80%;
+  width: 90%;
   height: auto;
+
+  @media only screen and (max-width: 750px) {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
 
   form {
     display: flex;
@@ -54,7 +73,7 @@
 }
 
 .input {
-  height:7vh;
+  height: 7vh;
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
@@ -75,6 +94,11 @@
   &:active {
     outline: none;
   }
+
+  @media only screen and (max-width: 750px) {
+    height: 6vh;
+    font-size: 1.6vh;
+  }
 }
 
 .textarea {
@@ -91,6 +115,10 @@
   background-color: #aac0d6;
   &::placeholder {
     font-family: "Mori";
+  }
+
+  @media only screen and (max-width: 750px) {
+    font-size: 1.6vh;
   }
 }
 
@@ -113,9 +141,15 @@
   margin-top: 2vh;
   font-weight: 300;
 
-  &:hover{
+  &:hover {
     background-color: white;
-    color:black
+    color: black;
+  }
+
+  @media only screen and (max-width: 750px) {
+    font-size: 1.6vh;
+    height: 4vh;
+    width: 110px;
   }
 }
 
