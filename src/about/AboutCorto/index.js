@@ -7,7 +7,7 @@ export default function AboutCorto() {
   const items = [
     {
       id: 1,
-      text: "Miembro titular de la Sociedad de Cirugía Plástica de Buenos Aires SCPBA",
+      text: "Miembro titular de la Sociedad de Cirugía Plástica de Buenos Aires",
     },
     {
       id: 2,
