@@ -16,10 +16,10 @@ export default function AboutHome1() {
       setIsMobile(window.innerWidth <= 750);
     };
 
-    // Verificar el tamaño de pantalla al cargar
+    // Check screen size on load
     handleResize();
 
-    // Escuchar cambios de tamaño de pantalla
+    // Listen for resize events
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -30,12 +30,9 @@ export default function AboutHome1() {
     layoutEffect: false,
   });
 
-  // Menor desplazamiento en pantallas pequeñas
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? ["0vh", "50vh"] : ["0vh", "100vh"]
-  );
+  // Define y transform but control its value based on screen size
+  const yTransform = useTransform(scrollYProgress, [0, 1], ["0vh", "100vh"]);
+  const y = isMobile ? "0vh" : yTransform;
 
   return (
     <div ref={container} className={styles.section}>
