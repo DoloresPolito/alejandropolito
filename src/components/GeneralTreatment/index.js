@@ -61,6 +61,7 @@ export default function GeneralTreatment({ content, category }) {
             style={{
               backgroundImage: `url(${backgroundImage})`,
               position: "absolute",
+              height: "100vh",
             }}
           />
         )}

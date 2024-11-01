@@ -30,29 +30,46 @@
     z-index: 1;
     height: 100%;
 
-
-    
-
     @media only screen and (max-width: 750px) {
-      width: 100vw !important;
-      height: 55vh !important; // Ajusta la altura de cada item a 50vh
-      flex-direction: column;
+      // width: 100vw !important;
+      // height: 55vh !important;
+      // flex-direction: column;
 
+      width: 100%; // Cambiar el ancho a 100% en pantallas pequeñas
+      height: 55vh; // Altura en pantallas pequeñas
+      flex-direction: column; // Cambiar a disposición vertical
     }
 
     img {
       position: relative;
-      min-width: 33vw;
+      width: 100%; // Ajustar la imagen al 100% del contenedor
+      height: auto; // Permitir que la altura se ajuste automáticamente
       min-height: 80vh;
-
+      min-width: 33vw;
       @media only screen and (max-width: 750px) {
-        min-width: 100%; // Ajusta la imagen para ocupar el ancho completo en pantallas pequeñas
-        max-height: 55vh; // Altura de imagen acorde al tamaño del item
-        object-fit: cover; 
-       height: auto;
-
+        object-fit: cover; // Cubrir el contenedor sin distorsionar
+        max-height: 55vh; // Limitar la altura máxima
+        min-height: auto;
+        min-width: auto;
+        width: 100vw;
       }
+     
+        
+    
     }
+
+    // img {
+    //   position: relative;
+    //   min-width: 33vw;
+    //   min-height: 80vh;
+
+    //   @media only screen and (max-width: 750px) {
+    //     min-width: 100%;
+    //     max-height: 55vh;
+    //     object-fit: cover;
+    //     height: auto;
+    //   }
+    // }
 
     .textcontainer {
       position: absolute;
@@ -64,8 +81,8 @@
       align-items: center !important;
 
       @media only screen and (max-width: 750px) {
-        max-height: 55vh;}
-
+        max-height: 45vh;
+      }
 
       h2 {
         margin-bottom: 1rem;
@@ -78,7 +95,7 @@
 
         @media only screen and (max-width: 750px) {
           font-size: 5vh;
-       }
+        }
       }
 
       button {

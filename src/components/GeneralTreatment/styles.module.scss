@@ -6,7 +6,8 @@
   margin-top: 8vh;
   padding-bottom: 4vh;
 
-  p, h5 {
+  p,
+  h5 {
     text-align: center;
   }
 
@@ -41,15 +42,12 @@
   background-repeat: no-repeat;
   transition: background-image 0.3s ease;
 
-
   // Para pantallas pequeñas (mobile), mantener fondo fijo
   @media only screen and (max-width: 750px) {
     position: absolute;
     top: 8vh;
     height: 100vh;
-    z-index: -1; 
-
-
+    z-index: -1;
   }
 
   // Para pantallas grandes (desktop), fondo normal y detrás de la grilla
@@ -69,7 +67,6 @@
 
   &.desktopGridContainer {
     overflow-y: visible;
-
   }
 }
 
@@ -111,6 +108,7 @@
       border-radius: 3vh;
       color: #374f52;
       font-size: 2vh;
+      border: none;
 
       @media only screen and (max-width: 750px) {
         opacity: 1;

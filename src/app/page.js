@@ -27,7 +27,7 @@ export default function Home() {
       <SwiperHero />
       <AboutHome />
       <Work2 />
-      <Clinic />
+      {/* <Clinic /> */}
       {/* <Logos/> */}
       <LogosMoving/>
     </div>
