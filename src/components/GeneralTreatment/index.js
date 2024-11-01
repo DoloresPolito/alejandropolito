@@ -12,8 +12,7 @@ export default function GeneralTreatment({ content, category }) {
 
   const { scrollY } = useScroll();
 
-  // Usar useTransform con la altura de la ventana después de que se haya montado
-  const translateY = useTransform(scrollY, [0, windowHeight * 0.3], ["30vh", "0vh"]);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,6 +28,9 @@ export default function GeneralTreatment({ content, category }) {
   const handleMouseEnter = (imageSrc) => {
     setBackgroundImage(imageSrc);
   };
+
+    // Usar useTransform con la altura de la ventana después de que se haya montado
+    const translateY = useTransform(scrollY, [0, windowHeight * 0.3], ["30vh", "0vh"]);
 
   return (
     <>
