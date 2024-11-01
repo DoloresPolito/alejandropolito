@@ -37,16 +37,19 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; // Mantenerla detrás de la grilla
+  z-index: -1;
   background-repeat: no-repeat;
-  transition: background-image 0.5s ease;
+  transition: background-image 0.3s ease;
+
 
   // Para pantallas pequeñas (mobile), mantener fondo fijo
   @media only screen and (max-width: 750px) {
-    position: fixed;
-    top: 30vh;
+    position: absolute;
+    top: 8vh;
     height: 100vh;
-    z-index: -1; // Fondo detrás de la grilla
+    z-index: -1; 
+
+
   }
 
   // Para pantallas grandes (desktop), fondo normal y detrás de la grilla

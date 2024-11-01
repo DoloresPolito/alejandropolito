@@ -3,11 +3,14 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
-import { motion } from "framer-motion";
+import { useTransform, useScroll, motion } from "framer-motion";
 
 export default function GeneralTreatment({ content, category }) {
   const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
   const [isMobile, setIsMobile] = useState(false);
+
+  const { scrollY } = useScroll();
+  const translateY = useTransform(scrollY, [0, window.innerHeight * 0.3], ["30vh", "0vh"]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +29,7 @@ export default function GeneralTreatment({ content, category }) {
   return (
     <>
       <div className={styles.section}>
+        {/* Título y Descripción */}
         <AnimatedDiv delay={0.1}>
           <p>{content.titulo}</p>
         </AnimatedDiv>
@@ -33,15 +37,27 @@ export default function GeneralTreatment({ content, category }) {
           <h5>{content.texto}</h5>
         </AnimatedDiv>
 
-        {/* Contenedor de la imagen de fondo fija */}
-        <motion.div
-          className={`${styles.fixedBackground} ${isMobile ? styles.mobileFixedBackground : styles.desktopFixedBackground}`}
-          style={{
-            backgroundImage: `url(${isMobile ? content.srcfija : backgroundImage})`,
-          }}
-        />
-
-        {/* Contenedor de la grilla */}
+        {/* Imagen de Fondo Animada */}
+        {isMobile ? (
+          <motion.div
+            className={`${styles.fixedBackground} ${styles.mobileFixedBackground}`}
+            style={{
+              backgroundImage: `url(${content.srcfija})`,
+              translateY: translateY,
+              position: "fixed",
+            }}
+          />
+        ) : (
+          <div
+            className={`${styles.fixedBackground} ${styles.desktopFixedBackground}`}
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              position: "absolute",
+            }}
+          />
+        )}
+        
+        {/* Contenedor de la Grilla */}
         <div className={`${styles.gridContainer} ${!isMobile && styles.desktopGridContainer}`}>
           <div className={styles.grilla}>
             {content.tratamientos.map((tratamiento, index) => (
