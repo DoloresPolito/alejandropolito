@@ -8,16 +8,20 @@ import { useTransform, useScroll, motion } from "framer-motion";
 export default function GeneralTreatment({ content, category }) {
   const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
   const [isMobile, setIsMobile] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(0); // Estado para almacenar la altura de la ventana
 
   const { scrollY } = useScroll();
-  const translateY = useTransform(scrollY, [0, window.innerHeight * 0.3], ["30vh", "0vh"]);
+
+  // Usar useTransform con la altura de la ventana después de que se haya montado
+  const translateY = useTransform(scrollY, [0, windowHeight * 0.3], ["30vh", "0vh"]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 750);
+      setWindowHeight(window.innerHeight); // Actualiza la altura de la ventana
     };
 
-    handleResize();
+    handleResize(); // Inicializar valores
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
