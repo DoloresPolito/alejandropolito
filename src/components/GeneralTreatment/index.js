@@ -1,13 +1,23 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
 import { motion } from "framer-motion";
+
 export default function GeneralTreatment({ content, category }) {
-  const [backgroundImage, setBackgroundImage] = useState(
-    content.tratamientos[0].src
-  );
+  const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 750);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMouseEnter = (imageSrc) => {
     setBackgroundImage(imageSrc);
@@ -23,18 +33,16 @@ export default function GeneralTreatment({ content, category }) {
           <h5>{content.texto}</h5>
         </AnimatedDiv>
 
+        {/* Contenedor de la imagen de fondo fija */}
         <motion.div
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 1.2 }}
-          className={styles.imagecontainer}
+          className={`${styles.fixedBackground} ${isMobile ? styles.mobileFixedBackground : styles.desktopFixedBackground}`}
           style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transition: "background-image 0.5s ease-in-out", // Transición de imagen de fondo
+            backgroundImage: `url(${isMobile ? content.srcfija : backgroundImage})`,
           }}
-        >
+        />
+
+        {/* Contenedor de la grilla */}
+        <div className={`${styles.gridContainer} ${!isMobile && styles.desktopGridContainer}`}>
           <div className={styles.grilla}>
             {content.tratamientos.map((tratamiento, index) => (
               <Link key={index} href={`/${category}/${tratamiento.id}`}>
@@ -48,7 +56,7 @@ export default function GeneralTreatment({ content, category }) {
               </Link>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   );

@@ -1,99 +1,120 @@
 .section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 8vh;
-    flex-direction: column;
-    align-items: center;
-  
-    p {
-      font-family: "BwGradual";
-      font-size: 6vh;
-      margin-bottom: 2vh;
-      margin-top: 2vh;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 2vh 2vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8vh;
+  padding-bottom: 4vh;
 
-      @media only screen and (max-width: 750px) {
-        font-size: 4.8vh;
-      }
-    }
-  
-    h5 {
-      margin-bottom: 5vh;
-      font-size: 3.5vh;
-      line-height: 110%;
-      font-family: "MoriLight";
-      text-align: center;
-      max-width: 90vh;
+  p, h5 {
+    text-align: center;
+  }
 
-      @media only screen and (max-width: 750px) {
-        font-size: 2.8vh;
-        max-width: 90vw;
+  p {
+    font-family: "BwGradual";
+    font-size: 6vh;
+    padding: 2vh 2vw;
 
-      }
-    }
-  
-    .imagecontainer {
-      width: 100%;
-      height: 110vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      background: no-repeat;
-      transition: background-image 0.5s ease;
-  
-      .grilla {
-        position: absolute;
-        margin-top: 10vh;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        position: absolute;
-        margin-bottom: 10vh;
-      }
-  
-      .item {
-        border: 0.2vh solid white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: white;
-        height: 30vh;
-        width: 27vw;
-        position: relative;
-        transition: background-color 0.3s;
-  
-        &:hover .verMasButton {
-          opacity: 1;
-        }
-  
-        p {
-          font-family: "BwGradual";
-          font-size: 3vh;
-          margin-bottom: 2vh;
-          margin-top: 2vh;
-          text-align: center;
-          text-transform: uppercase;
-        }
-  
-        .verMasButton {
-          opacity: 0;
-          transition: opacity 0.3s;
-          position: absolute;
-          bottom: 4vh;
-          left: 4vh;
-          padding: 1vh 2vh;
-          background: #ffffff;
-          border: none;
-          border-radius: 3vh;
-          cursor: pointer;
-          color: #374f52;
-          font-size: 2vh;
-        }
-      }
+    @media only screen and (max-width: 750px) {
+      font-size: 4.8vh;
     }
   }
 
+  h5 {
+    font-size: 3.5vh;
+    line-height: 110%;
+    font-family: "MoriLight";
+    padding: 0 2vw;
 
+    @media only screen and (max-width: 750px) {
+      font-size: 2.8vh;
+    }
+  }
+}
+
+.fixedBackground {
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; // Mantenerla detrás de la grilla
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease;
+
+  // Para pantallas pequeñas (mobile), mantener fondo fijo
+  @media only screen and (max-width: 750px) {
+    position: fixed;
+    top: 30vh;
+    height: 100vh;
+    z-index: -1; // Fondo detrás de la grilla
+  }
+
+  // Para pantallas grandes (desktop), fondo normal y detrás de la grilla
+  @media only screen and (min-width: 751px) {
+    position: absolute; // Para que el fondo esté detrás de la grilla
+    top: 40vh; // Ajusta el top para que la imagen esté más abajo
+    height: 100%; // Ocupa el fondo completo detrás de la grilla
+    background-size: cover;
+  }
+}
+
+.gridContainer {
+  width: 100%;
+  padding: 5vh 0;
+  position: relative; // Asegurar que la grilla esté delante de la imagen de fondo
+  overflow-y: auto;
+
+  &.desktopGridContainer {
+    overflow-y: visible;
+  }
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vh;
+  padding: 0 5vw;
+  position: relative; // Para que el contenido esté sobre el fondo
+  z-index: 1; // Mantener la grilla sobre la imagen de fondo
+  top: 10vh;
+  @media only screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    border: 0.2vh solid white;
+    height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    position: relative;
+
+    p {
+      font-family: "BwGradual";
+      font-size: 3vh;
+      text-transform: uppercase;
+    }
+
+    .verMasButton {
+      opacity: 0;
+      transition: opacity 0.3s;
+      position: absolute;
+      bottom: 4vh;
+      left: 4vh;
+      padding: 1vh 2vh;
+      background: #ffffff;
+      border-radius: 3vh;
+      color: #374f52;
+      font-size: 2vh;
+
+      @media only screen and (max-width: 750px) {
+        opacity: 1;
+        left: 2vh;
+      }
+    }
+
+    &:hover .verMasButton {
+      opacity: 1;
+    }
+  }
+}
