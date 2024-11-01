@@ -8,16 +8,20 @@ import { useTransform, useScroll, motion } from "framer-motion";
 export default function GeneralTreatment({ content, category }) {
   const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
   const [isMobile, setIsMobile] = useState(false);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0); // Estado para almacenar la altura de la ventana
+
   const { scrollY } = useScroll();
+  
+  // Usar useTransform siempre
+  // const translateY = useTransform(scrollY, [0, windowHeight * 0.3], isMobile ? ["30vh", "0vh"] : ["0vh", "0vh"]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 750);
-      setWindowHeight(window.innerHeight);
+      setWindowHeight(window.innerHeight); // Actualiza la altura de la ventana
     };
 
-    handleResize();
+    handleResize(); // Inicializar valores en el primer render
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -25,9 +29,6 @@ export default function GeneralTreatment({ content, category }) {
   const handleMouseEnter = (imageSrc) => {
     setBackgroundImage(imageSrc);
   };
-
-  // Mover la lógica de translateY aquí
-  const translateY = useTransform(scrollY, [0, windowHeight * 0.3], isMobile ? ["30vh", "0vh"] : ["0vh", "0vh"]);
 
   return (
     <>
@@ -46,8 +47,8 @@ export default function GeneralTreatment({ content, category }) {
             className={`${styles.fixedBackground} ${styles.mobileFixedBackground}`}
             style={{
               backgroundImage: `url(${content.srcfija})`,
-              translateY,
-              position: "fixed",
+              // translateY: translateY, 
+              position: "fixed", // Mantener la posición fija
               top: 0,
               left: 0,
               width: "100%",
@@ -63,7 +64,7 @@ export default function GeneralTreatment({ content, category }) {
             }}
           />
         )}
-
+        
         {/* Contenedor de la Grilla */}
         <div className={`${styles.gridContainer} ${!isMobile && styles.desktopGridContainer}`}>
           <div className={styles.grilla}>
