@@ -4,7 +4,7 @@
     {
         "titulo": "Cirugía Plástica",
         "texto": "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
-       "srcfija":"/images/tratamientos/plastica/abdomen.png",
+       "srcfija":"/images/tratamientos/plastica/mamaria.png",
         "tratamientos":[{
             "id":"abdomen",
             "nombre":"Abdomen",

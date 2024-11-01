@@ -69,6 +69,7 @@
 
   &.desktopGridContainer {
     overflow-y: visible;
+
   }
 }
 
@@ -80,6 +81,7 @@
   position: relative; // Para que el contenido esté sobre el fondo
   z-index: 1; // Mantener la grilla sobre la imagen de fondo
   top: 10vh;
+
   @media only screen and (max-width: 750px) {
     grid-template-columns: 1fr;
   }

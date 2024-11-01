@@ -4,7 +4,7 @@
     {
         "titulo": "Tratamientos No Quirúrgicos",
         "texto": "Mejoramos la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas.",
-        "srcfija":"/images/tratamientos/plasma.png",
+        "srcfija":"/images/tratamientos/dermatologia-clinica.png",
         "tratamientos":[{
             "id":"plasma",
             "nombre":"Plasma Rico en Plaquetas",
