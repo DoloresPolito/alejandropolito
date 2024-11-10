@@ -6,13 +6,14 @@
   align-items: center;
   justify-content: center;
   background-color: #f3e8dd;
-  padding-top: 10vh;
+  padding-top: 12vh;
+
   h4 {
     font-family: "MoriLight";
     font-size: 3.5vh;
     letter-spacing: 0.1vh;
     color: #0d0d0d;
-    padding-bottom: 10vh;
+    padding-bottom: 9vh;
     text-align: center;
     @media only screen and (max-width: 750px) {
       font-size: 2.5vh;
@@ -25,6 +26,7 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    padding-bottom: 10vh;
+    padding-bottom: 12vh;
+
   }
 }

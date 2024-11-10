@@ -23,11 +23,6 @@ export default function Header() {
           }}
           className={styles.el}
         >
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ""
-            }`}
-          ></div>
           <div className={styles.label}>
             <motion.p
               variants={opacity}
@@ -39,6 +34,12 @@ export default function Header() {
               Cerrar
             </motion.p>
           </div>
+          <div
+            className={`${styles.burger} ${
+              isActive ? styles.burgerActive : ""
+            }`}
+          ></div>
+          
         </div>
 
   

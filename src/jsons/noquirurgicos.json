@@ -3,7 +3,8 @@
 
     {
         "titulo": "Tratamientos No Quirúrgicos",
-        "texto": "Mejoramos la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas.",
+        "texto": "Transformamos tu apariencia sin necesidad de cirugía, empleando técnicas mínimamente invasivas que realzan la belleza natural y corrigen imperfecciones de manera sutil y personalizada.",
+        
         "srcfija":"/images/tratamientos/dermatologia-clinica.png",
         "tratamientos":[{
             "id":"plasma",
@@ -55,7 +56,7 @@
             "link":"",
             "src":"/images/tratamientos/cosmiatria.jpg",
             "descripcion":"La Cosmiatría es un área de la Dermatología que se encarga de agrupar todas las técnicas cosméticas. Es una actividad que busca darle armonía al cuerpo y al rostro. (Tratamientos corporales anti-celulíticos, Tratamientos corporales reductores, Tratamientos corporales por flacidez, Drenaje linfático manual, Tratamientos faciales, Punta de diamante, Radiofrecuencia facial y corporal, Aparatología).",
-            "ilus":"/images/ilus/4.orejas.png"
+            "ilus":"/images/ilus/4.oreja.png"
         } ]
     }
    

@@ -35,10 +35,10 @@ export default function GeneralTreatment({ content, category }) {
       <div className={styles.section}>
         {/* Título y Descripción */}
         <AnimatedDiv delay={0.1}>
-          <p style={{ color: isMobile ? "white" : "black" }}>{content.titulo}</p>
+          <p className={styles.titulo} style={{ color: isMobile ? "white" : "black" }}>{content.titulo}</p>
         </AnimatedDiv>
         <AnimatedDiv delay={0.3}>
-          <h5 style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
+          <h5  className={styles.subtitulo} style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
         </AnimatedDiv>
 
         {/* Imagen de Fondo Animada */}
@@ -79,6 +79,8 @@ export default function GeneralTreatment({ content, category }) {
                   <button className={styles.verMasButton}>VER +</button>
                 </div>
               </Link>
+
+
             ))}
           </div>
         </div>
