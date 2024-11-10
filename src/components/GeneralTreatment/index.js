@@ -3,11 +3,11 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { useScroll, motion } from "framer-motion";
 import image from "../../../public/images/tratamientos/plastica/mamaria.png"
 
 export default function GeneralTreatment({ content, category }) {
-  const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0]?.src || image);
+  const [backgroundImage, setBackgroundImage] = useState(content.srcfija || image); // Usamos la imagen predeterminada o content.srcfija
   const [isMobile, setIsMobile] = useState(false);
   const [windowHeight, setWindowHeight] = useState(0); // Estado para almacenar la altura de la ventana
 
@@ -24,15 +24,14 @@ export default function GeneralTreatment({ content, category }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleMouseEnter = (imageSrc) => {
-    setBackgroundImage(imageSrc);
+  const handleMouseEnter = (tratamientoSrc) => {
+    // Cambiar la imagen de fondo cuando el mouse pasa por encima de un tratamiento
+    setBackgroundImage(tratamientoSrc);
   };
 
-  const handleImageLoad = (e, tratamientoSrc) => {
-    // Cuando la imagen cargue, se actualiza el fondo con la imagen correspondiente
-    if (e.target.complete) {
-      setBackgroundImage(tratamientoSrc);
-    }
+  const handleMouseLeave = () => {
+    // Cuando el mouse sale, volvemos a la imagen predeterminada o inicial
+    setBackgroundImage(content.srcfija || image);
   };
 
   return (
@@ -43,7 +42,7 @@ export default function GeneralTreatment({ content, category }) {
           <p className={styles.titulo} style={{ color: isMobile ? "white" : "black" }}>{content.titulo}</p>
         </AnimatedDiv>
         <AnimatedDiv delay={0.3}>
-          <h5  className={styles.subtitulo} style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
+          <h5 className={styles.subtitulo} style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
         </AnimatedDiv>
 
         {/* Imagen de Fondo Animada */}
@@ -63,7 +62,7 @@ export default function GeneralTreatment({ content, category }) {
           <div
             className={`${styles.fixedBackground} ${styles.desktopFixedBackground}`}
             style={{
-              backgroundImage: `url(${backgroundImage})`,
+              backgroundImage: `url(${backgroundImage})`, // Usamos la imagen actual de fondo
               position: "absolute",
               height: "100vh",
             }}
@@ -77,7 +76,8 @@ export default function GeneralTreatment({ content, category }) {
               <Link key={index} href={`/${category}/${tratamiento.id}`}>
                 <div
                   className={styles.item}
-                  onMouseEnter={() => handleMouseEnter(tratamiento.src)}
+                  onMouseEnter={() => handleMouseEnter(tratamiento.src)} // Cambiar el fondo cuando el mouse entra
+                  onMouseLeave={handleMouseLeave} // Volver al fondo inicial cuando el mouse sale
                 >
                   <p>{tratamiento.nombre}</p>
                   <button className={styles.verMasButton}>VER +</button>
@@ -87,7 +87,6 @@ export default function GeneralTreatment({ content, category }) {
                     src={tratamiento.src} 
                     alt={tratamiento.nombre}
                     loading="eager" // Carga la imagen con prioridad
-                    onLoad={(e) => handleImageLoad(e, tratamiento.src)} 
                     style={{ display: "none" }} // Ocultar la imagen, ya que solo se usa para cargar el fondo
                   />
                 </div>
