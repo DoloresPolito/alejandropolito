@@ -4,16 +4,14 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
 import { useTransform, useScroll, motion } from "framer-motion";
+import image from "../../../public/images/tratamientos/plastica/mamaria.png"
 
 export default function GeneralTreatment({ content, category }) {
-  const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0].src);
+  const [backgroundImage, setBackgroundImage] = useState(content.tratamientos[0]?.src || image);
   const [isMobile, setIsMobile] = useState(false);
   const [windowHeight, setWindowHeight] = useState(0); // Estado para almacenar la altura de la ventana
 
   const { scrollY } = useScroll();
-  
-  // Usar useTransform siempre
-  // const translateY = useTransform(scrollY, [0, windowHeight * 0.3], isMobile ? ["30vh", "0vh"] : ["0vh", "0vh"]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,6 +26,13 @@ export default function GeneralTreatment({ content, category }) {
 
   const handleMouseEnter = (imageSrc) => {
     setBackgroundImage(imageSrc);
+  };
+
+  const handleImageLoad = (e, tratamientoSrc) => {
+    // Cuando la imagen cargue, se actualiza el fondo con la imagen correspondiente
+    if (e.target.complete) {
+      setBackgroundImage(tratamientoSrc);
+    }
   };
 
   return (
@@ -47,8 +52,7 @@ export default function GeneralTreatment({ content, category }) {
             className={`${styles.fixedBackground} ${styles.mobileFixedBackground}`}
             style={{
               backgroundImage: `url(${content.srcfija})`,
-              // translateY: translateY, 
-              position: "fixed", // Mantener la posición fija
+              position: "fixed", 
               top: 0,
               left: 0,
               width: "100%",
@@ -65,7 +69,7 @@ export default function GeneralTreatment({ content, category }) {
             }}
           />
         )}
-        
+
         {/* Contenedor de la Grilla */}
         <div className={`${styles.gridContainer} ${!isMobile && styles.desktopGridContainer}`}>
           <div className={styles.grilla}>
@@ -77,10 +81,17 @@ export default function GeneralTreatment({ content, category }) {
                 >
                   <p>{tratamiento.nombre}</p>
                   <button className={styles.verMasButton}>VER +</button>
+
+                  {/* Asegurar que las imágenes se carguen con prioridad */}
+                  <img 
+                    src={tratamiento.src} 
+                    alt={tratamiento.nombre}
+                    loading="eager" // Carga la imagen con prioridad
+                    onLoad={(e) => handleImageLoad(e, tratamiento.src)} 
+                    style={{ display: "none" }} // Ocultar la imagen, ya que solo se usa para cargar el fondo
+                  />
                 </div>
               </Link>
-
-
             ))}
           </div>
         </div>
