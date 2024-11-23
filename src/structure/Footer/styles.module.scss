@@ -19,12 +19,13 @@
     width: 35%;
     height: 100%;
     border-right: 1px solid black;
-    padding: 4vh 2vh;
+    padding: 4vh 0vh;
+
     @media only screen and (max-width: 750px) {
       border-right: none;
       border-bottom: 1px solid black;
       width: 100%;
-      padding: 2vh 0vh;
+      padding: 2vh 0;
     }
   }
 
@@ -33,11 +34,11 @@
     flex-direction: column;
     width: 65%;
     height: 100%;
-    padding: 4vh 2vh;
+    padding: 4vh 0vh;
 
     @media only screen and (max-width: 750px) {
       width: 100%;
-      padding: 0vh 0vh;
+      padding: 0;
     }
   }
 
@@ -46,12 +47,14 @@
     flex-direction: column;
     height: 90%;
     width: 100%;
-    padding: 4vh 5vh;
+    padding: 4vh 3vh;
+
 
     .navcontainer {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
       @media only screen and (max-width: 750px) {
         flex-direction: column;
       }
@@ -65,14 +68,21 @@
           position: relative;
           display: inline-block;
           margin-bottom: 0.5vh;
+          width: auto !important;
 
           .underline {
             position: absolute;
             left: 0;
             bottom: 0;
             height: 1px;
-            background-color: white; // Color del subrayado
+            background-color: white;
             width: 0;
+            transition: width 0.5s ease-in-out;
+
+          }
+
+          &:hover .underline {
+            width: 100%;
           }
         }
 
@@ -98,9 +108,10 @@
     .item {
       display: flex;
       flex-direction: column;
-      padding: 0vh 2vh;
+      padding: 0 2vh;
+
       @media only screen and (max-width: 750px) {
-        padding: 0vh 0vh;
+        padding: 0;
       }
     }
   }
@@ -109,14 +120,16 @@
     display: flex;
     height: 10%;
     width: 100%;
-    padding: 4vh 5vh;
+    padding: 4vh 3vh;
+
+
     @media only screen and (max-width: 750px) {
-     display: none;
+      display: none;
     }
   }
 
   h4 {
-    font-family: "BwGradual";
+    font-family: "BwGradual", sans-serif;
     font-size: 3vh;
     margin-bottom: 4vh;
     color: white;
@@ -126,6 +139,7 @@
     color: white;
     font-size: 2vh;
   }
+
   .responsiveBottom {
     display: none;
     padding: 4vh 5vh;
@@ -133,12 +147,7 @@
     font-size: 2vh;
 
     @media only screen and (max-width: 750px) {
-      display: flex; // Mostrar solo en pantallas pequeñas
+      display: flex;
     }
   }
-
-
 }
-
-
-

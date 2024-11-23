@@ -47,8 +47,9 @@
     p {
       margin: 0px;
       font-size: 2vh;
+  
       @media only screen and (max-width: 750px) {
-        font-size: 1.7vh;
+        font-size: 2.5vh;
  
       }
     }
@@ -65,14 +66,13 @@
         display: flex;
         align-items: center;
         font-family: "BwGradual";
-        font-size: 2vh;
+        // font-size: 2vh;
       }
 
       p {
         &:nth-of-type(2) {
           position: absolute;
           opacity: 0;
-
         }
       }
 
@@ -80,28 +80,30 @@
         width: 4.4vh;
         position: relative;
         pointer-events: none;
+        height:  0.1vh;
 
         &::after,
         &::before {
           content: "";
-          height: 0.15vh;
+          // height: 0.15vh;
           width: 100%;
           background-color: #0d0d0d;
           position: relative;
           display: block;
           transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+        height:  0.15vh;
         }
 
         &::after {
           top: 0.5vh;
-          height: 0.14vh;
+          // height: 0.14vh;
 
 
         }
 
         &::before {
           top: -0.10vh;
-          height: 0.14vh;
+          // height: 0.14vh;
 
         }
       }

@@ -134,7 +134,6 @@ export default function Footer() {
       <div className={styles.responsiveBottom}>
         <p>Alejandro Polito ® 2024. Todos los derechos reservados.</p>
       </div>
-      
     </div>
   );
 }

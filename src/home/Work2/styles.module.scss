@@ -45,7 +45,7 @@
       width: 100%; // Ajustar la imagen al 100% del contenedor
       height: auto; // Permitir que la altura se ajuste automáticamente
       min-height: 80vh;
-      min-width: 33vw;
+      min-width: 33.5vw;
       @media only screen and (max-width: 750px) {
         object-fit: cover; // Cubrir el contenedor sin distorsionar
         max-height: 55vh; // Limitar la altura máxima

@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Parallax, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css/navigation";
+import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Button from "../../components/Button";
@@ -24,12 +25,11 @@ export default function SwiperHero() {
       title: "Cirugía Reparadora",
       text: "Procedimientos especializados que restauran la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
       src: "1.png",
-
       background: "#36514b",
       link: "/cirugia-reparadora",
     },
     {
-      title: " Tratamientos No Quirúrgicos",
+      title: "No Quirúrgicos",
       text: "Soluciones estéticas avanzadas que mejoran la apariencia sin necesidad de cirugía, utilizando técnicas mínimamente invasivas para rejuvenecer la piel, remodelar el cuerpo y realzar la belleza natural de forma sutil y efectiva.",
       src: "4.jpg",
       background: "#9d8b74",
@@ -45,6 +45,17 @@ export default function SwiperHero() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 750);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div className={styles.container}>
@@ -58,7 +69,11 @@ export default function SwiperHero() {
                 delay: 5000,
                 disableOnInteraction: false,
               }}
-              modules={[Parallax, Pagination, Autoplay]}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              modules={[Parallax, Pagination, Navigation, Autoplay]}
               className={styles.mySwiper}
             >
               {slides.map((slide, index) => {
@@ -68,6 +83,20 @@ export default function SwiperHero() {
                   </SwiperSlide>
                 );
               })}
+              {isMobile ? (
+                <></>
+              ) : (
+                <>
+                  <div
+                    className="swiper-button-next"
+                    style={{ color: "#F5F4F4" }}
+                  ></div>
+                  <div
+                    className="swiper-button-prev"
+                    style={{ color: "#F5F4F4" }}
+                  ></div>
+                </>
+              )}
             </Swiper>
           </div>
         </div>
@@ -103,7 +132,6 @@ const Slide = ({ slide }) => {
           </div>
         </div>
 
-        {/* <div className={styles.imagecontainer}> */}
         <motion.div
           className={styles.imagecontainer}
           initial={{ scale: 0.95, opacity: 0 }}

@@ -13,12 +13,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
   }
 
   h3 {
     font-family: "BwGradualLight";
     font-size: 5vh;
     margin-bottom: 5vh;
+    @media only screen and (max-width: 750px) {
+      margin-bottom: 7vh;
+    }
   }
 
   .addresscontainer {
