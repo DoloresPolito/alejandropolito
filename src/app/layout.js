@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
+        {/* <Header /> */}
+        {children}
         <Footer />
       </body>
     </html>

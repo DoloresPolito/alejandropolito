@@ -30,7 +30,7 @@ export default function Footer() {
             <div className={styles.col}>
               <Link href="/cirugia-plastica">
                 <motion.div className={styles.navitem} whileHover="hover">
-                  <p>CIRUGÍA PLÁSTICA</p>
+                  <p>CIRUGÍA ESTÉTICA</p>
                   <motion.div
                     className={styles.underline}
                     variants={underlineVariants}
@@ -56,7 +56,7 @@ export default function Footer() {
                 </motion.div>
               </Link>
             </div>
-            <div className={styles.col}>
+            {/* <div className={styles.col}>
               <Link href="/about1">
                 <motion.div className={styles.navitem} whileHover="hover">
                   <p>DR. ALEJANDRO POLITO</p>
@@ -84,7 +84,7 @@ export default function Footer() {
                   />
                 </motion.div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.bottom}>
@@ -102,7 +102,8 @@ export default function Footer() {
                 Gualeguaychú
               </h4>
               <p>25 de Mayo 470, Gualeguaychú</p>
-              <p>(+54) (3446) 433142</p>
+              <p>(+54) (9 3446) 57-8126</p>
+           
             </div>
           </Link>
 
@@ -114,7 +115,7 @@ export default function Footer() {
                 San Isidro
               </h4>
               <p>Av. Fondo de la Legua 577, San Isidro</p>
-              <p>(+54) (11) 4763-770</p>
+              <p>(+54) (11) 4735-8100</p>
             </div>
           </Link>
           <Link href="https://www.google.com/maps/place/Jun%C3%ADn+1040,+C1113AAF+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.5966693,-58.4024726,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcca9686eeee01:0xd2fff681e41169bd!8m2!3d-34.5966738!4d-58.3976017!16s%2Fg%2F11c5mv22jm?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D">
@@ -125,7 +126,7 @@ export default function Footer() {
                 Capital Federal
               </h4>
               <p>Junin 1040, CABA, Recoleta</p>
-              <p>(+54) (11) 4823-3749</p>
+              <p>(+54) (9 3446) 57-8126</p>
             </div>
           </Link>
         </div>

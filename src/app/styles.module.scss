@@ -1,26 +1,11 @@
-/* .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+.content {
+    position: relative;
+    visibility: hidden; /* Oculta el contenido mientras isLoading es true */
+    opacity: 0;         /* Asegura que no sea visible */
   }
-}
-
-.main {
-  display: flex;
-  height: auto;
-} */
-
+  
+  .content.visible {
+    visibility: visible; /* Hace que el contenido sea visible */
+    opacity: 1;
+    transition: none;    /* Sin animación: el contenido aparece instantáneamente */
+  }

@@ -10,7 +10,10 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
+
+      <div
+  className={`${styles.header} ${isActive ? styles.active : styles.inactive}`}
+>
       <div className={styles.bar}>
         <div className={styles.el}>
           <Link href="/" className={styles.name}>

@@ -10,7 +10,7 @@ export default function Work2() {
   const items = [
     {
       id: 1,
-      title: "Cirugía Plástica",
+      title: "Cirugía Estética",
       imageUrl: "/images/work/2.png",
       delay: 0.3,
       link: "/cirugia-plastica",

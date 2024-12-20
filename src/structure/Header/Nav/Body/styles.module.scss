@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-top: 40px;
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 950px) {
     margin-top: 2vh;
     max-width: 90vw;
   }
@@ -24,7 +24,7 @@
     padding-top: 10px;
     overflow: hidden;
     
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 950px) {
       font-size: 4.3vh;
       white-space: normal;
       overflow-wrap: break-word;

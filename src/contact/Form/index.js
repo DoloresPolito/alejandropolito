@@ -1,19 +1,34 @@
 "use client";
 import styles from "./styles.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 // import { sendEmail } from "@/utils/send-email";
 
 
 import Image from "next/image";
 
-import contactimage from "../../../public/images/contact.png";
+import contactimagemobile from "../../../public/images/clinica/nuevas/contactformmobile.png";
+import contactimage2 from "../../../public/images/clinica/nuevas/contactform.png";
 
 export default function Form() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <Image src={contactimage} alt="contact" />
+  <Image src={isMobile ? contactimagemobile : contactimage2} alt="contact" />
       </div>
       <div className={styles.right}>
         <h3>CONSULTAS</h3>
@@ -32,6 +47,10 @@ const ContactForm = () => {
     // sendEmail(data);
     setMessageSent(true);
   }
+
+
+  
+
 
   return (
     <div className={styles.formcontainer}>

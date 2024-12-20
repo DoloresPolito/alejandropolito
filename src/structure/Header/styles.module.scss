@@ -1,16 +1,21 @@
 .header {
-  background-color: rgba(255, 252, 248); 
+  background-color: rgba(255, 252, 248, 0.5); 
   position: fixed;
+  top:0;
   width: 100%;
   height: 8vh;
   box-sizing: border-box;
   z-index: 100;
   border-bottom: 0.2vh solid black;
-
-
+  z-index: 9000;
+  transition: background-color 0.3s ease-in-out; 
+  &.active {
+    background-color: rgba(255, 252, 248,  0.95); // 95% opacidad cuando está activo
+  }
 
   .background {
     background-color: #fffcf6;
+    background-color: rgba(255, 252, 248, 0.95); 
     border-top: 0.2vh solid black;
     opacity: 1;
     height: 100%;
@@ -31,7 +36,7 @@
     margin-top: 1.8vh;
     margin-left: 2.5vh;
     margin-right: 2.5vh;
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 950px) {
       margin-top: 2.3vh;
     }
 
@@ -39,7 +44,7 @@
     .name {
       font-family: "BwGradual";
       font-size: 3.5vh;
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 950px) {
         font-size: 3vh;
       }
     }
@@ -48,7 +53,7 @@
       margin: 0px;
       font-size: 2vh;
   
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 950px) {
         font-size: 2.5vh;
  
       }

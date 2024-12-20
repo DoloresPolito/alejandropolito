@@ -16,7 +16,7 @@ const links = [
     src: "1.png",
   },
   {
-    title: "Cirugía Plástica",
+    title: "Cirugía Estética",
     href: "/cirugia-plastica",
     src: "ilus/1.cuerpo.png",
   },
@@ -39,7 +39,7 @@ const links = [
   {
     title: "Contacto",
     href: "/contacto",
-    src: "clinica/v2.png",
+    src: "clinica/nuevas/contactnav.png",
   },
 ];
 

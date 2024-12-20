@@ -3,6 +3,7 @@ import GeneralTreatment from "@/components/GeneralTreatment";
 import content from "../../jsons/reparadora.json"
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Header from "@/structure/Header";
 export default function Reparadora() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -17,6 +18,9 @@ export default function Reparadora() {
   }, []);
   
   return (
+    <>
+      <Header/>
     <GeneralTreatment content={content[0]} category="cirugia-reparadora"/>
+    </>
   );
 }

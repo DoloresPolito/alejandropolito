@@ -1,0 +1,144 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    // margin-top: 2vh;
+  
+    .header2 {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      z-index: 1;
+      justify-content: space-between;
+      width: auto;
+      font-weight: 300;
+      box-sizing: border-box;
+      align-items: center;
+      margin-top: -7vh;
+      margin-left: 0.5vh;
+      z-index: 4000;
+  
+      .logo {
+        display: flex;
+        cursor: pointer;
+        width: auto;
+        margin-top: 8vh;
+        margin-left: 3vh;
+        z-index: 10;
+     
+  
+        img {
+          height: 8vh;
+          width: auto;
+        }
+      }
+    }
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position:bottom;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: start;
+    color: white;
+    z-index: 10;
+    height: 80vh;
+    width: 95vw;
+  
+    .motionDiv {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .topcontainer {
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      align-items: flex-end;
+  
+  
+      @media screen and (max-width: 650px) {
+        justify-content: center;
+      }
+  
+      h1 {
+        margin: 0;
+        font-weight: 400;
+        line-height: 100%;
+        width: 90vw;
+        font-size: 10vw;
+        font-family: var(--font-montserrat), sans-serif;
+  
+      
+  
+        @media screen and (max-width: 650px) {
+          font-size: 12vw;
+          width: 100%;
+        }
+      }
+  
+      p {
+        font-size: 3vh;
+        margin-left: 2vh;
+        font-family: var(--font-montserrat), sans-serif;
+  
+  
+        @media screen and (max-width: 650px) {
+          font-size: 3vh;
+          text-align: center;
+        }
+      }
+    }
+  
+    .bottomcontainer {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      margin-top: 5vh;
+      .results {
+        font-size: 5.2vh;
+        font-weight: 400;
+        margin-left: 2vh;
+        font-family: var(--font-inter), sans-serif;
+        max-width: 100vh;
+  
+        @media screen and (max-width: 650px) {
+          margin-left: 0vh;
+          text-align: center;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+  
+      .bottombuttons {
+        background-color: red;
+        margin-top: 4vh;
+      }
+    }
+  }

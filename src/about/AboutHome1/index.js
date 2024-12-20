@@ -40,7 +40,7 @@ export default function AboutHome1() {
         <div className={styles.container}>
           <AnimatedDiv>
             <h3>
-              El doctor Alejandro Polito es cirujano plástico con una extensa
+              El doctor Alejandro Polito es un cirujano plástico con una extensa
               experiencia en las últimas técnicas de cirugías aplicadas a la
               estética y reconstrucción que se usan en el mundo.
             </h3>

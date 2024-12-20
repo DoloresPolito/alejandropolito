@@ -2,16 +2,15 @@
     display: none;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 950px) {
    
     .imageContainer{
         display: block;
-        width: 40vh;
+        width: 50vh;
         height: 60vh;
         margin-top: 10vh;
         position: relative;
-        right: 10vw;
-
+        right: 5vw;
 
         img{
             object-fit: cover;
