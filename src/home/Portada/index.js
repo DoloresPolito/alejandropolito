@@ -65,7 +65,7 @@ export default function Portada() {
     const scrollContainer = scrollContainerRef.current;
 
     const scrollContent = () => {
-      scrollContainer.scrollLeft += 0.7; // Ajusta la velocidad según tu preferencia
+      scrollContainer.scrollLeft += 1.0; // Ajusta la velocidad según tu preferencia
       requestAnimationFrame(scrollContent);
     };
 
