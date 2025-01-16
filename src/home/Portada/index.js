@@ -7,6 +7,21 @@ export default function Portada() {
   const lenisRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const scrollContentRef = useRef(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); 
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 600); // Ahora `window` estará disponible
+    };
+  
+    handleResize(); // Verifica el tamaño de la pantalla al cargar el componente
+    window.addEventListener("resize", handleResize); // Escucha los cambios de tamaño
+  
+    return () => {
+      window.removeEventListener("resize", handleResize); // Limpia el evento al desmontar el componente
+    };
+  }, []);
 
   // Carga inicial de imágenes desde la carpeta public
   useEffect(() => {
@@ -60,17 +75,17 @@ export default function Portada() {
     };
   }, []);
 
-  // Movimiento continuo del contenedor
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
     const scrollContent = () => {
-      scrollContainer.scrollLeft += 1.0; // Ajusta la velocidad según tu preferencia
+      const velocidad = isSmallScreen ? 0.5 : 1.0; // Velocidad ajustada
+      scrollContainer.scrollLeft += velocidad;
       requestAnimationFrame(scrollContent);
     };
 
     scrollContent();
-  }, []);
+  }, [isSmallScreen]);
 
   return (
     <div className={styles.homeCover} ref={scrollContainerRef}>

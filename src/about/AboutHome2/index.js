@@ -11,7 +11,7 @@ export default function AboutHome2({view}) {
       <div className={styles.container}>
         <AnimatedDiv delay={0.1}>
           <h5>
-            Ha realizado una aplica cantidad de procedimientos quirúrgicos y no
+            Ha realizado una amplia cantidad de procedimientos quirúrgicos y no
             quirúrgicos desde su graduación en 1985 y continúa capacitandose año
             tras año para brindar la mejor respuesta a sus inquietudes.
           </h5>{" "}
