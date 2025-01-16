@@ -1,0 +1,64 @@
+.homeCover {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x:scroll;
+    white-space: nowrap; /* Ensures all content stays in one line */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    margin-top: 0; /* Asegúrate de que no haya margen superior */
+    position: relative; /* Para que las imágenes estén detrás de la navbar */
+    z-index: 1; 
+  }
+  
+  @media (max-width: 768px) {
+    .homeCover {
+      min-height: 60vh;
+      max-height: 60vh;
+    }
+  }
+  
+  .homeCover::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+  
+  .scrollContent {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .homeCover .fotoPortada {
+    display: flex;
+    justify-content: center; /* Aligns the image horizontally if the container has extra space */
+    align-items: center;    /* Aligns the image vertically if the container has extra space */
+    height: 100vh;
+    position: relative;
+    text-align: right;
+    border:1px solid black
+  }
+  
+  @media (max-width: 768px) {
+    .homeCover .fotoPortada {
+      height: 60vh;
+    }
+  }
+  
+  .homeCover .fotoPortada img {
+    height: 100vh;
+  }
+  
+  @media (max-width: 768px) {
+    .homeCover .fotoPortada img {
+      height: 60vh;
+    }
+  }
+  
+  .fotoPortada .creditos {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    margin: 2rem;
+  }
+  
+
+  
+  

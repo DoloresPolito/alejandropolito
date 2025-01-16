@@ -1,0 +1,61 @@
+.animatedHomeHeader {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: baseline;
+  // min-height: 64px;
+  // padding: 0rem 2rem;
+  // width: -webkit-fill-available;
+  // position: sticky;
+  // top: 0;
+  // z-index: 1;
+  // border-bottom: 0.08rem solid #000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Asegúrate de que la navbar esté por encima de las imágenes */
+  background-color: rgba(255, 255, 255, 0); /* Transparente al inicio */
+  transition: background-color 0.3s ease; /* Transición suave del fondo */
+  border-bottom: 0.2vh solid black;
+}
+
+.animatedHomeHeader.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Blanco al hacer scroll */
+}
+
+.pageHeader {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 0.08rem solid #000;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 0rem 0rem 0rem 1rem;
+  }
+}
+
+.headerBrand {
+  display: flex;
+}
+
+.headerBrand a {
+  font-weight: 500;
+  font-style: normal;
+  // font-size: 24px;
+  font-family: "BwGradual";
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+
+.animatedHomeHeader .headerBrand a {
+  font-size: 120px;
+}

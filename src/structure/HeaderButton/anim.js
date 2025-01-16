@@ -33,14 +33,17 @@ export const height = {
 
 export const background = {
     initial: {
-        height: 0
+        height: 0,
+        top: 0 
     },
     open: {
         height: "100vh",
+        top: 0,
         transition
     },
     closed: {
         height: 0,
+        top: 0, 
         transition
     }
 }

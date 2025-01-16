@@ -1,6 +1,7 @@
 
 import Treatment from '../../../components/Treatment';
 import cirugiaplasticaData from "../../../jsons/plastica.json"
+import NavbarStatic from '@/structure/NavbarStatic';
 
 export default function TreatmentPage({ params }) {
 
@@ -12,5 +13,10 @@ export default function TreatmentPage({ params }) {
         return <p style={{ marginTop: "20vh" }}>Tratamiento no encontrado.</p>;
     }
 
-    return <Treatment data={data} />;
+    return (
+        <>
+          <NavbarStatic />
+          <Treatment data={data} />
+        </>
+      );
 }

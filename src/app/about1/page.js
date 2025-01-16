@@ -5,7 +5,7 @@ import AboutCorto from "@/about/AboutCorto";
 import styles from "./styles.module.scss";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Header from "@/structure/Header";
+import NavbarStatic from "@/structure/NavbarStatic";
 export default function About1() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -20,7 +20,7 @@ export default function About1() {
   }, []);
   return (
     <div className={styles.section}>
-      <Header />
+      <NavbarStatic />
       <AboutHome1 />
       <AboutHome2 />
       <AboutCorto />

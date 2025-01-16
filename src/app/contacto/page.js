@@ -5,7 +5,8 @@ import Address from "@/contact/Address";
 import Form from "@/contact/Form";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Header from "@/structure/Header";
+// import Header from "@/structure/HeaderButton";
+import NavbarStatic from "@/structure/NavbarStatic";
 
 export default function Contact() {
 
@@ -23,7 +24,7 @@ export default function Contact() {
 
   return (
     <div className={styles.section}>
-      <Header/>
+      <NavbarStatic/>
       <div className={styles.addresscontainer}>
         <Address />
       </div>

@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "@/structure/Header";
+import Header from "@/structure/HeaderButton";
 import Footer from "@/structure/Footer";
 import "../styles/fonts.css";
 

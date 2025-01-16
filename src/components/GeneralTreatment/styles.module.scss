@@ -61,6 +61,7 @@
   transition: background-image 0.3s ease;
   z-index: -1;
 
+
   // Para pantallas móviles, el fondo se mantiene fijo y ocupa toda la altura
   @media only screen and (max-width: 750px) {
     position: fixed;

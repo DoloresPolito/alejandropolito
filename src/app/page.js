@@ -10,9 +10,28 @@ import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader";
 import NewHero from "../home/NewHero";
 import styles from "./styles.module.scss";
-import Header from "@/structure/Header";
-
+// import Header from "@/structure/Header";
+import NavbarStatic from "@/structure/NavbarStatic";
+import AnimatedHomeHeader from "../structure/NavbarToia"
+import Portada from "../home/Portada"
 export default function Home() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 750);
+    };
+
+    // Check screen size on load
+    handleResize();
+
+    // Listen for resize events
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -52,8 +71,11 @@ export default function Home() {
           isLoading ? styles.hidden : styles.visible
         }`}
       >
-        <Header />
-        <NewHero />
+{isMobile ? (<NavbarStatic/>) :     <AnimatedHomeHeader/> }
+
+   
+        <Portada/>
+        {/* <NewHero /> */}
         <AboutHome />
         <Work2 />
         <LogosMoving />

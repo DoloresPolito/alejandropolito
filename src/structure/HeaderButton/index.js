@@ -10,16 +10,20 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-
-      <div
-  className={`${styles.header} ${isActive ? styles.active : styles.inactive}`}
->
+    <div
+      className={`${styles.header} ${
+        isActive ? styles.active : styles.inactive
+      }`}
+    >
       <div className={styles.bar}>
-        <div className={styles.el}>
-          <Link href="/" className={styles.name}>
-            Alejandro Polito
-          </Link>
-        </div>
+        {/* <div className={styles.trasparentname}>
+          <p>
+
+    
+          <Link href="/">Alejandro Polito</Link>
+          </p>
+        </div> */}
+
         <div
           onClick={() => {
             setIsActive(!isActive);
@@ -42,10 +46,7 @@ export default function Header() {
               isActive ? styles.burgerActive : ""
             }`}
           ></div>
-          
         </div>
-
-  
       </div>
       <motion.div
         variants={background}

@@ -1,61 +1,64 @@
 .header {
-  background-color: rgba(255, 252, 248, 0.5); 
+  // background-color: rgba(255, 252, 248, 0.5);
   position: fixed;
-  top:0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 8vh;
   box-sizing: border-box;
-  z-index: 100;
-  border-bottom: 0.2vh solid black;
-  z-index: 9000;
-  transition: background-color 0.3s ease-in-out; 
+  transition: background-color 0.3s ease-in-out;
+  // z-index: 10000;
+
   &.active {
-    background-color: rgba(255, 252, 248,  0.95); // 95% opacidad cuando está activo
+    background-color: rgba(
+      255,
+      252,
+      248,
+      0.95
+    ); // 95% opacidad cuando está activo
   }
 
   .background {
     background-color: #fffcf6;
-    background-color: rgba(255, 252, 248, 0.95); 
-    border-top: 0.2vh solid black;
+    background-color: rgba(255, 252, 248, 0.95);
     opacity: 1;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: absolute;
     left: 0;
-    top: 100%;
-
-
-
+    top: 0;
+    z-index: -1;
   }
 
   .bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-weight: 400;
     position: relative;
     margin-top: 1.8vh;
     margin-left: 2.5vh;
     margin-right: 2.5vh;
+
     @media only screen and (max-width: 950px) {
       margin-top: 2.3vh;
     }
 
+    // .trasparentname {
+    //   cursor: pointer;
+    //   user-select: none;
 
-    .name {
-      font-family: "BwGradual";
-      font-size: 3.5vh;
-      @media only screen and (max-width: 950px) {
-        font-size: 3vh;
-      }
-    }
+    //   p {
+    //     font-size: 0px !important;
+    //     // color: transparent;
+    //   }
+    // }
 
     p {
       margin: 0px;
       font-size: 2vh;
-  
+
       @media only screen and (max-width: 950px) {
         font-size: 2.5vh;
- 
       }
     }
 
@@ -65,6 +68,7 @@
       justify-content: center;
       gap: 8px;
       cursor: pointer;
+      margin-top: 1vh;
 
       .label {
         position: relative;
@@ -85,7 +89,7 @@
         width: 4.4vh;
         position: relative;
         pointer-events: none;
-        height:  0.1vh;
+        height: 0.1vh;
 
         &::after,
         &::before {
@@ -96,20 +100,17 @@
           position: relative;
           display: block;
           transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
-        height:  0.15vh;
+          height: 0.15vh;
         }
 
         &::after {
           top: 0.5vh;
           // height: 0.14vh;
-
-
         }
 
         &::before {
-          top: -0.10vh;
+          top: -0.1vh;
           // height: 0.14vh;
-
         }
       }
 
@@ -127,5 +128,3 @@
     }
   }
 }
-
-
