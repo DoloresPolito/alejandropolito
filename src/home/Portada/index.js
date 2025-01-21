@@ -79,7 +79,7 @@ export default function Portada() {
     const scrollContainer = scrollContainerRef.current;
 
     const scrollContent = () => {
-      const velocidad = isSmallScreen ? 0.5 : 1.0; // Velocidad ajustada
+      const velocidad = isSmallScreen ? 0.2 : 1.0; // Velocidad ajustada
       scrollContainer.scrollLeft += velocidad;
       requestAnimationFrame(scrollContent);
     };
