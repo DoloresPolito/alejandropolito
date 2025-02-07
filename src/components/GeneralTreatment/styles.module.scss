@@ -14,6 +14,7 @@
     font-family: "BwGradual";
     font-size: 6vh;
     padding: 2vh 2vw;
+    margin-bottom: 3vh;
 
     @media only screen and (max-width: 750px) {
       font-size: 4.8vh;
@@ -28,6 +29,7 @@
     max-width: 60%;
     justify-self: center;
     margin-bottom: 5vh;
+
     margin: 0 auto;
 
 
@@ -60,7 +62,7 @@
   background-repeat: no-repeat;
   transition: background-image 0.3s ease;
   z-index: -1;
-
+display: flex;
 
   // Para pantallas móviles, el fondo se mantiene fijo y ocupa toda la altura
   @media only screen and (max-width: 750px) {
@@ -72,18 +74,21 @@
   // Para pantallas grandes, el fondo comienza desde 40vh del top
   @media only screen and (min-width: 751px) {
     position: absolute;
-    top: 40vh; // Ajusta la posición a 40vh desde el top
-    height: calc(100vh - 40vh); // Ajusta la altura para cubrir el resto de la pantalla desde 40vh
+    top: 15vh;
+    // height: calc(100vh - 15vh); 
+    
   }
 }
 
 .gridContainer {
   width: 100%;
-  padding-top: 10vh; // Espaciado superior uniforme
-  padding-bottom: 10vh; // Espaciado inferior uniforme
+  // padding-top: 10vh; 
+  // padding-bottom: 10vh;
   position: relative;
   // margin-bottom: 3vh;
   overflow-y: auto;
+
+
 
   // En pantallas de escritorio, permitir que el contenido fluya
   &.desktopGridContainer {
@@ -97,10 +102,15 @@
   gap: 0vh; // Espacio uniforme entre los elementos de la grilla
   padding: 0 5vw; // Espacio lateral en la grilla
   z-index: 1; // Mantener la grilla sobre el fondo
-  position: relative; // Asegurar que esté por encima del fondo
 
+  margin-top: -70vh;
+
+  position: relative; 
+  // Asegurar que esté por encima del fondo
+  // top:-75vh; //CAMBIAR EN MOBILE!!!!
   @media only screen and (max-width: 750px) {
     grid-template-columns: 1fr;
+    margin-top: 10vh;
   }
 
   .item {

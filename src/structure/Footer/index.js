@@ -46,6 +46,18 @@ export default function Footer() {
                   />
                 </motion.div>
               </Link>
+
+              <Link href="/cirugia-dermatologica">
+                <motion.div className={styles.navitem} whileHover="hover">
+                  <p>CIRUGÍA DERMATOLÓGICA</p>
+                  <motion.div
+                    className={styles.underline}
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </Link>
+
+
               <Link href="/no-quirurgicos">
                 <motion.div className={styles.navitem} whileHover="hover">
                   <p>TRATAMIENTOS NO QUIRÚRGICOS</p>
@@ -97,7 +109,7 @@ export default function Footer() {
           <Link href="https://www.google.com/maps/place/25+de+Mayo+470,+E3269+Gualeguaych%C3%BA,+Entre+R%C3%ADos/@-33.009176,-58.5120881,17z/data=!3m1!4b1!4m6!3m5!1s0x95baa82b47b097f5:0x3e5fbce29bbffdfc!8m2!3d-33.0091805!4d-58.5095132!16s%2Fg%2F11snpydcpy?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D">
             <div className={styles.item}>
               <h4>
-                Centro Médico
+                Clínica Polito
                 <br />
                 Gualeguaychú
               </h4>

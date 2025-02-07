@@ -4,29 +4,8 @@
     {
         "titulo": "Cirugía Reparadora",
         "texto": "Restaurar la función y la apariencia del cuerpo tras lesiones, cirugías o malformaciones congénitas, devolviendo confianza y mejorando la calidad de vida.",
-        "srcfija":"/images/tratamientos/lesiones-de-piel.jpg",
+        "srcfija":"/images/tratamientos/quemados.jpg",
         "tratamientos":[{
-            "id":"cirugia-plastica-infantil",
-            "nombre":"Cirugía Plastica Infantil",
-            "link":"",
-            "src":"/images/tratamientos/cirugia-infantil.jpg",
-            "descripcion":"Los Principios que rigen la cirugía plástica en los niños, en términos generales, son similares a los que se utilizan en los adultos. Sin embargo las técnicas deben ser adaptadas a ciertos factores anatómicos fisiológicos y psicológicos relacionados con la infancia."
-
-        },{
-            "id":"cicatrices-tatuajes",
-            "nombre":"Cicatrices y tatuajes",
-            "link":"",
-            "src":"/images/tratamientos/cicatrices-tatuajes.jpg",
-            "descripcion":"Durante el proceso de recuperación de una herida resultante de un accidente, una cirugía, una quemadura, o de acné, la cicatrización ocurre siempre que varias capas de la piel hayan sido afectadas. Una vez que la cicatriz se forma, nunca desaparece, aunque puede hacerse menos visible por diversos métodos."
-
-        },{
-            "id":"lesiones-de-piel",
-            "nombre":"Lesiones de piel",
-            "link":"",
-            "src":"/images/tratamientos/lesiones-de-piel.jpg",
-            "descripcion":"Una lesión en la piel potencialmente maligna debe extirparse completamente y ser estudiada por el Patólogo quien establece un diagnóstico. El cirujano plástico además, debe reconstruir el defecto dejado por la resección, minimizando las secuelas estéticas y funcionales."
-
-        },{
             "id":"reconstruccion-mamaria",
             "nombre":"Reconstrucción mamaria",
             "link":"",
@@ -46,6 +25,28 @@
             "link":"",
             "src":"/images/tratamientos/quemados.jpg",
             "descripcion":"Hay que tener en cuenta que el momento de comenzar a pensar en la reparación, se encuentra inmediatamente después de que la quemadura ha tenido lugar. Si el cirujano que trata la lesión aguda no es el responsable de la reconstrucción posterior, es preferible la consulta temprana al cirujano plástico para marcar la estrategia que se deberá seguir en la reparación."
+
+        },
+        {
+            "id":"cirugia-plastica-infantil",
+            "nombre":"Cirugía Plastica Infantil",
+            "link":"",
+            "src":"/images/tratamientos/cirugia-infantil.jpg",
+            "descripcion":"Los Principios que rigen la cirugía plástica en los niños, en términos generales, son similares a los que se utilizan en los adultos. Sin embargo las técnicas deben ser adaptadas a ciertos factores anatómicos fisiológicos y psicológicos relacionados con la infancia."
+
+        },{
+            "id":"cicatrices-tatuajes",
+            "nombre":"Cicatrices y tatuajes",
+            "link":"",
+            "src":"/images/tratamientos/cicatrices-tatuajes.jpg",
+            "descripcion":"Durante el proceso de recuperación de una herida resultante de un accidente, una cirugía, una quemadura, o de acné, la cicatrización ocurre siempre que varias capas de la piel hayan sido afectadas. Una vez que la cicatriz se forma, nunca desaparece, aunque puede hacerse menos visible por diversos métodos."
+
+        },{
+            "id":"lesiones-de-piel",
+            "nombre":"Lesiones de piel",
+            "link":"",
+            "src":"/images/tratamientos/lesiones-de-piel.jpg",
+            "descripcion":"Una lesión en la piel potencialmente maligna debe extirparse completamente y ser estudiada por el Patólogo quien establece un diagnóstico. El cirujano plástico además, debe reconstruir el defecto dejado por la resección, minimizando las secuelas estéticas y funcionales."
 
         }]
     }

@@ -1,61 +1,68 @@
 [
-  
+  {
+    "titulo": "Cirugía Estética",
+    "texto": "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
+    "srcfija": "/images/tratamientos/plastica/mamaria.png",
+    "tratamientos": [
+      {
+        "id": "reconstruccion-mamaria",
+        "nombre": "Mamaria",
+        "link": "",
+        "src": "/images/tratamientos/plastica/mamaria.png",
+        "descripcion": "Procedimientos: Reconstrucción mamaria, implantes mamarios, reducción mamamria. En general lo procedimiento quirúrgicos mamarios se realizan con anestesia combinada, no requieren internación, la paciente puede retirarse a su casa en 3 o 4 horas una vez que se recupera de la anestesia. Lo habitual es que puedan retornar a su trabajo en 3 o 4 días luego de la cirugía y restablecer su actividad normal a los 15 días.",
+        "ilus": "/images/ilus/3.teta.png"
+      },
 
-    {
-        "titulo": "Cirugía Estética",
-        "texto": "Realzar la belleza natural, mejorar la apariencia y corregir imperfecciones, logrando resultados estéticos armoniosos y personalizados.",
-       "srcfija":"/images/tratamientos/plastica/mamaria.png",
-        "tratamientos":[{
-            "id":"abdomen",
-            "nombre":"Abdomen",
-            "link":"",
-            "src":"/images/tratamientos/plastica/abdomen.png",
-            "descripcion":"La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción.",
-            "ilus":"/images/ilus/1.cuerpo.png"
-
-        },{
-            "id":"orejas",
-            "nombre":"Orejas",
-            "link":"",
-            "src":"/images/tratamientos/plastica/orejas.png",
-            "descripcion":"La cirugía del oído externo o otoplastia se realiza para modificar forma, tamaño y posición de las orejas. Se puede realizar en pacientes adolescentes y/o adultos pero no cabe duda que adquiere mucha importancia en niños de 4 a 7 años de edad, victimas de la burla a la que muchas veces están expuestos. La oreja se aborda por el surco posterior y se trabaja sobre el cartílago auricular. Es un procedimiento con baja incidencia de complicaciones y rápida recuperación.",
-            "ilus":"/images/ilus/4.oreja.png"
-
-        },{
-            "id":"facial",
-            "nombre":"Facial",
-            "link":"",
-            "src":"/images/tratamientos/plastica/facial.png",
-            "descripcion":"Puede combinar procedimientos como: Lifting, cirugía de párpados, liposucción de papada y mejilla, corrección de mentón y punta nasal, corrección de cola, cejas, etc., apoyados complementariamente con tratamientos no quirúrgicos. El objetivo es implementar cambios con naturalidad, eligiendo siempre el tratamiento acorde a sus necesidades. Cada caso es muy particular y esto es una síntesis de lo que tenemos disponible, por lo que siempre es necesario la evaluación y consulta personalizada para diseñar la estrategia."
-
-        },{
-            "id":"nariz",
-            "nombre":"Nariz",
-            "link":"/nariz",
-            "src":"/images/tratamientos/plastica/nariz.png",
-            "descripcion":"La cirugía de nariz o rinoplastia está orientada a modificar la forma de la nariz para lograr la armonía con los demás parámetros de la cara, teniendo en cuenta la personalidad, edad y sexo. La idea rectora es mantener la armonía y naturalidad. Además de la corrección estética se trabaja para mejorar la función respiratoria que puede estar alterada por un tabique nasal desviado.",
-            "ilus":"/images/ilus/2.nariz.png"
-        },{
-            "id":"reconstruccion-mamaria",
-            "nombre":"Mamaria",
-            "link":"",
-            "src":"/images/tratamientos/plastica/mamaria.png",
-            "descripcion":"Procedimientos: Reconstrucción mamaria, implantes mamarios, reducción mamamria. En general lo procedimiento quirúrgicos mamarios se realizan con anestesia combinada, no requieren internación, la paciente puede retirarse a su casa en 3 o 4 horas una vez que se recupera de la anestesia. Lo habitual es que puedan retornar a su trabajo en 3 o 4 días luego de la cirugía y restablecer su actividad normal a los 15 días.",
-            "ilus":"/images/ilus/3.teta.png"
-        },{
-            "id":"lipoescultura",
-            "nombre":"Lipoescultura",
-            "link":"",
-            "src":"/images/tratamientos/plastica/lipoescultura.png",
-            "descripcion":"Elimina el tejido adiposo que se acumula en varias regiones del cuerpo. Con una fina cánula se absorbe la grasa localizada. La elección de la anestesia dependerá de la zona a operar y de la cantidad de grasa que deba aspirarse.",
-            "ilus":"/images/ilus/1.cuerpo.png"
-        },{
-            "id":"parpados",
-            "nombre":"Párpados",
-            "link":"",
-            "src":"/images/tratamientos/plastica/parpados.png",
-            "descripcion":"Es un procedimiento para extraer la grasa y el exceso de piel de los parpados superiores e inferiores. Corrige la caída de los parpados superiores y las bolsas que nos hacen parecer mayores de lo que somos. Se realiza con anestesia local o combinada y normalmente no es necesario permanecer en el centro más de un par de horas después de la operación."
-        } ]
-    }
-   
+      {
+        "id": "abdomen",
+        "nombre": "Abdomen",
+        "link": "",
+        "src": "/images/tratamientos/plastica/abdomen.png",
+        "descripcion": "La abdominoplastia o mini-abdominoplastia son procedimientos indicados para mejorar el contorno del cuerpo. A través de esta técnica se remueve el exceso de piel y grasa del abdomen corrigiendo la flacidez abdominal. En muchas oportunidades se combina con liposucción.",
+        "ilus": "/images/ilus/1.cuerpo.png"
+      },
+      {
+        "id": "lipoescultura",
+        "nombre": "Lipoescultura",
+        "link": "",
+        "src": "/images/tratamientos/plastica/lipoescultura.png",
+        "descripcion": "Elimina el tejido adiposo que se acumula en varias regiones del cuerpo. Con una fina cánula se absorbe la grasa localizada. La elección de la anestesia dependerá de la zona a operar y de la cantidad de grasa que deba aspirarse.",
+        "ilus": "/images/ilus/1.cuerpo.png"
+      },
+      {
+        "id": "facial",
+        "nombre": "Facial",
+        "link": "",
+        "src": "/images/tratamientos/plastica/facial.png",
+        "descripcion": "Puede combinar procedimientos como: Lifting, cirugía de párpados, liposucción de papada y mejilla, corrección de mentón y punta nasal, corrección de cola, cejas, etc., apoyados complementariamente con tratamientos no quirúrgicos. El objetivo es implementar cambios con naturalidad, eligiendo siempre el tratamiento acorde a sus necesidades. Cada caso es muy particular y esto es una síntesis de lo que tenemos disponible, por lo que siempre es necesario la evaluación y consulta personalizada para diseñar la estrategia."
+      },
+      {
+        "id": "parpados",
+        "nombre": "Párpados",
+        "link": "",
+        "src": "/images/tratamientos/plastica/parpados.png",
+        "descripcion": "Es un procedimiento para extraer la grasa y el exceso de piel de los parpados superiores e inferiores. Corrige la caída de los parpados superiores y las bolsas que nos hacen parecer mayores de lo que somos. Se realiza con anestesia local o combinada y normalmente no es necesario permanecer en el centro más de un par de horas después de la operación."
+      },
+      {
+        "id": "nariz",
+        "nombre": "Nariz",
+        "link": "/nariz",
+        "src": "/images/tratamientos/plastica/nariz.png",
+        "descripcion": "La cirugía de nariz o rinoplastia está orientada a modificar la forma de la nariz para lograr la armonía con los demás parámetros de la cara, teniendo en cuenta la personalidad, edad y sexo. La idea rectora es mantener la armonía y naturalidad. Además de la corrección estética se trabaja para mejorar la función respiratoria que puede estar alterada por un tabique nasal desviado.",
+        "ilus": "/images/ilus/2.nariz.png"
+      },
+      {
+        "id": "orejas",
+        "nombre": "Orejas",
+        "link": "",
+        "src": "/images/tratamientos/plastica/orejas.png",
+        "descripcion": "La cirugía del oído externo o otoplastia se realiza para modificar forma, tamaño y posición de las orejas. Se puede realizar en pacientes adolescentes y/o adultos pero no cabe duda que adquiere mucha importancia en niños de 4 a 7 años de edad, victimas de la burla a la que muchas veces están expuestos. La oreja se aborda por el surco posterior y se trabaja sobre el cartílago auricular. Es un procedimiento con baja incidencia de complicaciones y rápida recuperación.",
+        "ilus": "/images/ilus/4.oreja.png"
+      }
+     
+    
+     
+      
+    ]
+  }
 ]

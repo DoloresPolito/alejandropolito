@@ -12,10 +12,9 @@ import NewHero from "../home/NewHero";
 import styles from "./styles.module.scss";
 // import Header from "@/structure/Header";
 import NavbarStatic from "@/structure/NavbarStatic";
-import AnimatedHomeHeader from "../structure/NavbarToia"
-import Portada from "../home/Portada"
+import AnimatedHomeHeader from "../structure/NavbarToia";
+import Portada from "../home/Portada";
 export default function Home() {
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -30,7 +29,6 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -71,10 +69,9 @@ export default function Home() {
           isLoading ? styles.hidden : styles.visible
         }`}
       >
-{isMobile ? (<NavbarStatic/>) :     <AnimatedHomeHeader/> }
+        {isMobile ? <NavbarStatic /> : <AnimatedHomeHeader />}
 
-   
-        <Portada/>
+        <Portada />
         {/* <NewHero /> */}
         <AboutHome />
         <Work2 />

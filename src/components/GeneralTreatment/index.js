@@ -63,7 +63,7 @@ export default function GeneralTreatment({ content, category }) {
             className={`${styles.fixedBackground} ${styles.desktopFixedBackground}`}
             style={{
               backgroundImage: `url(${backgroundImage})`, // Usamos la imagen actual de fondo
-              position: "absolute",
+              position: "relative",
               height: "100vh",
             }}
           />

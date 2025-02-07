@@ -31,6 +31,11 @@ const links = [
     src: "ilus/3.teta.png",
   },
   {
+    title: "Cirugía Dermatológica",
+    href: "/cirugia-dermatologica",
+    src: "tratamientos/dermatologia-clinica.png",
+  },
+  {
     title: "Dr. Alejandro Polito",
     href: "/about1",
     src: "clinica/v1el.png",
