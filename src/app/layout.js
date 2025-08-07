@@ -1,7 +1,8 @@
 import "./globals.css";
-import Header from "@/structure/HeaderButton";
+// import Header from "@/structure/HeaderButton";
 import Footer from "@/structure/Footer";
 import "../styles/fonts.css";
+import FixedMedia from "@/components/FixedMedia";
 
 export const metadata = {
   title: "Alejandro Polito",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body>
         {/* <Header /> */}
         {children}
+        <FixedMedia/>
         <Footer />
       </body>
     </html>
