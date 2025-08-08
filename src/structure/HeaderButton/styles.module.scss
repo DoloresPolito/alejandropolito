@@ -7,7 +7,10 @@
   height: 8vh;
   box-sizing: border-box;
   transition: background-color 0.3s ease-in-out;
-  // z-index: 10000;
+  z-index: 500;
+
+
+
 
   &.active {
     background-color: rgba(
@@ -15,8 +18,10 @@
       252,
       248,
       0.95
-    ); // 95% opacidad cuando está activo
+    ); 
   }
+
+
 
   .background {
     background-color: #fffcf6;
@@ -27,7 +32,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
+    // background-color: violet;
   }
 
   .bar {
@@ -69,7 +75,7 @@
       gap: 8px;
       cursor: pointer;
       margin-top: 1vh;
-
+      z-index: 10;
       .label {
         position: relative;
         display: flex;
@@ -90,7 +96,7 @@
         position: relative;
         pointer-events: none;
         height: 0.1vh;
-
+        z-index: 10;
         &::after,
         &::before {
           content: "";
@@ -115,6 +121,7 @@
       }
 
       .burgerActive {
+        z-index: 10;
         &::after {
           transform: rotate(45deg);
           top: 0;

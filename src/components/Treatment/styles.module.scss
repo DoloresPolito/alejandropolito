@@ -104,6 +104,23 @@
 
          
         }
+
+        .consultarLink {
+          text-decoration: none;
+    
+     
+          cursor: pointer;
+          transition: opacity 0.3s ease;
+          font-size: 1.8vh;
+          p {
+            font-size: 1.5vh;
+          }
+        
+          &:hover {
+    
+            font-weight: bold;
+          }
+        }
       }
     }
 

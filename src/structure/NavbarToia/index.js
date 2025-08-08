@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './styles.module.scss'
+import Link from 'next/link';
 
 import Header from "../HeaderButton"
 export default function AnimatedHomeHeader() {
@@ -47,11 +48,13 @@ export default function AnimatedHomeHeader() {
       }}
     >
       <div className={styles.headerBrand}>
+      {/* <Link href="/"> */}
         <motion.a
           style={{ fontSize }} // Aplica el tamaño de fuente dinámico
         >
           Alejandro Polito
         </motion.a>
+        {/* </Link> */}
 
         <Header />
       </div>

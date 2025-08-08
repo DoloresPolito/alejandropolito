@@ -1,20 +1,20 @@
 .navbarcontainer {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 8vh;
-  position: fixed;
   top: 0;
-  border-bottom: 0.2vh solid black;
   background-color: rgba(255, 252, 248, 0.95);
+  border-bottom: 0.2vh solid black;
+  z-index: 100; // Agregalo si no lo tenés
 
-  pointer-events: auto;
-
-  z-index: 25000 !important;
   .namecontainer {
-    cursor: pointer !important;
- 
+    position: relative; // IMPORTANTE
+    z-index: 1000; // Más alto que cualquier elemento que interfiera
+    cursor: pointer;
+
     .name {
       font-family: "BwGradual";
       font-size: 3.5vh;

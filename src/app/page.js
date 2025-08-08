@@ -1,21 +1,27 @@
 "use client";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
-import SwiperHero from "@/home/SwiperHero";
+// import SwiperHero from "@/home/SwiperHero";
 import Work2 from "@/home/Work2";
-import Clinic from "@/home/Clinic";
+// import Clinic from "@/home/Clinic";
 import AboutHome from "@/home/AboutHome";
 import LogosMoving from "@/home/LogosMoving";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader";
-import NewHero from "../home/NewHero";
+// import NewHero from "../home/NewHero";
 import styles from "./styles.module.scss";
 // import Header from "@/structure/Header";
 import NavbarStatic from "@/structure/NavbarStatic";
 import AnimatedHomeHeader from "../structure/NavbarToia";
 import Portada from "../home/Portada";
+import { usePreloader } from "@/context/PreloaderContext";
+
+
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const { hasShownPreloader, setHasShownPreloader } = usePreloader();
+  const [isLoading, setIsLoading] = useState(!hasShownPreloader);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +36,7 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -44,17 +50,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+    if (!isLoading) return;
 
-      setTimeout(() => {
-        setIsLoading(false); // Cambia el estado después de 2 segundos.
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 2000); // Coincide con la duración del preloader.
-    })();
-  }, []);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setHasShownPreloader(true); // ✅ Marcamos como ya mostrado
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [isLoading, setHasShownPreloader]);
+
 
   return (
     <>

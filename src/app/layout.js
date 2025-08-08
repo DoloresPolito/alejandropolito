@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/structure/Footer";
 import "../styles/fonts.css";
 import FixedMedia from "@/components/FixedMedia";
+import { PreloaderProvider } from "@/context/PreloaderContext";
 
 export const metadata = {
   title: "Alejandro Polito",
@@ -27,9 +28,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {/* <Header /> */}
+        <PreloaderProvider>
         {children}
         <FixedMedia/>
         <Footer />
+        </PreloaderProvider>
       </body>
     </html>
   );

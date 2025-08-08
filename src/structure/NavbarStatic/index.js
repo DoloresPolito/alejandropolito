@@ -7,9 +7,16 @@ export default function NavbarStatic() {
   return (
     <>
       <div className={styles.navbarcontainer}>
-        <Link href="/" className={styles.namecontainer}>
-          <p className={styles.name}>Alejandro Polito</p>
+        {/* <Link href="/" className={styles.namecontainer}>
+            <p className={styles.name}>Alejandro Polito</p>
+          </Link> */}
+
+        <Link href="/">
+          <div className={styles.namecontainer}>
+            <p className={styles.name}>Alejandro Polito</p>
+          </div>
         </Link>
+
         <HeaderButton />
       </div>
     </>
