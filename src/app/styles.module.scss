@@ -9,3 +9,57 @@
     opacity: 1;
     transition: none;    /* Sin animación: el contenido aparece instantáneamente */
   }
+
+
+  .errorSection{
+
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p,
+  h5,h3 {
+    text-align: center;
+  }
+
+  h3 {
+    font-family: "BwGradual";
+    font-size: 6vh;
+    padding: 2vh 2vw;
+    margin-bottom: 0vh;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 4.8vh;
+   
+    }
+  }
+
+  h5 {
+    font-size: 3vh;
+    line-height: 110%;
+    font-family: "MoriLight";
+    padding: 0 2vw;
+    max-width: 100%;
+    justify-self: center;
+    margin-bottom: 2vh;
+    margin: 0 auto;
+
+
+    @media only screen and (max-width: 750px) {
+      font-size: 2.8vh;
+      max-width: 90%;
+ 
+    }
+  }
+
+  p {
+    text-decoration: underline;
+    margin-top: 10vh;
+    @media only screen and (max-width: 750px) {
+      font-size: 2vh;
+    }
+  }
+
+  }

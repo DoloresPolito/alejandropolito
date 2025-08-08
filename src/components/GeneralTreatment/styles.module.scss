@@ -32,12 +32,8 @@
 
     margin: 0 auto;
 
-
-
     @media only screen and (max-width: 1000px) {
       max-width: 80%;
-
-
     }
 
     @media only screen and (max-width: 750px) {
@@ -62,7 +58,7 @@
   background-repeat: no-repeat;
   transition: background-image 0.3s ease;
   z-index: -1;
-display: flex;
+  display: flex;
 
   // Para pantallas móviles, el fondo se mantiene fijo y ocupa toda la altura
   @media only screen and (max-width: 750px) {
@@ -75,20 +71,17 @@ display: flex;
   @media only screen and (min-width: 751px) {
     position: absolute;
     top: 15vh;
-    // height: calc(100vh - 15vh); 
-    
+    // height: calc(100vh - 15vh);
   }
 }
 
 .gridContainer {
   width: 100%;
-  // padding-top: 10vh; 
+  // padding-top: 10vh;
   // padding-bottom: 10vh;
   position: relative;
   // margin-bottom: 3vh;
   overflow-y: auto;
-
-
 
   // En pantallas de escritorio, permitir que el contenido fluya
   &.desktopGridContainer {
@@ -105,7 +98,7 @@ display: flex;
 
   margin-top: -70vh;
 
-  position: relative; 
+  position: relative;
   // Asegurar que esté por encima del fondo
   // top:-75vh; //CAMBIAR EN MOBILE!!!!
   @media only screen and (max-width: 750px) {
@@ -153,96 +146,3 @@ display: flex;
   }
 }
 
-
-
-// .fixedBackground {
-//   left: 0;
-//   width: 100%;
-//   background-size: cover;
-//   background-position: center;
-//   z-index: -1;
-//   background-repeat: no-repeat;
-//   transition: background-image 0.3s ease;
-//   height: 100vh;
-
-//   // Para pantallas pequeñas (mobile), mantener fondo fijo
-//   @media only screen and (max-width: 750px) {
-//     position: absolute;
-//     top: 8vh;
-//     height: 100vh;
-//     z-index: -1;
-//   }
-
-//   // Para pantallas grandes (desktop), fondo normal y detrás de la grilla
-//   @media only screen and (min-width: 751px) {
-//     position: absolute; // Para que el fondo esté detrás de la grilla
-//     top: 40vh; // Ajusta el top para que la imagen esté más abajo
-//     height: 100%; // Ocupa el fondo completo detrás de la grilla
-//     background-size: cover;
-//   }
-// }
-
-// .gridContainer {
-//   width: 100%;
-//   padding-top: 5vh;
-//   padding-bottom: 5vh;
-//   position: relative; // Asegurar que la grilla esté delante de la imagen de fondo
-//   overflow-y: auto;
-//   margin-bottom: 3vh;
-
-//   &.desktopGridContainer {
-//     overflow-y: visible;
-//   }
-// }
-
-// .grilla {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   gap: 0vh;
-//   padding: 0 5vw;
-//   position: relative; // Para que el contenido esté sobre el fondo
-//   z-index: 1; // Mantener la grilla sobre la imagen de fondo
-//   top: 10vh;
-
-//   @media only screen and (max-width: 750px) {
-//     grid-template-columns: 1fr;
-//   }
-
-//   .item {
-//     border: 0.2vh solid white;
-//     height: 30vh;
-//     display: flex;
-//     align-items: flex-start;
-//     color: white;
-//     position: relative;
-
-//     p {
-//       font-family: "BwGradual";
-//       font-size: 3vh;
-//       text-transform: uppercase;
-//     }
-
-//     .verMasButton {
-//       opacity: 0;
-//       transition: opacity 0.3s;
-//       position: absolute;
-//       bottom: 4vh;
-//       left: 4vh;
-//       padding: 1vh 2vh;
-//       background: #ffffff;
-//       border-radius: 3vh;
-//       color: #374f52;
-//       font-size: 2vh;
-//       border: none;
-
-//       @media only screen and (max-width: 750px) {
-//         opacity: 1;
-//         left: 2vh;
-//       }
-//     }
-
-//     &:hover .verMasButton {
-//       opacity: 1;
-//     }
-//   }
-// }
