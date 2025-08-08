@@ -73,7 +73,7 @@ export default function GeneralTreatment({ content, category }) {
         <div className={`${styles.gridContainer} ${!isMobile && styles.desktopGridContainer}`}>
           <div className={styles.grilla}>
             {content.tratamientos.map((tratamiento, index) => (
-              <Link key={index} href={`/${category}/${tratamiento.id}`}>
+              <Link key={index} href={`/${category}/${tratamiento.id}`} scroll={true}>
                 <div
                   className={styles.item}
                   onMouseEnter={() => handleMouseEnter(tratamiento.src)} // Cambiar el fondo cuando el mouse entra
