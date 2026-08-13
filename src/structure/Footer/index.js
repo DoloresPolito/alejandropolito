@@ -115,7 +115,10 @@ export default function Footer() {
               </h4>
               <p>25 de Mayo 470, Gualeguaychú</p>
               <p>(+54) (9 3446) 57-8126</p>
-           
+              <div className={styles.maplink}>
+                <p>VER MAPA</p>
+                <div className={styles.underline} />
+              </div>
             </div>
           </Link>
 
@@ -128,6 +131,10 @@ export default function Footer() {
               </h4>
               <p>Av. Fondo de la Legua 577, San Isidro</p>
               <p>(+54) (11) 4735-8100</p>
+              <div className={styles.maplink}>
+                <p>VER MAPA</p>
+                <div className={styles.underline} />
+              </div>
             </div>
           </Link>
           <Link href="https://www.google.com/maps/place/Jun%C3%ADn+1040,+C1113AAF+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.5966693,-58.4024726,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcca9686eeee01:0xd2fff681e41169bd!8m2!3d-34.5966738!4d-58.3976017!16s%2Fg%2F11c5mv22jm?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D">
@@ -139,6 +146,10 @@ export default function Footer() {
               </h4>
               <p>Junin 1040, CABA, Recoleta</p>
               <p>(+54) (9 3446) 57-8126</p>
+              <div className={styles.maplink}>
+                <p>VER MAPA</p>
+                <div className={styles.underline} />
+              </div>
             </div>
           </Link>
         </div>

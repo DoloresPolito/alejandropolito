@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../../components/AnimatedDiv";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/Button";
 export default function Work2() {
+  const [hoveredId, setHoveredId] = useState(null);
   const items = [
     {
       id: 1,
@@ -36,15 +36,12 @@ export default function Work2() {
       <div className={styles.section}>
         <div className={styles.container}>
           {items.map((item) => (
-            <motion.div
+            <Link
               key={item.id}
+              href={item.link}
               className={styles.item}
-              initial={{ backgroundSize: "100%", opacity: 1 }}
-              whileHover={{
-                backgroundSize: "105%",
-                transition: { duration: 0.5, ease: "easeInOut" },
-              }}
-              animate={{ backgroundSize: "100%", opacity: 1 }}
+              onMouseEnter={() => setHoveredId(item.id)}
+              onMouseLeave={() => setHoveredId(null)}
             >
               <AnimatedDiv delay={item.delay}>
                 <Image
@@ -62,13 +59,10 @@ export default function Work2() {
                 </AnimatedDiv>
 
                 <AnimatedDiv delay={item.delay}>
-                  <Link href={item.link}>
-                    {/* <button>VER TRATAMIENTOS</button> */}
-                    <Button/>
-                  </Link>
+                  <Button hovered={hoveredId === item.id} />
                 </AnimatedDiv>
               </div>
-            </motion.div>
+            </Link>
           ))}
         </div>
       </div>

@@ -29,6 +29,7 @@
     justify-content: center;
     z-index: 1;
     height: 100%;
+    cursor: pointer;
 
     @media only screen and (max-width: 750px) {
       // width: 100vw !important;
@@ -46,6 +47,7 @@
       height: auto; // Permitir que la altura se ajuste automáticamente
       min-height: 80vh;
       min-width: 33.5vw;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
       @media only screen and (max-width: 750px) {
         object-fit: cover; // Cubrir el contenedor sin distorsionar
         max-height: 55vh; // Limitar la altura máxima
@@ -53,9 +55,13 @@
         min-width: auto;
         width: 100vw;
       }
-     
-        
-    
+
+
+
+    }
+
+    &:hover img {
+      transform: scale(1.08);
     }
 
     // img {
