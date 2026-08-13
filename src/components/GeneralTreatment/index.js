@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
 import { useScroll, motion } from "framer-motion";
-import image from "../../../public/images/tratamientos/plastica/mamaria.png"
+import image from "../../../public/images/tratamientos/plastica/mamaria.webp"
 
 export default function GeneralTreatment({ content, category }) {
   const [backgroundImage, setBackgroundImage] = useState(content.srcfija || image); // Usamos la imagen predeterminada o content.srcfija

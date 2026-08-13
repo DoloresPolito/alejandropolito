@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import image from "../../../public/images/about-corto.jpg";
+import image from "../../../public/images/about/-about-corto.webp";
 import AnimatedDiv from "@/components/AnimatedDiv";
 
 export default function AboutCorto() {

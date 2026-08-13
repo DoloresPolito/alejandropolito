@@ -8,7 +8,7 @@ export default function ImageComponent({src, isActive}) {
   return (
     <motion.div variants={opacity} initial="initial" animate={isActive ? "open" : "closed"} className={styles.imageContainer}>
         <Image 
-        src={`/images/${src}`}
+        src={`/images/nav/${src}`}
         fill={true}
         alt="image"
  

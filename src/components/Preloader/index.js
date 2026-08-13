@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp, background } from "./animation";
-import logo from "../../../public/logo/logopreloader.png";
+import logo from "../../../public/logo/logopreloader.webp";
 import Image from "next/image";
 
 const words = ["0%", "25%", "50%", "100%"];
@@ -53,7 +53,7 @@ export default function Preloader() {
           <motion.p variants={opacity} initial="initial" animate="enter">
             {words[index]}
           </motion.p>
-          <Image src={logo} alt="Alejandro Polito" />
+          <Image src={logo} alt="Alejandro Polito" priority />
         </>
       )}
     </motion.div>

@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import image from "../../../public/images/about1.png";
+import image from "../../../public/images/about/-about1.webp";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import image2 from "../../../public/images/aboutmod.png";
+import image2 from "../../../public/images/about/-aboutmod.webp";
 import Link from "next/link";
 
 export default function AboutHome2({view}) {

@@ -1,6 +1,5 @@
 "use client";
 import styles from "./styles.module.scss";
-import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { opacity, background } from "./anim";
@@ -16,13 +15,7 @@ export default function Header() {
       }`}
     >
       <div className={styles.bar}>
-        {/* <div className={styles.trasparentname}>
-          <p>
 
-    
-          <Link href="/">Alejandro Polito</Link>
-          </p>
-        </div> */}
 
         <div
           onClick={() => {

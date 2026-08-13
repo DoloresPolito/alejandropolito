@@ -7,8 +7,8 @@ import { useForm } from "react-hook-form";
 
 import Image from "next/image";
 
-import contactimagemobile from "../../../public/images/clinica/nuevas/contactformmobile.png";
-import contactimage2 from "../../../public/images/clinica/nuevas/contactform.png";
+import contactimagemobile from "../../../public/images/contact/contactformmobile.webp";
+import contactimage2 from "../../../public/images/contact/-contactform.webp";
 
 export default function Form() {
   const [isMobile, setIsMobile] = useState(false);

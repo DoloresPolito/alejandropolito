@@ -5,46 +5,45 @@ import { motion } from "framer-motion";
 import { height } from "../anim";
 import Body from "./Body";
 import ImageComponent from "./ImageComponent";
-// import Footer from './Footer';
 import Image from "next/image";
-import mobileimage from "../../../../public/images/ilus/1.cuerpo.png";
+import mobileimage from "../../../../public/images/nav/estetica-nav.png";
 
 const links = [
   {
     title: "Home",
     href: "/",
-    src: "1.png",
+    src: "home-nav.webp",
   },
   {
     title: "Cirugía Estética",
     href: "/cirugia-plastica",
-    src: "ilus/1.cuerpo.png",
+    src: "estetica-nav.png",
   },
   {
     title: "Cirugía Reparadora",
     href: "/cirugia-reparadora",
-    src: "ilus/2.nariz.png",
+    src: "reparadora-nav.png",
   },
   {
     title: "No quirúrgicos",
     href: "/no-quirurgicos",
-    src: "ilus/3.teta.png",
+    src: "noquir-nav.png",
   },
   {
     title: "Cirugía Dermatológica",
     href: "/cirugia-dermatologica",
-    src: "tratamientos/dermatologia-clinica.png",
+    src: "dermatologia-nav.webp",
   },
   {
     title: "Dr. Alejandro Polito",
     href: "/about1",
-    src: "clinica/v1el.png",
+    src: "dr-nav.webp",
   },
 
   {
     title: "Contacto",
     href: "/contacto",
-    src: "clinica/nuevas/contactnav.png",
+    src: "contact-nav.webp",
   },
 ];
 
@@ -97,7 +96,6 @@ export default function Index({ setIsActive }) {
         )}
       </div>
 
-      {/* <Footer /> */}
     </motion.div>
   );
 }

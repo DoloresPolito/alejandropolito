@@ -5,14 +5,38 @@ import "../styles/fonts.css";
 import FixedMedia from "@/components/FixedMedia";
 import { PreloaderProvider } from "@/context/PreloaderContext";
 
+const SITE_URL = "https://www.alejandropolito.com.ar";
+const SITE_TITLE = "Alejandro Polito | Cirujano Plástico";
+const SITE_DESCRIPTION =
+  "Dr. Alejandro Polito, cirujano plástico. Cirugía estética, reparadora, dermatológica y tratamientos no quirúrgicos en Buenos Aires.";
+
 export const metadata = {
-  title: "Alejandro Polito",
-  description: "Cirugía Plástica y Reconstructiva",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | Alejandro Polito",
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Alejandro Polito",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
 
       <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

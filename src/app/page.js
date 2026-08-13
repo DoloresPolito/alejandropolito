@@ -1,16 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
-// import SwiperHero from "@/home/SwiperHero";
 import Work2 from "@/home/Work2";
-// import Clinic from "@/home/Clinic";
 import AboutHome from "@/home/AboutHome";
 import LogosMoving from "@/home/LogosMoving";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader";
-// import NewHero from "../home/NewHero";
 import styles from "./styles.module.scss";
-// import Header from "@/structure/Header";
 import NavbarStatic from "@/structure/NavbarStatic";
 import AnimatedHomeHeader from "../structure/NavbarToia";
 import Portada from "../home/Portada";
@@ -79,7 +75,6 @@ export default function Home() {
         {isMobile ? <NavbarStatic /> : <AnimatedHomeHeader />}
 
         <Portada />
-        {/* <NewHero /> */}
         <AboutHome />
         <Work2 />
         <LogosMoving />

@@ -4,20 +4,20 @@ import Image from "next/image";
 
 const Loop = ({ reverse }) => {
   const logos = [
-    { src: "/images/logos/Web Logos-01.jpg", alt: "Asociación Médica Argentina" },
-    { src: "/images/logos/Web Logos-02.jpg", alt: "Agote" },
-    { src: "/images/logos/Web Logos-03.jpg", alt: "Angelus" },
-    { src: "/images/logos/Web Logos-04.jpg", alt: "Hepta" },
-    { src: "/images/logos/Web Logos-05.jpg", alt: "Hospital Británico" },
-    { src: "/images/logos/Web Logos-06.jpg", alt: "Osde" },
-    { src: "/images/logos/Web Logos-07.jpg", alt: "Swiss Medical" },
-    { src: "/images/logos/Web Logos-08.jpg", alt: "Sociedad de Cirugía Plástica de Buenos Aires" },
-    { src: "/images/logos/Web Logos-09.jpg", alt: "Asociación Argentina de Cirugía" },
-    { src: "/images/logos/Web Logos-10.jpg", alt: "Apsot" },
-    { src: "/images/logos/Web Logos-11.jpg", alt: "Colegio Médico Gualeguaychu" },
-    { src: "/images/logos/Web Logos-12.jpg", alt: "Centro Médico San Lucas" },
-    { src: "/images/logos/Web Logos-13.jpg", alt: "Sanatorio Las Lomas" },
-    { src: "/images/logos/Web Logos-14.jpg", alt: "Sanatorio Otaendi" },
+    { src: "/images/logos/Web Logos-01.webp", alt: "Asociación Médica Argentina" },
+    { src: "/images/logos/Web Logos-02.webp", alt: "Agote" },
+    { src: "/images/logos/Web Logos-03.webp", alt: "Angelus" },
+    { src: "/images/logos/Web Logos-04.webp", alt: "Hepta" },
+    { src: "/images/logos/Web Logos-05.webp", alt: "Hospital Británico" },
+    { src: "/images/logos/Web Logos-06.webp", alt: "Osde" },
+    { src: "/images/logos/Web Logos-07.webp", alt: "Swiss Medical" },
+    { src: "/images/logos/Web Logos-08.webp", alt: "Sociedad de Cirugía Plástica de Buenos Aires" },
+    { src: "/images/logos/Web Logos-09.webp", alt: "Asociación Argentina de Cirugía" },
+    { src: "/images/logos/Web Logos-10.webp", alt: "Apsot" },
+    { src: "/images/logos/Web Logos-11.webp", alt: "Colegio Médico Gualeguaychu" },
+    { src: "/images/logos/Web Logos-12.webp", alt: "Centro Médico San Lucas" },
+    { src: "/images/logos/Web Logos-13.webp", alt: "Sanatorio Las Lomas" },
+    { src: "/images/logos/Web Logos-14.webp", alt: "Sanatorio Otaendi" },
   ];
 
   return (

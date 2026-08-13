@@ -5,7 +5,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import image1 from "../../../public/images/about2.png";
+import image1 from "../../../public/images/about/-about2.webp";
 
 export default function AboutHome1() {
   const container = useRef();
