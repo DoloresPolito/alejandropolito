@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import useMaxWidth, { BREAKPOINTS } from "@/hooks/useMaxWidth";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "../AnimatedDiv";
 import { useScroll, motion } from "framer-motion";
@@ -8,21 +9,10 @@ import image from "../../../public/images/tratamientos/plastica/mamaria.webp"
 
 export default function GeneralTreatment({ content, category }) {
   const [backgroundImage, setBackgroundImage] = useState(content.srcfija || image); // Usamos la imagen predeterminada o content.srcfija
-  const [isMobile, setIsMobile] = useState(false);
-  const [windowHeight, setWindowHeight] = useState(0); // Estado para almacenar la altura de la ventana
+  const isMobile = useMaxWidth(BREAKPOINTS.mobile);
 
   const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-      setWindowHeight(window.innerHeight); // Actualiza la altura de la ventana
-    };
-
-    handleResize(); // Inicializar valores en el primer render
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleMouseEnter = (tratamientoSrc) => {
     // Cambiar la imagen de fondo cuando el mouse pasa por encima de un tratamiento
@@ -37,13 +27,15 @@ export default function GeneralTreatment({ content, category }) {
   return (
     <>
       <div className={styles.section}>
-        {/* Título y Descripción */}
-        <AnimatedDiv delay={0.1}>
-          <p className={styles.titulo} style={{ color: isMobile ? "white" : "black" }}>{content.titulo}</p>
-        </AnimatedDiv>
-        <AnimatedDiv delay={0.3}>
-          <h5 className={styles.subtitulo} style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
-        </AnimatedDiv>
+        {/* Título y Descripción (en desktop, centrados entre la navbar y la imagen) */}
+        <div className={styles.header}>
+          <AnimatedDiv delay={0.1}>
+            <p className={styles.titulo} style={{ color: isMobile ? "white" : "black" }}>{content.titulo}</p>
+          </AnimatedDiv>
+          <AnimatedDiv delay={0.3}>
+            <h5 className={styles.subtitulo} style={{ color: isMobile ? "white" : "black" }}>{content.texto}</h5>
+          </AnimatedDiv>
+        </div>
 
         {/* Imagen de Fondo Animada */}
         {isMobile ? (

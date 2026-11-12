@@ -24,11 +24,14 @@
     padding-top: 10px;
     overflow: hidden;
     
+    // Mobile: cada ítem en un solo renglón.
+    // El más largo ("CIRUGÍA DERMATOLÓGICA") mide ~13em en BwGradual,
+    // así que la letra se achica solo lo necesario para que entre en el ancho disponible
+    // (90vw del .body, o el ancho menos el padding del menú si es menor).
     @media only screen and (max-width: 950px) {
-      font-size: 4.3vh;
-      white-space: normal;
-      overflow-wrap: break-word;
-      word-break: break-word;
+      font-size: min(4.3vh, calc(min(90vw, 100vw - 4vh) / 13.3));
+      padding-right: 0;
+      white-space: nowrap;
     }
   }
 

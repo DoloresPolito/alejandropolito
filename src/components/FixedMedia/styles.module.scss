@@ -1,50 +1,40 @@
 .section {
-    position: fixed;
-    top: 90%;
-    right: 5vh;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: transparent;
-    padding: 0.5rem;
+  position: fixed;
+  top: 90%;
+  right: 5vh;
+  transform: translateY(-50%);
+  padding: 0.5rem;
   z-index: 10000;
 
   @media only screen and (max-width: 750px) {
     right: 1vh;
   }
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 8vh;
-      height: 8vh;
-      background-color: #CBBAA4;
-      border-radius: 50%;
-    
-      
-      text-decoration: none;
-      transition: all 0.3s ease;
 
-      @media only screen and (max-width: 750px) {
-        width: 6vh;
-        height: 6vh;
-      }
+  // Botón alargado (pill) con el texto "Consultanos"
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    padding: 0 3.5vh;
+    border-radius: 999px;
+    background-color: #cbbaa4;
+    color: #3d342a; // marrón oscuro: contrasta con el beige sin ser negro
+    font-family: "Mori";
+    font-size: 1.8vh;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
 
-      img{
-        height: 4.5vh;
+    @media only screen and (max-width: 750px) {
+      height: 5vh;
+      padding: 0 2.5vh;
+      font-size: 1.6vh;
+    }
 
-        @media only screen and (max-width: 750px) {
-   
-          height: 3.5vh;
-        }
-      }
-
- 
-
-      &:hover {
-        background-color: #9D8B73;
-        color: #ffffff;
-      }
+    &:hover {
+      background-color: #9d8b73;
     }
   }
+}

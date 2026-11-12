@@ -1,6 +1,6 @@
 import Treatment from "../../../components/Treatment";
 import noquirurgicosData from "../../../jsons/noquirurgicos.json";
-import NavbarStatic from "@/structure/NavbarStatic";
+import NavbarStatic from "@/structure/Navbar/NavbarStatic";
 
 export async function generateMetadata({ params }) {
   const data = noquirurgicosData[0].tratamientos.find(

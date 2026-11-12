@@ -1,5 +1,5 @@
+import useMaxWidth from "@/hooks/useMaxWidth";
 import React, { useEffect, useRef, useState } from "react";
-import Lenis from "lenis";
 import Image from "next/image";
 import styles from "./styles.module.scss"; // Asegúrate de tener los estilos necesarios aquí
 
@@ -47,58 +47,28 @@ export default function Portada() {
   // Se inicializa directamente (en vez de en un useEffect) para que la primera
   // imagen se pinte ya en el primer render y pueda contar como LCP con priority.
   const [imagenes] = useState(() => [...LISTA_DE_IMAGENES, ...LISTA_DE_IMAGENES]);
-  const lenisRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const scrollContentRef = useRef(null);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 600); // Ahora `window` estará disponible
-    };
-
-    handleResize(); // Verifica el tamaño de la pantalla al cargar el componente
-    window.addEventListener("resize", handleResize); // Escucha los cambios de tamaño
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // Limpia el evento al desmontar el componente
-    };
-  }, []);
-
-  // Configuración de Lenis para scroll suave horizontal
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.5,
-      easing: (t) => t,
-      smooth: true,
-      direction: "horizontal", // Scroll horizontal
-    });
-
-    lenisRef.current = lenis;
-
-    const onRaf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(onRaf);
-    };
-
-    requestAnimationFrame(onRaf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  const isSmallScreen = useMaxWidth(599); // < 600px
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
+    // Antes, en mobile corrían dos loops a la vez (1.0 + 0.2): se deja 1.2
+    // para que la velocidad que se veía no cambie.
+    const velocidad = isSmallScreen ? 1.2 : 1.0;
+    let frameId;
+
+    // Desplaza las fotos solas hacia la izquierda en cada frame
     const scrollContent = () => {
-      const velocidad = isSmallScreen ? 0.2 : 1.0; // Velocidad ajustada
       scrollContainer.scrollLeft += velocidad;
-      requestAnimationFrame(scrollContent);
+      frameId = requestAnimationFrame(scrollContent);
     };
 
     scrollContent();
+
+    // Corta el loop al salir de la home o al cambiar de tamaño (si no, se acumulan)
+    return () => cancelAnimationFrame(frameId);
   }, [isSmallScreen]);
 
   return (

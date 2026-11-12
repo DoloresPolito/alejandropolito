@@ -72,6 +72,52 @@
           margin-bottom: 0.5vh;
         }
       }
+
+      // "CÓMO LLEGAR": siempre subrayado, la flecha indica que abre el mapa
+      .directions h4 {
+        text-decoration: underline;
+      }
+
+      // Dirección: abre el mapa, sin subrayado
+      .address {
+        align-self: flex-start;
+      }
+
+      // Teléfono: abre WhatsApp; con hover aparece una línea finita de izquierda a derecha
+      .phone {
+        align-self: flex-start;
+
+        p {
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.2vh;
+            width: 0;
+            height: 1px;
+            background-color: rgba(13, 13, 13, 0.45);
+            transition: width 0.5s ease-in-out;
+          }
+        }
+
+        &:hover p::after,
+        &:focus-visible p::after {
+          width: 100%;
+        }
+      }
+
+      .whatsapp {
+        font-family: "BwGradual";
+        font-size: 1.5vh;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgb(88, 87, 87);
+        vertical-align: middle;
+        margin-left: 1vh;
+      }
     }
   }
 }

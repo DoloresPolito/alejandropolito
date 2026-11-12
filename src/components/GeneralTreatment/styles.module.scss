@@ -43,6 +43,19 @@
     }
   }
 
+  // Bloque de título + descripción. En desktop tiene el mismo espacio arriba y abajo
+  // (el título ya trae 2vh de padding arriba, por eso 6vh + 2vh = 8vh)
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: 751px) {
+      padding: 6vh 0 8vh;
+    }
+  }
+
   .titulo {
     text-transform: uppercase;
     @media only screen and (max-width: 750px) {
@@ -67,10 +80,10 @@
     height: 100vh;
   }
 
-  // Para pantallas grandes, el fondo comienza desde 40vh del top
+  // Para pantallas grandes, la imagen va justo debajo del título (el espacio lo da .header)
   @media only screen and (min-width: 751px) {
     position: absolute;
-    top: 15vh;
+    top: 0;
     // height: calc(100vh - 15vh);
   }
 }
@@ -96,7 +109,8 @@
   padding: 0 5vw; // Espacio lateral en la grilla
   z-index: 1; // Mantener la grilla sobre el fondo
 
-  margin-top: -70vh;
+  // Sube la grilla para que quede 15vh adentro de la imagen (100vh - 15vh)
+  margin-top: -85vh;
 
   position: relative;
   // Asegurar que esté por encima del fondo

@@ -3,7 +3,7 @@ import GeneralTreatment from "@/components/GeneralTreatment";
 import content from "../../jsons/noquirurgicos.json"
 // import { useEffect } from "react";
 // import Lenis from "lenis";
-import NavbarStatic from "@/structure/NavbarStatic";
+import NavbarStatic from "@/structure/Navbar/NavbarStatic";
 
 export default function NoQuirurgicos() {
   // useEffect(() => {

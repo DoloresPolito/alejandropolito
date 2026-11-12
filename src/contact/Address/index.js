@@ -1,26 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
+import useMaxWidth, { BREAKPOINTS } from "@/hooks/useMaxWidth";
 import styles from "./styles.module.scss";
-import Link from "next/link";
+import { LOCATIONS, phoneLink } from "@/utils/locations";
 import AnimatedDiv from "@/components/AnimatedDiv";
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 export default function Address() {
   const container = useRef();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-    };
-
-    // Check screen size on load
-    handleResize();
-
-    // Listen for resize events
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMaxWidth(BREAKPOINTS.mobile);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -33,52 +20,45 @@ export default function Address() {
   const y = isMobile ? "0vh" : yTransform;
 
 
-  const items = [
-    {
-      place: "CLÍNICA POLITO",
-      address: "25 de Mayo 470, Gualeguaychú",
-      phone: "(+54) (9 3446) 57-8126",
-      link: "https://www.google.com/maps/place/25+de+Mayo+470,+E3269+Gualeguaych%C3%BA,+Entre+R%C3%ADos/@-33.009176,-58.5120881,17z/data=!3m1!4b1!4m6!3m5!1s0x95baa82b47b097f5:0x3e5fbce29bbffdfc!8m2!3d-33.0091805!4d-58.5095132!16s%2Fg%2F11snpydcpy?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D",
-      delay: 0,
-    },
-    {
-      place: "HEPTA SAN ISIDRO",
-      address: "Av. Fondo de la Legua 577, San Isidro",
-      phone: "(+54) (11) 4735-8100",
-      link: "https://www.google.com/maps/place/Av.+Fondo+de+la+Legua+577,+B1609+Boulogne,+Provincia+de+Buenos+Aires/@-34.497962,-58.5475806,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb07b11988783:0x6e57d955a5efd2e7!8m2!3d-34.4979664!4d-58.5450057!16s%2Fg%2F11jtyjgk1q?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D",
-      delay: 0.3,
-    },
-    {
-      place: "CONSULTORIO CAPITAL FEDERAL",
-      address: "Junin 1040, CABA, Recoleta",
-      phone: "(+54) (9 3446) 57-8126",
-      link: "https://www.google.com/maps/place/Jun%C3%ADn+1040,+C1113AAF+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.5966693,-58.4024726,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcca9686eeee01:0xd2fff681e41169bd!8m2!3d-34.5966738!4d-58.3976017!16s%2Fg%2F11c5mv22jm?hl=es&entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D",
-      delay: 0.6,
-    },
-  ];
   return (
     <div className={styles.container}>
       <motion.div style={{ y }} className={styles.motionDiv}>
         <h3>CONTACTO</h3>
 
         <div className={styles.addresscontainer}>
-          {items.map((item) => (
-            <AnimatedDiv delay={item.delay} key={item.delay}>
+          {LOCATIONS.map((location, index) => (
+            <AnimatedDiv delay={index * 0.3} key={location.city}>
               <div className={styles.item}>
                 <div className={styles.top}>
-                  <h4>{item.place}</h4>
-                  <Link href={item.link} target="_blank">
-                    <h4 style={{ textDecoration: "underline" }}>CÓMO LLEGAR</h4>
-                  </Link>
+                  <h4>{location.contactTitle}</h4>
+                  <a
+                    href={location.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.directions}
+                  >
+                    <h4>
+                      CÓMO LLEGAR <span aria-hidden="true">↗</span>
+                    </h4>
+                  </a>
                 </div>
                 <div className={styles.bottom}>
-                  <Link href={item.link} target="_blank">
-                    <p>{item.address}</p>
-                  </Link>
-
-             
-                    <p>{item.phone}</p>
-           
+                  <a
+                    href={location.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.address}
+                  >
+                    <p>{location.address}</p>
+                  </a>
+                  <a {...phoneLink(location)} className={styles.phone}>
+                    <p>
+                      {location.phone}{" "}
+                      {location.whatsapp && (
+                        <span className={styles.whatsapp}>WhatsApp ↗</span>
+                      )}
+                    </p>
+                  </a>
                 </div>
               </div>
             </AnimatedDiv>

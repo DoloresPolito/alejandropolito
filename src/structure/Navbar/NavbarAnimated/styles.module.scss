@@ -1,0 +1,29 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 0.2vh solid black;
+  transition: background-color 0.3s ease;
+}
+
+.brand {
+  display: flex;
+}
+
+.name {
+  font-family: "BwGradual";
+  font-weight: 500;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+
+// En la navbar vieja el selector ".headerBrand a" también pegaba en los
+// links del menú (HeaderButton), dándoles estos estilos solo en la home desktop.
+// Se mantiene igual para no cambiar cómo se ve el menú.
+.brand :global(a) {
+  font-weight: 500;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}

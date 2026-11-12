@@ -3,8 +3,7 @@ import styles from "./style.module.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp, background } from "./animation";
-import logo from "../../../public/logo/logopreloader.webp";
-import Image from "next/image";
+import { BRAND_NAME } from "@/structure/Navbar/constants";
 
 const words = ["0%", "25%", "50%", "100%"];
 
@@ -37,6 +36,7 @@ export default function Preloader() {
       initial="initial"
       exit="exit"
       className={styles.section}
+      data-preloader
     >
       {/* Fondo animado */}
       <motion.div
@@ -53,7 +53,11 @@ export default function Preloader() {
           <motion.p variants={opacity} initial="initial" animate="enter">
             {words[index]}
           </motion.p>
-          <Image src={logo} alt="Alejandro Polito" priority />
+          <div className={styles.brand}>
+            <span className={styles.brandName}>{BRAND_NAME}</span>
+            <span className={styles.brandLine} aria-hidden="true" />
+            <span className={styles.brandTagline}>Cirugía plástica y reconstructiva</span>
+          </div>
         </>
       )}
     </motion.div>

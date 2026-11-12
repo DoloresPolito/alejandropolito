@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react";
+import useMaxWidth, { BREAKPOINTS } from "@/hooks/useMaxWidth";
+import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./styles.module.scss";
@@ -9,20 +10,7 @@ import image1 from "../../../public/images/about/-about2.webp";
 
 export default function AboutHome1() {
   const container = useRef();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-    };
-
-    // Check screen size on load
-    handleResize();
-
-    // Listen for resize events
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMaxWidth(BREAKPOINTS.mobile);
 
   const { scrollYProgress } = useScroll({
     target: container,

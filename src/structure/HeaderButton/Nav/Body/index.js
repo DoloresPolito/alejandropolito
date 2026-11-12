@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import useMaxWidth from "@/hooks/useMaxWidth";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./styles.module.scss";
@@ -36,14 +36,7 @@ export const translate = {
 
 
 export default function Body({ links, selectedLink, setSelectedLink, setIsActive }) {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth < 750);
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isSmallScreen = useMaxWidth(749); // < 750px
 
   const getChars = (word) => {
     if (isSmallScreen) {

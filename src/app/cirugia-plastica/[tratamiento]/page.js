@@ -1,7 +1,7 @@
 
 import Treatment from '../../../components/Treatment';
 import cirugiaplasticaData from "../../../jsons/plastica.json"
-import NavbarStatic from '@/structure/NavbarStatic';
+import NavbarStatic from '@/structure/Navbar/NavbarStatic';
 
 export async function generateMetadata({ params }) {
     const data = cirugiaplasticaData[0].tratamientos.find(item => item.id === params.tratamiento);

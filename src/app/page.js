@@ -1,49 +1,27 @@
 "use client";
 import { useEffect, useState } from "react";
-import Lenis from "lenis";
+import SmoothScroll from "@/components/SmoothScroll";
 import Work2 from "@/home/Work2";
 import AboutHome from "@/home/AboutHome";
 import LogosMoving from "@/home/LogosMoving";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader";
 import styles from "./styles.module.scss";
-import NavbarStatic from "@/structure/NavbarStatic";
-import AnimatedHomeHeader from "../structure/NavbarToia";
+import HomeNavbar from "@/structure/Navbar/HomeNavbar";
 import Portada from "../home/Portada";
 import { usePreloader } from "@/context/PreloaderContext";
 
 
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
   const { hasShownPreloader, setHasShownPreloader } = usePreloader();
   const [isLoading, setIsLoading] = useState(!hasShownPreloader);
 
+
+  // Si ya se mostró en esta visita (por ej. después de recargar), no lo vuelve a mostrar
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-    };
-
-    // Check screen size on load
-    handleResize();
-
-    // Listen for resize events
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+    if (hasShownPreloader) setIsLoading(false);
+  }, [hasShownPreloader]);
 
   useEffect(() => {
     if (!isLoading) return;
@@ -71,8 +49,10 @@ export default function Home() {
         className={`${styles.content} ${
           isLoading ? styles.hidden : styles.visible
         }`}
+        data-home-content
       >
-        {isMobile ? <NavbarStatic /> : <AnimatedHomeHeader />}
+        <SmoothScroll />
+        <HomeNavbar />
 
         <Portada />
         <AboutHome />

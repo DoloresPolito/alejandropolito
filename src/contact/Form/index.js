@@ -1,8 +1,10 @@
 "use client";
+import useMaxWidth from "@/hooks/useMaxWidth";
 import styles from "./styles.module.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-// import { sendEmail } from "@/utils/send-email";
+import { whatsappUrl } from "@/utils/whatsapp";
+import { BRAND_NAME } from "@/structure/Navbar/constants";
 
 
 import Image from "next/image";
@@ -11,18 +13,7 @@ import contactimagemobile from "../../../public/images/contact/contactformmobile
 import contactimage2 from "../../../public/images/contact/-contactform.webp";
 
 export default function Form() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 900);
-    };
-
-    handleResize(); // Set initial value
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMaxWidth(899); // < 900px
 
 
   return (
@@ -41,11 +32,24 @@ export default function Form() {
 
 const ContactForm = () => {
   const { register, handleSubmit } = useForm();
-  const [messageSent, setMessageSent] = useState(false);
+  const [whatsappLink, setWhatsappLink] = useState(null);
 
-  function onSubmit(data) {
-    // sendEmail(data);
-    setMessageSent(true);
+  // Arma el mensaje con los datos del formulario y abre WhatsApp para enviarlo a la clínica
+  function onSubmit({ name, email, phone, message }) {
+    const text = [
+      `Hola! Les escribo desde la web de ${BRAND_NAME} con una consulta.`,
+      "",
+      `*Nombre:* ${name}`,
+      `*E-mail:* ${email}`,
+      `*Teléfono:* ${phone}`,
+      "",
+      "*Consulta:*",
+      message,
+    ].join("\n");
+
+    const url = whatsappUrl(text);
+    setWhatsappLink(url);
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
 
@@ -54,14 +58,21 @@ const ContactForm = () => {
 
   return (
     <div className={styles.formcontainer}>
-      {messageSent ? (
-        <>
-          <div className={styles.messagesent}>
-            <h3>
-              GRACIAS POR EL MENSAJE, NOS COMUNICAREMOS CON VOS A LA BREVEDAD.
-            </h3>
-          </div>
-        </>
+      {whatsappLink ? (
+        <div className={styles.messagesent}>
+          <h3>
+            SE ABRIRÁ WHATSAPP PARA MANDAR LA CONSULTA.
+          </h3>
+          {/* Por si el navegador bloqueó la ventana nueva */}
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsapplink}
+          >
+            ¿No se abrió? Abrir WhatsApp ↗
+          </a>
+        </div>
       ) : (
         <>
           <form onSubmit={handleSubmit(onSubmit)}>

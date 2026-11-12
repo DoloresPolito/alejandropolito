@@ -1,6 +1,7 @@
 "use client";
+import useMaxWidth from "@/hooks/useMaxWidth";
 import styles from "./styles.module.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { height } from "../anim";
 import Body from "./Body";
@@ -53,18 +54,7 @@ export default function Index({ setIsActive }) {
     index: 0,
   });
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 750);
-    };
-
-    handleResize(); // Set initial value
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMaxWidth(749); // < 750px
 
   return (
     <motion.div

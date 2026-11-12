@@ -10,21 +10,49 @@
   overflow: hidden; /* Para evitar glitches visuales */
   background-color: #f0ebe3;
 
-  img {
+  // Logo escrito (antes era una imagen). Las medidas replican las proporciones
+  // del logo original: --u equivale a 1px de esa imagen (461px de alto = 20vh).
+  .brand {
+    --u: calc(20vh / 461);
     position: absolute;
-    top: 230px;
-    width: auto;
-    height: 20vh;
+    top: calc(230px + 52 * var(--u));
     z-index: 10000;
-
-    @media screen and (max-width: 900px) {
-      height: 20vh;
-    }
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1f2123;
 
     @media screen and (max-width: 425px) {
-      height: 15vh;
+      --u: calc(15vh / 461);
     }
   }
+
+  .brandName {
+    font-family: "BwGradual";
+    font-size: calc(216 * var(--u));
+    line-height: 1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .brandLine {
+    display: block;
+    width: 97.5%;
+    height: calc(5 * var(--u));
+    margin-top: calc(37 * var(--u));
+    background-color: currentColor;
+  }
+
+  .brandTagline {
+    font-family: "SequelBook";
+    font-size: calc(63 * var(--u));
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: calc(37 * var(--u));
+  }
+
 }
 
 .background {

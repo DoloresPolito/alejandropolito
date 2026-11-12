@@ -1,4 +1,4 @@
-import NavbarStatic from "@/structure/NavbarStatic";
+import NavbarStatic from "@/structure/Navbar/NavbarStatic";
 import styles from "./styles.module.scss";
 import AnimatedDiv from "@/components/AnimatedDiv";
 import Link from "next/link";

@@ -41,3 +41,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  /* Subtítulo del preloader ("CIRUGÍA PLÁSTICA Y RECONSTRUCTIVA") */
+  @font-face {
+    font-family: 'SequelBook';
+    src: url('/fonts/Sequel Sans OTF 2/Sequel Sans Book Body.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -33,3 +33,13 @@ a {
 }
 
 
+
+/* Preloader ya mostrado en esta visita (atributo agregado por un script en layout.js) */
+html[data-preloader-done] [data-preloader] {
+  display: none !important;
+}
+
+html[data-preloader-done] [data-home-content] {
+  visibility: visible !important;
+  opacity: 1 !important;
+}

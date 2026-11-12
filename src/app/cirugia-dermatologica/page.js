@@ -2,7 +2,7 @@
 import GeneralTreatment from "@/components/GeneralTreatment";
 import content from "../../jsons/dermatologica.json"
 
-import NavbarStatic from "@/structure/NavbarStatic";
+import NavbarStatic from "@/structure/Navbar/NavbarStatic";
 export default function Plastica() {
 
   

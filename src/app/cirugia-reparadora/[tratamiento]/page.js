@@ -1,6 +1,6 @@
 import Treatment from "../../../components/Treatment";
 import cirugiareparadoraData from "../../../jsons/reparadora.json";
-import NavbarStatic from "@/structure/NavbarStatic";
+import NavbarStatic from "@/structure/Navbar/NavbarStatic";
 
 export async function generateMetadata({ params }) {
   const data = cirugiareparadoraData[0].tratamientos.find(

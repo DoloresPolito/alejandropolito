@@ -4,6 +4,10 @@ import Footer from "@/structure/Footer";
 import "../styles/fonts.css";
 import FixedMedia from "@/components/FixedMedia";
 import { PreloaderProvider } from "@/context/PreloaderContext";
+import { PRELOADER_STORAGE_KEY, PRELOADER_DONE_ATTR } from "@/context/preloaderConstants";
+
+// Corre antes de pintar: si el preloader ya se mostró en esta visita, lo oculta de entrada
+const PRELOADER_SCRIPT = `try{if(sessionStorage.getItem("${PRELOADER_STORAGE_KEY}")==="1")document.documentElement.setAttribute("${PRELOADER_DONE_ATTR}","")}catch(e){}`;
 
 const SITE_URL = "https://www.alejandropolito.com.ar";
 const SITE_TITLE = "Alejandro Polito | Cirujano Plástico";
@@ -36,8 +40,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: PRELOADER_SCRIPT }} />
+        {/* Tipografías del preloader: se precargan para que el logo escrito aparezca ya con su fuente */}
+        <link rel="preload" href="/fonts/BwGradual/BwGradualDEMO-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Sequel%20Sans%20OTF%202/Sequel%20Sans%20Book%20Body.otf" as="font" type="font/otf" crossOrigin="anonymous" />
 
       <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
